@@ -1,0 +1,45 @@
+{
+	// Should we change the title?
+	"ChangeTitle": true,
+	// This is the window title,you can change it.
+	"Title": "%user% - Arcomua Modpack 230224 - Minecraft %mcversion% with Quilt Loader",
+	// %date% and %syncdate% placeholders' format.
+	"Dateformat": "yyyy-MM-dd HH:mm:ss",
+	/* %memory% display format.
+	   '!using' is the game using memory.
+	   '!max' is the memory allocated to the game.
+	   '!free' is the memory that the game hasn't used yet.
+	*/
+	"MemoryFormat": "!using MB/!max MB",
+	/* %location% display format.
+	   !x is player's X axis.!y is player's Y axis.!z is player's Z axis.
+	*/
+	"LocationFromat": "!x !y !z",
+	/* You can write some game tips or famous quotes here.
+	   When using variables, a sentence will be selected for display.
+	   Note: if it is empty,%sentence% variable will be disabled.
+	*/
+	"Sentences": [],
+	/* If this is enabled,mod will get sentence from Hitokoto.
+	   But you can't get sentence from sentences list.
+	   Tip: Hitokoto is a website that provides good Chinese sentences.
+	*/
+	"getSentenceFromHitokoto": false,
+	/* Should we change the splash text?
+	   You can add splash texts in splash.txt.
+	*/
+	"SplashText": false,
+	/* Set the maximum number of random numbers that can be generated (the generated random numbers do not include the maximum range set)
+	   Suitable for variable %random%. Note: the range cannot be less than 2.
+	*/
+	"randomMax": 100,
+	/* Should window icon be changed?
+	   REMEMBER! You have to provide both 16x16 and 32x32 icon in .png format!
+	*/
+	"ChangeIcons": false,
+	/* Here you may provide names of your icons relative to icons directory in TitleChanger's config folder
+	   REMEMBER! You have to provide both 16x16 and 32x32 icon in .png format!
+	*/
+	"Icon16x": "",
+	"Icon32x": ""
+}

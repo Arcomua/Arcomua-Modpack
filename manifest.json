@@ -1,0 +1,13 @@
+{
+  "manifestType": "minecraftModpack",
+  "manifestVersion": 1,
+  "name": "1.19.3 Quilt - Arcomua Modpack [230224]",
+  "version": "230224",
+  "author": "Arcomua Modpack Team",
+  "overrides": "overrides",
+  "minecraft": {
+    "version": "1.19.3",
+    "modLoaders": []
+  },
+  "files": []
+}
