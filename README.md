@@ -3,7 +3,7 @@
 <div align="center">
 	<h1>Arcomua Modpack</h1>
 	<p>
-		<img src="https://img.shields.io/badge/Mod%20Loader-Quilt-9722ff?style=flat" alt="State" />
+		<img src="https://img.shields.io/badge/Mod%20Loader-Fabric-dbd0b4?style=flat" alt="Fabric Mod Loader" />
 		<img src="https://img.shields.io/badge/Version-230224-blue?style=flat" alt="Version" />
 	</p>
 </div>
