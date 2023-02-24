@@ -131,7 +131,7 @@ key_key.waila.show_overlay:key.keyboard.unknown
 key_key.waila.toggle_liquid:key.keyboard.unknown
 key_key.waila.show_recipe_input:key.keyboard.unknown
 key_key.waila.show_recipe_output:key.keyboard.unknown
-key_key.wthit-plugins.show_author:key.keyboard.left.shift
+key_key.wthit-plugins.show_author:key.keyboard.unknown
 key_gui.xaero_switch_waypoint_set:key.keyboard.unknown
 key_gui.xaero_instant_waypoint:key.keyboard.keypad.add
 key_gui.xaero_toggle_slime:key.keyboard.unknown
