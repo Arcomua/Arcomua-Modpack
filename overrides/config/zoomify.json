@@ -1,0 +1,35 @@
+{
+    "zoomify_gui_category_behaviour": {
+        "zoomify_gui_initialzoom_name": 4,
+        "zoomify_gui_zoomintime_name": 1.0,
+        "zoomify_gui_zoomouttime_name": 0.5,
+        "zoomify_gui_zoomintransition_name": 12,
+        "zoomify_gui_zoomouttransition_name": 12,
+        "zoomify_gui_affecthandfov_name": true,
+        "zoomify_gui_retainzoomsteps_name": false
+    },
+    "zoomify_gui_category_scrolling": {
+        "zoomify_gui_scrollzoom_name": true,
+        "zoomify_gui_scrollzoomamount_name": 3,
+        "zoomify_gui_scrollzoomsmoothness_name": 70,
+        "zoomify_gui_linearlikesteps_name": true
+    },
+    "zoomify_gui_category_controls": {
+        "zoomify_gui_zoomkeybehaviour_name": 0,
+        "zoomify_gui_keybindscrolling_name": false,
+        "zoomify_gui_relativesensitivity_name": 100,
+        "zoomify_gui_relativeviewbobbing_name": true,
+        "zoomify_gui_cinematiccam_name": 0
+    },
+    "zoomify_gui_category_spyglass": {
+        "zoomify_gui_spyglassbehaviour_name": 0,
+        "zoomify_gui_spyglassoverlayvisibility_name": 1,
+        "zoomify_gui_spyglasssoundbehaviour_name": 3
+    },
+    "zoomify_gui_category_secondary": {
+        "zoomify_gui_secondaryzoomamount_name": 4,
+        "zoomify_gui_secondaryzoomintime_name": 10.0,
+        "zoomify_gui_secondaryzoomouttime_name": 1.0,
+        "zoomify_gui_secondaryzoomhidehudonzoom_name": true
+    }
+}
