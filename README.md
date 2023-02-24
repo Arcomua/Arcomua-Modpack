@@ -1,4 +1,4 @@
-[![Cover](https://repository-images.githubusercontent.com/605815963/caf9fecd-2818-4ff6-8a54-eeee43650ccb)](#arcoma-modpack)
+[![Cover](https://repository-images.githubusercontent.com/605815963/acf90131-3a24-4fc3-b3af-17404082f735)](#arcoma-modpack)
 
 <div align="center">
 	<h1>Arcomua Modpack</h1>
