@@ -1,5 +1,5 @@
-#Fri Feb 24 19:55:51 CST 2023
-shadowDistance=128.0
+#Sat Feb 25 14:29:37 CST 2023
 LESS_LAVA_FOG=true
-MOTION_BLURRING=true
 MINIMUM_LIGHT_MODE=3
+MOTION_BLURRING=true
+shadowDistance=128.0

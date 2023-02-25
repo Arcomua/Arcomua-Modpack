@@ -1,0 +1,8 @@
+titleAlwaysFitsScreen = true
+scoreboardMode = "FADE"
+scoreboardFadeSpeed = 13
+scoreboardHideMinAlpha = 0
+titleMarginLeft = 8
+titleMarginRight = 8
+preferredTitleScale = 4.0
+preferredSubtitleScale = 2.0

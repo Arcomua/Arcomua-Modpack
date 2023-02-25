@@ -1,0 +1,17 @@
+{
+	"nightVisionEnabled": true,
+	"defaultGamma": 100,
+	"toggledGamma": 1500,
+	"updateToggle": false,
+	"smoothTransition": false,
+	"showStatusEffect": false,
+	"advancedOptions": {
+		"transitionSpeed": 4500,
+		"limitCheck": true,
+		"minGamma": -750,
+		"maxGamma": 1500,
+		"gammaStep": 10,
+		"showMessage": true,
+		"resetOnClose": false
+	}
+}

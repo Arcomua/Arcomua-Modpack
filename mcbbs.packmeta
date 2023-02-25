@@ -1,29 +1,83 @@
 {
   "manifestType": "minecraftModpack",
   "manifestVersion": 2,
-  "name": "1.19.3 Fabric - Arcomua Modpack [230224]",
-  "version": "230224",
+  "name": "1.18.2 Fabric - Arcomua Modpack [230225]",
+  "version": "230225",
   "author": "Arcomua Modpack Team",
   "description": "",
   "fileApi": "",
-  "url": "https://github.com/Arcomua-Modpack",
+  "url": "https://github.com/Arcomua-Modpack/Arcomua-Modpack",
   "forceUpdate": false,
   "origin": [],
   "addons": [
     {
       "id": "game",
-      "version": "1.19.3"
+      "version": "1.18.2"
     },
     {
       "id": "fabric",
-      "version": "0.14.15"
+      "version": "0.14.16"
     }
   ],
   "libraries": [],
   "files": [
     {
+      "path": "config/appleskin.json5",
+      "hash": "4994b8afdf50b6412aa302a70c31a9f04bfb73fa",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "config/betterf3.json",
       "hash": "53049a265ba32fb5578b0594fe00d7a96425a723",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/betterpingdisplay.json",
+      "hash": "51a7efebd32597a49b4c6f151b36845182ab339a",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/boatiview/client.toml",
+      "hash": "c185dacbc9b54a55e495a2bb98a2276226bc9ab2",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/cardinal-components-api.properties",
+      "hash": "fa888bcbf7e935bdae5567d26ffad1ac2f93b35c",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/continuity.json",
+      "hash": "dcd61957c3ede67c890235ee6615d0f0945118cd",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/crowdin.txt",
+      "hash": "f31ebd67175d181274cdb9457c4017ce098ffcf3",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/customwindowtitle-client.toml",
+      "hash": "881819c16ef491a23e3b10e4828620ac2056353e",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/debugify-descriptions.json",
+      "hash": "ae013b0f0252f4f27e5a12f634caf8ec523528a3",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/debugify.json",
+      "hash": "da86b6c927bb8f43899316300c2ab6a7cd4b2b95",
       "force": true,
       "type": "addon"
     },
@@ -40,6 +94,72 @@
       "type": "addon"
     },
     {
+      "path": "config/enchdesc.json",
+      "hash": "9f081106244f0002f71683e07a7a4b2404c6a0f6",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/entityculling.json",
+      "hash": "67d2eaa083b0e864e71e50599fcf41bc37a5b412",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/fabric/indigo-renderer.properties",
+      "hash": "04424a5b9f100e3fb410905d1fd0a0b4438e174c",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/ferritecore.mixin.properties",
+      "hash": "768afe6b2baa22f3cc091cde5057871a81cda563",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/gamma_utils.json5",
+      "hash": "6ee85001fc749047211b018e4f86207bf740e24b",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/graphutil.json",
+      "hash": "d6dd8109af697042e13482f8b2d4c259676c6f38",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/held-item-info.json",
+      "hash": "d859aa1b1bb77d5e6734af7f23dc5923f0fbcfe8",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/horsestatsvanilla.json5",
+      "hash": "25bd4b3d062f19163fac7d0e670a2ebcdfd5352f",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/immediatelyfast.json",
+      "hash": "6d5d53bf9ba03a64fd37c525a24f05fc75ac947d",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/indium-renderer.properties",
+      "hash": "797b79badf8704168717854b0416232e819632d3",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/inventoryprofilesnext/integrationHints/exampleIntegrationHints.json",
+      "hash": "2bedb4d58a778b937dd9da01c50a46af9887709b",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "config/inventoryprofilesnext/inventoryprofiles.json",
       "hash": "279ab8016486dff355ac39ea8d6b0ab7636ff1c4",
       "force": true,
@@ -47,13 +167,97 @@
     },
     {
       "path": "config/iris.properties",
-      "hash": "e9e1f0c3e43d78b08b24c95b3c0c070098218a8b",
+      "hash": "be3a7f3ac24702d32f8ca2ab4ca6d37e8305044b",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/lambdynlights.toml",
+      "hash": "d01fd4e6bee37e323877c1a6068b5dd0a289f136",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/libgui.json5",
+      "hash": "aa2f828b3903fa48180cb314feb1107f4b4e42f2",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/lightoverlay.properties",
+      "hash": "d5c0a93a926f017276c42c59ce74645fd9a3c0ff",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/lithium.properties",
+      "hash": "d4d30939d76f2e3e7ab2736e9649be0abcc310c0",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/malilib.json",
+      "hash": "38d9e77318ca57d5161d2aa76f26e0263dfa7f0e",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/midnightlib.json",
+      "hash": "d280a7026524ae95864bae0638691f87c626c7b3",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/minihud/mc.calibur.tv.json",
+      "hash": "63334c29f8821e7373ea30d1056de2651da42a93",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/minihud/mc.calibur.tv_dim_minecraft_overworld.json",
+      "hash": "91ab74c432fadc78cc85ab32fc3dc6bac46e0abe",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/minihud/mc.calibur.tv_dim_minecraft_resource.json",
+      "hash": "91ab74c432fadc78cc85ab32fc3dc6bac46e0abe",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/minihud/mc.calibur.tv_dim_minecraft_shop.json",
+      "hash": "91ab74c432fadc78cc85ab32fc3dc6bac46e0abe",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/minihud/mc.calibur.tv_dim_minecraft_the_end.json",
+      "hash": "91ab74c432fadc78cc85ab32fc3dc6bac46e0abe",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/minihud.json",
-      "hash": "7c3ad67f7881c55e721d9d809e07ba8b9fdf762d",
+      "hash": "344190894d380264b6af8b112211f405040a38b5",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/modelfix-client.json",
+      "hash": "efb85a31cc66fc9df084ac913cc37d6a3e2b725d",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/modmenu.json",
+      "hash": "261d46ad0aed315cc3afdf0728f15ec21192d028",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/moreculling.toml",
+      "hash": "2b3398498c558ecfdb447f7e69afe21479eb6705",
       "force": true,
       "type": "addon"
     },
@@ -71,7 +275,7 @@
     },
     {
       "path": "config/NoChatReports/NCR-Encryption.json",
-      "hash": "2668667aad40805cc47d9a084744fba128514f95",
+      "hash": "734b4a2f34dc5cf12ad5bb90da7b72cdfc964893",
       "force": true,
       "type": "addon"
     },
@@ -88,6 +292,24 @@
       "type": "addon"
     },
     {
+      "path": "config/onsoulfire.json",
+      "hash": "9510d7c0183c5850a88c98f1f7e60c58b528aecd",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/petowner.json",
+      "hash": "6153f0a935cd702f1d0f78f9fa3e7650826db236",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/smoothboot.json",
+      "hash": "4165bc0af9c1979833aa5cb7c49e44d3f08865f4",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "config/smoothswapping.json",
       "hash": "6e875c95e8e76a4e2659a226d4749a18875cc130",
       "force": true,
@@ -95,7 +317,7 @@
     },
     {
       "path": "config/sodium-extra-options.json",
-      "hash": "611a5be12e7a610c5d86d385e033792840e81e87",
+      "hash": "f9dad57e29d37f547978864643237ae6e0037f0b",
       "force": true,
       "type": "addon"
     },
@@ -113,13 +335,55 @@
     },
     {
       "path": "config/sodium-options.json",
-      "hash": "9c2c035db83c59f219a075b88d8eaa1cdca13697",
+      "hash": "93ca40d20769fef06a59a289f0d90d7377ce44cc",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/stendhal/stendhal.properties",
+      "hash": "bc1f0c05b90b80f434109cec84272adb76428bcd",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/TitleChanger/config.json5",
       "hash": "ed99656248eb838dc53be536d84b78b1eec07c00",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/TitleChanger/splash.txt",
+      "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/titlefixer.toml",
+      "hash": "920615598a6adf508db982690dea5e5fefbc388a",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/tweakermore.json",
+      "hash": "1e6118fe42c0b6196cff31ee30c9f749e329c5e2",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/tweakeroo.json",
+      "hash": "be6cd2968121f4849e87c0012373dc92dcb2d4e5",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/ViaFabric/viafabric.yml",
+      "hash": "de26274a074e66bed9bc064107f33a2a0db58a76",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/ViaFabric/viaversion.yml",
+      "hash": "90cd3ad98b0027f7e4edb12410a8ca5d3446c3dc",
       "force": true,
       "type": "addon"
     },
@@ -149,7 +413,7 @@
     },
     {
       "path": "config/xaerominimap_entities.json",
-      "hash": "cbf8c90f4fa8124e21528d4e19652c395b2e2b24",
+      "hash": "9dc476df5c9459928e2680b5a50de7c6480f1da1",
       "force": true,
       "type": "addon"
     },
@@ -167,7 +431,13 @@
     },
     {
       "path": "config/zoomify.json",
-      "hash": "245abe62a4059a46116e8ea220a69b8887c3edaa",
+      "hash": "2dfd2983ba58b09181991e26ee8506068180d2ff",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "hmclversion.cfg",
+      "hash": "8a549d8c2a4c9a6a16b4730fb8e808c5bfdebaf3",
       "force": true,
       "type": "addon"
     },
@@ -178,56 +448,56 @@
       "type": "addon"
     },
     {
-      "path": "mods/antighost-1.19.3-fabric0.68.1-1.1.5.jar",
-      "hash": "e1dbabc4007d1cc6132bf8e9df71b45e688cd366",
+      "path": "mods/antighost-1.18.2-fabric0.47.10-1.1.4.jar",
+      "hash": "b9a690827fdaa60388bc297d6bf339c7ffd68261",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/appleskin-fabric-mc1.19.3-2.4.2.jar",
-      "hash": "313c021e65965bc6ca7b884a40b121e750cec41d",
+      "path": "mods/appleskin-fabric-mc1.18.2-2.4.1.jar",
+      "hash": "bca8d17a4baf9cfa84a36965147bd615bffd539e",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/architectury-7.1.70-fabric.jar",
-      "hash": "19c3b151eaf3c9fe1ae3a6209b32fe264b77defc",
+      "path": "mods/architectury-4.11.89-fabric.jar",
+      "hash": "740a2e6d60a4d20a03bff22611774c4f6ec90f48",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/badpackets-fabric-0.3.4.jar",
-      "hash": "d65faf486a088e1a706b29457f6b1725665a8379",
+      "path": "mods/axolotl-item-fix-1.1.3.jar",
+      "hash": "f60f9ea1e6afded2935ba5b1406aedcf429c20f8",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/BetterF3-5.1.0-Fabric-1.19.3.jar",
-      "hash": "8710e284c79cedf22624df3e597af51e5778991f",
+      "path": "mods/badpackets-fabric-0.1.3.jar",
+      "hash": "78ba6d78aa5ccbec96c3106f49d25641a8bfd66f",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/BetterPingDisplay-Fabric-1.19.3-1.1.1.jar",
-      "hash": "013baa7d7ea3ce66faa62872b053340d4baaec97",
+      "path": "mods/BetterF3-3.0.0-Fabric-1.18.2.jar",
+      "hash": "0d8813aaad005f8eddbd11643d44af306cca04e3",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/Boat-Item-View-Fabric-1.19.3-0.0.4.jar",
-      "hash": "e2038bfdf70cfc1198d3e3f15927dc96142edbc8",
+      "path": "mods/BetterPingDisplay-Fabric-1.18.2-1.1.1.jar",
+      "hash": "56ddc966f0d0f2dcdc73480c8e0fb6b6349fde25",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/Bookshelf-Fabric-1.19.3-17.0.5.jar",
-      "hash": "2083dc8f9085631f412385712f2fffa4be16c9fc",
+      "path": "mods/Boat-Item-View-Fabric-1.18-0.0.3.jar",
+      "hash": "dc48a1b617ea555013aec9f4ceb02b84c68994fe",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/clear-skies-fabric-mc119-2.0.96.jar",
-      "hash": "1f3cf1b19fff0c1606e6e4c3d39aeb57b8e6ffcc",
+      "path": "mods/Bookshelf-Fabric-1.18.2-13.2.52.jar",
+      "hash": "75619e9e66cb1332d605f3a3fbb59559045637b7",
       "force": true,
       "type": "addon"
     },
@@ -238,74 +508,74 @@
       "type": "addon"
     },
     {
-      "path": "mods/cloth-config-9.0.94-fabric.jar",
-      "hash": "9b218b97186b75e5701b343dddfea1081d8ba48d",
+      "path": "mods/cloth-config-6.4.90-fabric.jar",
+      "hash": "4c88bab53b54736e87776b2b1c13343a70d43114",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/continuity-3.0.0-beta.21.19.3.jar",
-      "hash": "229057727abf35e0469527b94d84d96e1770c156",
+      "path": "mods/continuity-2.0.1+1.18.2.jar",
+      "hash": "0ccc70d5e03526597558829bffba2ff3bf5db5c4",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/Controlling-fabric-1.19.3-10.0+9.jar",
-      "hash": "b7ba865efdaa0b461afa05cb46b8e92ba537f8bb",
+      "path": "mods/Controlling-forge-1.18.2-9.0+22.jar",
+      "hash": "f30cc2d7e8568720272619b42f45950704ef1daa",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/custom-lan-1.19.3-v2.2.1.jar",
-      "hash": "5c1734bfb397eed46c39f357dd77aa8b0bc06176",
+      "path": "mods/custom-lan-1.18.2-v2.0.1.jar",
+      "hash": "462fcfde03b819921250bf411bb6cde5763c7a8c",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/CustomSkinLoader_Fabric-14.15.2.jar",
-      "hash": "73a4dd111c6d0d4ccf1069891fd0fd179c265aed",
+      "path": "mods/CustomWindowTitle-Fabric-1.17.1+v1.1.1.jar",
+      "hash": "37a7b22dd075b1478a81cdc379900d1f9b19d326",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/Debugify-1.19.3+1.1.jar",
-      "hash": "d7f9cbf11bb36ef360de2b898a5a5e224eaef9e3",
+      "path": "mods/debugify-1.11.0-fabric-1.18.2.jar",
+      "hash": "c1722e40c0592204e3664c482be3533fc185e578",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/DisableCustomWorldsAdvice-3.0.jar",
-      "hash": "99e87f4cb9a1cd2c3f7ce635b5db73e0f03e141c",
+      "path": "mods/DisableCustomWorldsAdvice-2.0.jar",
+      "hash": "3fd1adc79c42da6a7592c5d1c7fa413917782d86",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/dynamic-fps-2.2.0.jar",
-      "hash": "8d264374dc08df87777fb51b94c781476c315bb5",
+      "path": "mods/dynamic-fps-2.1.0.jar",
+      "hash": "d4ffc71b2f0ea01b9a6242c23faace5cdc72d947",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/emi-0.6.6+1.19.3.jar",
-      "hash": "5cc6e5c3eca13adca9c0624485971b24e1e6c2d3",
+      "path": "mods/emi-0.6.6+1.18.2.jar",
+      "hash": "6e388cb3da1b2ffebd3562f4bf388a207e04d625",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/EnchantmentDescriptions-Fabric-1.19.3-14.0.6.jar",
-      "hash": "c45edbb5ddd76f12c5d53fb3fbef36eb04cea3c5",
+      "path": "mods/EnchantmentDescriptions-Fabric-1.18.2-10.0.12.jar",
+      "hash": "bc3dad71b4570f3a67e23dc2907764203aa2cad7",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/entityculling-fabric-1.6.1-mc1.19.3.jar",
-      "hash": "9d289e59681072d0caeae8fefbd164872a82d856",
+      "path": "mods/entityculling-fabric-1.6.1-mc1.18.2.jar",
+      "hash": "b0822232e9d7bdd5d084ebcf40e8ce9b37a96734",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/fabric-api-0.75.1+1.19.3.jar",
-      "hash": "f38287aa33a6eb509cfc8658e721110f90fc440f",
+      "path": "mods/fabric-api-0.75.1+1.18.2.jar",
+      "hash": "f84b5b8c851c18f2dd3f9248c86cd0aa1fa7b494",
       "force": true,
       "type": "addon"
     },
@@ -316,38 +586,44 @@
       "type": "addon"
     },
     {
-      "path": "mods/fabricskyboxes-0.6.2+mc1.19.3.jar",
-      "hash": "9e06cd799ce67d9775329eb615765e0b81f93015",
+      "path": "mods/fabric-title-changer-1.0.6.jar.disabled",
+      "hash": "2139a4e1e60dfcc2ab768c4603f88f2fea0e3f36",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/ferritecore-5.1.0-fabric.jar",
-      "hash": "4c45e0e8981374d6c98304c3de90e813eb930673",
+      "path": "mods/fabricskyboxes-0.6.2+mc1.18.2.jar",
+      "hash": "cf0c8bd1c71803c9469b953b7442b6d3cd0ef4d5",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/Gamma-Utils-1.6.13-mc1.19.3.jar",
-      "hash": "6dbd88d8c99a13d61712509dc83e4a8dabd32cf0",
+      "path": "mods/ferritecore-4.2.1-fabric.jar",
+      "hash": "d5d047374981d614c2a53422be751dc1491f9cd0",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/graphutil-fabric-1.0.0-mc1.19.3.jar",
-      "hash": "1467d640d5e335fc7401da643bdb41b819d1eef0",
+      "path": "mods/Gamma-Utils-1.5.8-mc1.18.2.jar",
+      "hash": "267fecc7d179f1b81fc70ccc58ef15fe00755e8a",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/held-item-info-1.4.2.jar",
-      "hash": "0d1071506adfaa1ac108d3bb52f8bcb66838a982",
+      "path": "mods/graphutil-fabric-1.0.0-mc1.18.2.jar",
+      "hash": "0243e36ab126f20c1e06742eff1b2c98bf793c75",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/horse-stats-vanilla-4.2.2.jar",
-      "hash": "400bc9a26c778f0b97447890fad262c4758810a9",
+      "path": "mods/held-item-info-1.4.2+1.18.jar",
+      "hash": "c540231f4aac4a4616d9d97c41e7a06266e7c34c",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "mods/horse-stats-vanilla-4.1.10.jar",
+      "hash": "e97f794981653c11c1c43a738aed20438b1e5ae1",
       "force": true,
       "type": "addon"
     },
@@ -364,98 +640,92 @@
       "type": "addon"
     },
     {
-      "path": "mods/ImmediatelyFast-1.1.9+1.19.3.jar",
-      "hash": "8d3743d3f670981079fd0e61f30322dfa6f73876",
+      "path": "mods/ImmediatelyFast-1.1.9+1.18.2.jar",
+      "hash": "e12e37dbed576c365f9a2a60ef0e96006fabb55e",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/indium-1.0.14+mc1.19.3.jar",
-      "hash": "6dbdca98673403365e87a940f9e7a2a631fa7c30",
+      "path": "mods/indium-1.0.7+mc1.18.2.jar",
+      "hash": "5f5e0910181572f844171ed4f2f11e23f3c68af6",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/inspecio-1.7.0+1.19.3.jar",
-      "hash": "4e2b3f13daa5f5414f630cf20e023fdecd06fd08",
+      "path": "mods/inspecio-1.4.1+1.18.jar",
+      "hash": "886b2d77f495b8725dbd8557fcb6437227e354f9",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/InventoryProfilesNext-fabric-1.19.3-1.9.2.jar",
-      "hash": "56a9048c9d5a55bd11c9f501c048180b2f63eee3",
+      "path": "mods/InventoryProfilesNext-fabric-1.18.2-1.9.2.jar",
+      "hash": "dfb1662d36cc3e4d6e159bbf70bdb93a9df92717",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/iris-mc1.19.3-1.5.2.jar",
-      "hash": "b6404f241552c4ff296ee867f95b4229495ca35c",
+      "path": "mods/iris-mc1.18.2-1.5.2.jar",
+      "hash": "6f45ff61ff914ab42815c903c1937d108cacd625",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/krypton-0.2.1.jar",
-      "hash": "ebf02e469c028ea9e548401cacbb62e434874c08",
+      "path": "mods/krypton-0.1.9.jar",
+      "hash": "466a8a26949497a3b11886a788e6e156a8b03d24",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/lambdynamiclights-2.2.0+1.19.3.jar",
-      "hash": "99d55d20f77cf13221601a109b35371563975187",
+      "path": "mods/lambdynamiclights-2.1.0+1.17.jar",
+      "hash": "5f1f59c0ff6d54fc7ec1d42eb347a2f6987d234c",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/lazydfu-0.1.3.jar",
-      "hash": "0dfa8b03ed408fb7fdada29e01cfebba02af1049",
+      "path": "mods/lazydfu-0.1.2.jar",
+      "hash": "2efec5781f1271bdcdae462eee402ccb97bff6fe",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/libIPN-fabric-1.19.3-2.0.2.jar",
-      "hash": "1740cf574546a60eacef4d9b85f83d5b54567e17",
+      "path": "mods/libIPN-fabric-1.18.2-2.0.2.jar",
+      "hash": "eb0f678716c60a66b588ab833c7b465a4dafb6e2",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/light-overlay-7.0.2.jar",
-      "hash": "92642401c8abcbd6a9957bf097859b6c38e0241a",
+      "path": "mods/light-overlay-6.0.5.jar",
+      "hash": "1c4e17e1557978bb9321cdcf449329a3cd13cfd6",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/LinsAPI-1.4.jar",
-      "hash": "e12e6267e67404bb6ed4f0fb64e529664f69979c",
+      "path": "mods/lithium-fabric-mc1.18.2-0.10.3.jar",
+      "hash": "d47d223403bbc4d14748141cdddc4beeb451fe4e",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/lithium-fabric-mc1.19.3-0.10.4.jar",
-      "hash": "a1b521e18f7857a2fd327c7bebeed3128418e3c9",
+      "path": "mods/malilib-fabric-1.18.2-0.12.1.jar",
+      "hash": "a810cf1f28751ac2681ab94a1f00b58c49884649",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/malilib-fabric-1.19.3-0.14.0.jar",
-      "hash": "a46313e2c551c52005d6dc7eef7c53adf4c483f5",
+      "path": "mods/mcwifipnp-1.6.2-1.18.2-fabric.jar",
+      "hash": "f84854812c5a9f5dda1039e936aa9051c99ea1b8",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/mcwifipnp-1.6.3-1.19.3-fabric.jar",
-      "hash": "251b759f911a8b7961f9bdc3ac141c53bab1261d",
+      "path": "mods/memoryleakfix-1.18.2-0.7.0.jar",
+      "hash": "fa27ac9b26a78772b36cb879809302900c3a5185",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/memoryleakfix-1.19.3-0.7.0.jar",
-      "hash": "9fae1093c64b47d6b97ee825ed3d9b725490700c",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "mods/minihud-fabric-1.19.3-0.25.0.jar",
-      "hash": "524126044127da79d2d66ddcd498a7ca35771ddc",
+      "path": "mods/minihud-fabric-1.18.2-0.22.1.jar",
+      "hash": "b8101d801f8625b03d61707997b3a27197375785",
       "force": true,
       "type": "addon"
     },
@@ -466,20 +736,20 @@
       "type": "addon"
     },
     {
-      "path": "mods/modelfix-1.10-fabric.jar",
-      "hash": "fd52ec87add371140066fc3ae95d68c83f8a6ee5",
+      "path": "mods/modelfix-1.8.jar",
+      "hash": "ef1882c6244ffb09fed6251b647dec1ffebdca4f",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/modmenu-5.1.0-beta.4.jar",
-      "hash": "d259056e4c63fd3b60e9a006bc2b7e6e7f784114",
+      "path": "mods/modmenu-3.2.5.jar",
+      "hash": "00ddc85a2bc6f58ca57b1a53bdd74ec5cbbaa21e",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/moreculling-1.19.3-0.16.0.jar",
-      "hash": "79840c76a3d3b5ecccde00462e3a129316e38c02",
+      "path": "mods/moreculling-1.18.2-0.8.2.jar",
+      "hash": "dea034de00f8faefe9a57b74e733f1210c99e333",
       "force": true,
       "type": "addon"
     },
@@ -490,152 +760,146 @@
       "type": "addon"
     },
     {
-      "path": "mods/NoChatReports-FABRIC-1.19.3-v2.0.0.jar",
-      "hash": "2eaa80b4480ca6c0d8b1180fdb742ebcb43ac300",
+      "path": "mods/onsoulfire-1.18-3.jar",
+      "hash": "ea6a5d855b6c96723137f67adf2aace15f02f75d",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/onsoulfire-1.19-3.jar",
-      "hash": "32968a7b3eaffac511ae0a1edddbba5912f1c855",
+      "path": "mods/PetOwner-1.8.2-1.18-pre4+.jar",
+      "hash": "ba3375b661e056e8a52f516469926ba7cdd730ea",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/PetOwner-1.8.4-1.19.3+.jar",
-      "hash": "8eb9577fd408b461f18501f7e9ef34b4a63169e1",
+      "path": "mods/reeses_sodium_options-1.4.9+mc1.18.2-build.66.jar",
+      "hash": "c896ca9fe8bee67085d2700f003dc0739f453af9",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/reeses_sodium_options-1.4.9+mc1.19.2-build.67.jar",
-      "hash": "3b48ed460ce30c38e6058fdd0c3d6a221913e4e4",
+      "path": "mods/Smooth Swapping 0.6.1 (1.18.2)-0.6.1.jar",
+      "hash": "868c8684bf5803739948e79cff4adb68f37f482b",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/Smooth Swapping 0.6.1 (1.19.3)-0.6.1.jar",
-      "hash": "e27046c943ec441927c3218d921ac63b04ab20ef",
+      "path": "mods/smoothboot-fabric-1.18.2-1.7.0.jar",
+      "hash": "ef6c6d8838c529b4b072c446c050a03cdc43903b",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/smoothboot-fabric-1.19-1.7.1.jar",
-      "hash": "8414cbce145a5f48102e6cc811dfd1459afe44f3",
+      "path": "mods/sodium-extra-0.4.17+mc1.18.2-build.94.jar",
+      "hash": "23ec3846fb0de40978c6358d9117bb1363ab6829",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/sodium-extra-0.4.17+mc1.19.3-build.95.jar",
-      "hash": "9951496edb671104806a986c80fb55891829eb39",
+      "path": "mods/sodium-fabric-mc1.18.2-0.4.1+build.15.jar",
+      "hash": "f839863a6be7014b8d80058ea1f361521148d049",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/sodium-fabric-mc1.19.3-0.4.9+build.23.jar",
-      "hash": "14abd0a08804dc67ec6bc8a83d5062f806db6fc9",
+      "path": "mods/starlight-1.0.2+fabric.89b8d9f.jar",
+      "hash": "a436b72ee514bd2b59900159bcc4d461f96ef340",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/starlight-1.1.1+fabric.ae22326.jar",
-      "hash": "de6fe932555604345477db89b59d59249909c640",
+      "path": "mods/stendhal-1.3.4-1.18.x.jar",
+      "hash": "a78ca8fa99868d4c9ffb61f58debb874cbbd8177",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/stendhal-1.3.5-1.19.3.jar",
-      "hash": "96d79f14c2ed7b3467221f4c1555ef841ed6e5d2",
+      "path": "mods/titlefixer-1.0+1.18.jar",
+      "hash": "42419463f12c0460e8a0bbb7ed668be2500ee19a",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/TitleChanger-1.7.1.jar",
-      "hash": "1d50082735078cb97993afed2d70a034f3324d57",
+      "path": "mods/tweakermore-mc1.18.2-v3.9.2.jar",
+      "hash": "2d0291ad189388abc5922c6498c713a532f59d9c",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/titlefixer-1.0+1.19.3.jar",
-      "hash": "729a49ff6856b22cb7c60e47f9eb41b7060fd9d1",
+      "path": "mods/tweakeroo-fabric-1.18.2-0.13.3.jar",
+      "hash": "86b73189a898f8618f7534bef7c4e2a0facb160d",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/tweakermore-mc1.19.3-v3.9.2.jar",
-      "hash": "d791a63a69957c2da92e885d3464f6b69a9e9c92",
+      "path": "mods/viafabric-0.4.9+27-dev.jar",
+      "hash": "de4bbcf29bc972a79bf61946cea9a91829ebccdb",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/tweakeroo-fabric-1.19.3-0.15.0.jar",
-      "hash": "abf4fef22ab4b1d1b9d34743933b92bcf03ea162",
+      "path": "mods/wthit-fabric-4.13.6.jar",
+      "hash": "7185ae61a011eeb63895b03e2bb6099a1c7f53bd",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/viafabric-0.4.9+23-main.jar",
-      "hash": "7442e3eceff8b680e532379f71543400c42fd492",
+      "path": "mods/wthit-plugins-1.0.6+1.18.2.jar",
+      "hash": "8e00dc59232ff0d8e620ac0209dc5a9459b19366",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/wthit-fabric-6.1.4.jar",
-      "hash": "53e1869fc6d980e2cc57d9425f35cad652ccc63e",
+      "path": "mods/XaerosWorldMap_1.28.9_Fabric_1.18.2.jar",
+      "hash": "ed4e068c5e1ca5bee55e4e439e9539f8b9bebdab",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/wthit-plugins-1.0.6+1.19.jar",
-      "hash": "b9c3df6da3d5cecb8157425c7322356f1a8af887",
+      "path": "mods/Xaeros_Minimap_23.1.0_Fabric_1.18.2.jar",
+      "hash": "5f78e4ded3b758b76a02fdccdc6afd5e971e530e",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/XaerosWorldMap_1.28.9_Fabric_1.19.3.jar",
-      "hash": "f6e7261f32eba7a0af469656c21b03cc7ef18c23",
+      "path": "mods/Zoomify-1.6.0+build.2.jar",
+      "hash": "6405f994d1760de132b8ee2c7697f8f60aa7cfe0",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/Xaeros_Minimap_23.1.0_Fabric_1.19.3.jar",
-      "hash": "3703941ec8489edc0e3c2d196048240990a50700",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "mods/YetAnotherConfigLib-2.2.0.jar",
-      "hash": "62158cf974075dfd896540191e4ae108e6ec67b3",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "mods/Zoomify-2.9.2.jar",
-      "hash": "b8a3c3df58b696f0c3a03d9a7fcff4ed81c5ef57",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "mods/[fabric-1.19.3]AllMusic-2.6.5.jar",
-      "hash": "8c96cdbfa2e1c88a76706f3607c14e9bd2cee936",
+      "path": "mods/[fabric-1.18.2]AllMusic-2.6.5.jar",
+      "hash": "59be698eb4d19bba1e17b61837d1d1ce3058252b",
       "force": true,
       "type": "addon"
     },
     {
       "path": "options.txt",
-      "hash": "0200d6ec30a6783aec124bd3fc2541d8a20795c1",
+      "hash": "f5854aa65091102a60ab24c16963b3910f3718e0",
       "force": true,
       "type": "addon"
     },
     {
       "path": "resourcepacks/Arcomua Transition 230224.zip",
-      "hash": "92034a2a19f935affc7abac40cb0b457d2f964b9",
+      "hash": "d31e1e255b1bc87377d889359bc4fd6544126ea9",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "resourcepacks/Minecraft-Mod-Language-Modpack-1-18-Fabric.zip",
+      "hash": "e698834e8fd4ff8f71befbeec38bc2cf49179201",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "resourcepacks/Minecraft-Mod-Language-Modpack-Converted-12.zip",
+      "hash": "f34b76c2c27346c74df12eb512076668766194b2",
       "force": true,
       "type": "addon"
     },
     {
       "path": "resourcepacks/No Cave Ambience 1.19.3.zip",
-      "hash": "da47f0c85fddfe34298be2eb8c7c158f24ad2302",
+      "hash": "08df64f3a580b78ceb9e641d4220e1c23595143a",
       "force": true,
       "type": "addon"
     },
@@ -647,7 +911,7 @@
     },
     {
       "path": "shaderpacks/ComplementaryReimagined_r1.4.zip.txt",
-      "hash": "abbaaf6fa75a0c4d4439c3543c514aa1fb7ce7c2",
+      "hash": "a0fa46af12962897085b0c4a191d9fc9b506fbfd",
       "force": true,
       "type": "addon"
     }
