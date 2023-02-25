@@ -35,10 +35,10 @@ graphicsMode:1
 ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
-renderClouds:false
-resourcePacks:["vanilla","file/Arcomua Transition 230224.zip","file/No Cave Ambience 1.19.3.zip","file/Minecraft-Mod-Language-Modpack-1-18-Fabric.zip"]
+renderClouds:true
+resourcePacks:["vanilla","file/Arcomua Transition 230224.zip","file/No Cave Ambience 1.18.2.zip","file/Minecraft-Mod-Language-Modpack-1-18-Fabric.zip"]
 incompatibleResourcePacks:[]
-lastServer:mc.calibur.tv
+lastServer:
 lang:zh_cn
 soundDevice:""
 chatVisibility:0
