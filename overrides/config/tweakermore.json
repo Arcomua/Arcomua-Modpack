@@ -1,0 +1,963 @@
+{
+  "Generic": {
+    "autoFillContainerThreshold": 2,
+    "infoViewBeamAngle": 40.0,
+    "infoViewTargetDistance": 8.0,
+    "infoViewCommandBlockMaxWidth": 200,
+    "infoViewCommandBlockTextScale": 1.0,
+    "infoViewRedstoneDustUpdateOrderTextAlpha": 0.8,
+    "infoViewRespawnBlockExplosionTextAlpha": 0.8,
+    "safeAfkHealthThreshold": 10.0,
+    "tweakmContainerProcessorHintPos": "top_right",
+    "tweakmContainerProcessorHintScale": 1.0,
+    "tweakmSchematicBlockPlacementRestrictionMargin": 2,
+    "tweakmSchematicBlockPlacementRestrictionStrict": true,
+    "villagerOfferUsesDisplay": false,
+    "bossBarMaxEntry": -1,
+    "bossBarScale": 1.0,
+    "chatMessageLimit": 100,
+    "connectionSimulatedDelay": 0,
+    "daytimeOverrideValue": 0,
+    "flyDrag": 0.09,
+    "legacyF3NLogic": false,
+    "maxChatHudHeight": 160,
+    "netherPortalSoundChance": 0.01,
+    "playerSkinBlockingLoading": false,
+    "scoreboardSideBarScale": 1.0,
+    "shulkerTooltipEnchantmentHint": false,
+    "shulkerTooltipFillLevelHint": false,
+    "shulkerTooltipHintLengthLimit": 120,
+    "shulkerTooltipPotionInfoHint": false,
+    "signMultilinePasteSupport": false,
+    "spectatorTeleportMenuIncludeSpectator": false,
+    "applyTweakerMoreOptionLabelGlobally": false,
+    "eCraftItemScrollerCompact": false,
+    "eprHideOnDebugHud": false,
+    "lmOriginOverride000": false,
+    "minihudDisableLightOverlaySpawnCheck": false,
+    "ofRemoveSignTextRenderDistance": false,
+    "ofRemoveItemFrameItemRenderDistance": false,
+    "ofUnlockF3FpsLimit": false,
+    "ofUseVanillaBrightnessCache": false,
+    "replayFlySpeedLimitMultiplier": 1,
+    "replayAccurateTimelineTimestamp": false,
+    "serverDataSyncerQueryInterval": 1,
+    "serverDataSyncerQueryLimit": 512,
+    "shaderGameTimeAsWorldTime": false,
+    "xmapNoSessionFinalizationWait": false,
+    "lmPickBlockShulkersPorting": false,
+    "hideDisabledOptions": false,
+    "preserveConfigUnknownEntries": true,
+    "tweakerMoreDebugBool": false,
+    "tweakerMoreDebugDouble": 0.0,
+    "tweakerMoreDebugInt": 0
+  },
+  "GenericHotkeys": {
+    "copySignTextToClipBoard": {
+      "keys": ""
+    },
+    "creativePickBlockWithState": {
+      "keys": "LEFT_ALT",
+      "enabled": false
+    },
+    "infoViewRenderingKey": {
+      "keys": "RIGHT_ALT"
+    },
+    "refreshInventory": {
+      "keys": ""
+    },
+    "openTweakerMoreConfigGui": {
+      "keys": "K,C"
+    },
+    "tweakerMoreDebugResetOptionStatistic": {
+      "keys": ""
+    }
+  },
+  "Lists": {
+    "infoViewCommandBlockRenderStrategy": "hotkey_held",
+    "infoViewCommandBlockTargetStrategy": "pointed",
+    "infoViewRedstoneDustUpdateOrderRenderStrategy": "hotkey_held",
+    "infoViewRespawnBlockExplosionRenderStrategy": "always",
+    "infoViewRespawnBlockExplosionTargetStrategy": "beam",
+    "serverMsptMetricsStatisticType": {
+      "value": "game_tick",
+      "keybind": ""
+    },
+    "tweakmAutoCleanContainerListType": "none",
+    "tweakmAutoCleanContainerWhiteList": [
+      "minecraft:shulker_box"
+    ],
+    "tweakmAutoCleanContainerBlackList": [
+      "minecraft:shulker_box"
+    ],
+    "tweakmSchematicBlockPlacementRestrictionHint": "all",
+    "tweakmSchematicBlockPlacementRestrictionItemWhitelist": [],
+    "playerNameTagRenderStrategyList": [],
+    "playerNameTagRenderStrategyType": "none",
+    "prioritizedCommandSuggestions": [],
+    "weatherOverrideValue": "clear",
+    "handRestockListType": "none",
+    "handRestockWhiteList": [
+      "minecraft:bucket"
+    ],
+    "handRestockBlackList": [
+      "minecraft:lava_bucket"
+    ],
+    "ofWitchHat": {
+      "value": "untouched",
+      "keybind": ""
+    }
+  },
+  "TweakToggles": {
+    "infoViewCommandBlock": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "infoViewRedstoneDustUpdateOrder": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "infoViewRespawnBlockExplosion": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmAutoCleanContainer": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmAutoCollectMaterialListItem": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmAutoFillContainer": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmAutoPickSchematicBlock": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmAutoPutBackExistedItem": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmAutoVillagerTradeFavorites": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmContainerProcessorHint": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmInfoView": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmSchematicProPlace": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmSafeAfk": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmSchematicBlockPlacementRestriction": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmSchematicBlockPlacementRestrictionCheckFacing": {
+      "enabled": true,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmSchematicBlockPlacementRestrictionCheckSlab": {
+      "enabled": true,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmDaytimeOverride": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmFakeNightVision": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmFlawlessFrames": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmUnlimitedBlockEntityRenderDistance": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmUnlimitedEntityRenderDistance": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakmWeatherOverride": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "serverDataSyncer": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tweakerMoreDebugMode": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    }
+  },
+  "TweakHotkeys": {
+    "infoViewCommandBlock": {
+      "keys": ""
+    },
+    "infoViewRedstoneDustUpdateOrder": {
+      "keys": ""
+    },
+    "infoViewRespawnBlockExplosion": {
+      "keys": ""
+    },
+    "tweakmAutoCleanContainer": {
+      "keys": ""
+    },
+    "tweakmAutoCollectMaterialListItem": {
+      "keys": ""
+    },
+    "tweakmAutoFillContainer": {
+      "keys": ""
+    },
+    "tweakmAutoPickSchematicBlock": {
+      "keys": ""
+    },
+    "tweakmAutoPutBackExistedItem": {
+      "keys": ""
+    },
+    "tweakmAutoVillagerTradeFavorites": {
+      "keys": ""
+    },
+    "tweakmContainerProcessorHint": {
+      "keys": ""
+    },
+    "tweakmInfoView": {
+      "keys": ""
+    },
+    "tweakmSchematicProPlace": {
+      "keys": ""
+    },
+    "tweakmSafeAfk": {
+      "keys": ""
+    },
+    "tweakmSchematicBlockPlacementRestriction": {
+      "keys": ""
+    },
+    "tweakmSchematicBlockPlacementRestrictionCheckFacing": {
+      "keys": ""
+    },
+    "tweakmSchematicBlockPlacementRestrictionCheckSlab": {
+      "keys": ""
+    },
+    "tweakmDaytimeOverride": {
+      "keys": ""
+    },
+    "tweakmFakeNightVision": {
+      "keys": ""
+    },
+    "tweakmFlawlessFrames": {
+      "keys": ""
+    },
+    "tweakmUnlimitedBlockEntityRenderDistance": {
+      "keys": ""
+    },
+    "tweakmUnlimitedEntityRenderDistance": {
+      "keys": ""
+    },
+    "tweakmWeatherOverride": {
+      "keys": ""
+    },
+    "serverDataSyncer": {
+      "keys": ""
+    },
+    "tweakerMoreDebugMode": {
+      "keys": ""
+    }
+  },
+  "DisableToggles": {
+    "disableBeaconBeamRendering": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableCameraFrustumCulling": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableCameraSubmersionFog": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableCreativeFlyClimbingCheck": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableDarkSkyRendering": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableEntityModelRendering": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableEntityRenderInterpolation": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableHorizonShadingRendering": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableLightUpdates": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disablePistonBlockBreakingParticle": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableRedstoneParticle": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableSignTextLengthLimit": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableSlimeBlockBouncing": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "disableVignetteDarkness": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "tkrDisableNauseaEffectPorting": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    }
+  },
+  "DisableHotkeys": {
+    "disableBeaconBeamRendering": {
+      "keys": ""
+    },
+    "disableCameraFrustumCulling": {
+      "keys": ""
+    },
+    "disableCameraSubmersionFog": {
+      "keys": ""
+    },
+    "disableCreativeFlyClimbingCheck": {
+      "keys": ""
+    },
+    "disableDarkSkyRendering": {
+      "keys": ""
+    },
+    "disableEntityModelRendering": {
+      "keys": ""
+    },
+    "disableEntityRenderInterpolation": {
+      "keys": ""
+    },
+    "disableHorizonShadingRendering": {
+      "keys": ""
+    },
+    "disableLightUpdates": {
+      "keys": ""
+    },
+    "disablePistonBlockBreakingParticle": {
+      "keys": ""
+    },
+    "disableRedstoneParticle": {
+      "keys": ""
+    },
+    "disableSignTextLengthLimit": {
+      "keys": ""
+    },
+    "disableSlimeBlockBouncing": {
+      "keys": ""
+    },
+    "disableVignetteDarkness": {
+      "keys": ""
+    },
+    "tkrDisableNauseaEffectPorting": {
+      "keys": ""
+    }
+  },
+  "Fixes": {
+    "fixChestMirroring": false,
+    "fixHoverTextScale": false,
+    "isScrollStacksFallbackFixPorting": false
+  },
+  "internal": {
+    "configGui": {
+      "category": "ALL",
+      "sortingStrategy": "ALPHABET"
+    },
+    "configStatistic": {
+      "autoFillContainerThreshold": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "copySignTextToClipBoard": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "creativePickBlockWithState": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewBeamAngle": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewTargetDistance": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewRenderingKey": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewCommandBlock": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewCommandBlockMaxWidth": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewCommandBlockRenderStrategy": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewCommandBlockTargetStrategy": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewCommandBlockTextScale": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewRedstoneDustUpdateOrder": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewRedstoneDustUpdateOrderRenderStrategy": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewRedstoneDustUpdateOrderTextAlpha": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewRespawnBlockExplosion": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewRespawnBlockExplosionTextAlpha": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewRespawnBlockExplosionRenderStrategy": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoViewRespawnBlockExplosionTargetStrategy": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "refreshInventory": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "safeAfkHealthThreshold": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "serverMsptMetricsStatisticType": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoCleanContainer": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoCleanContainerListType": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoCleanContainerWhiteList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoCleanContainerBlackList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoCollectMaterialListItem": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoFillContainer": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoPickSchematicBlock": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoPutBackExistedItem": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmAutoVillagerTradeFavorites": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmContainerProcessorHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmContainerProcessorHintPos": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmContainerProcessorHintScale": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmInfoView": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSchematicProPlace": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSafeAfk": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSchematicBlockPlacementRestriction": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSchematicBlockPlacementRestrictionHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSchematicBlockPlacementRestrictionItemWhitelist": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSchematicBlockPlacementRestrictionMargin": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSchematicBlockPlacementRestrictionCheckFacing": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSchematicBlockPlacementRestrictionCheckSlab": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmSchematicBlockPlacementRestrictionStrict": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "villagerOfferUsesDisplay": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "bossBarMaxEntry": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "bossBarScale": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "chatMessageLimit": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "connectionSimulatedDelay": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "daytimeOverrideValue": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableBeaconBeamRendering": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableCameraFrustumCulling": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableCameraSubmersionFog": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableCreativeFlyClimbingCheck": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableDarkSkyRendering": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableEntityModelRendering": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableEntityRenderInterpolation": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableHorizonShadingRendering": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableLightUpdates": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disablePistonBlockBreakingParticle": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableRedstoneParticle": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableSignTextLengthLimit": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableSlimeBlockBouncing": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "disableVignetteDarkness": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "fixChestMirroring": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "fixHoverTextScale": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "flyDrag": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "legacyF3NLogic": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "maxChatHudHeight": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "netherPortalSoundChance": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "playerNameTagRenderStrategyList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "playerNameTagRenderStrategyType": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "playerSkinBlockingLoading": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "prioritizedCommandSuggestions": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "scoreboardSideBarScale": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "shulkerTooltipEnchantmentHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "shulkerTooltipFillLevelHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "shulkerTooltipHintLengthLimit": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "shulkerTooltipPotionInfoHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "signMultilinePasteSupport": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "spectatorTeleportMenuIncludeSpectator": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmDaytimeOverride": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmFakeNightVision": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmFlawlessFrames": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmUnlimitedBlockEntityRenderDistance": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmUnlimitedEntityRenderDistance": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakmWeatherOverride": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "weatherOverrideValue": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "applyTweakerMoreOptionLabelGlobally": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "eCraftItemScrollerCompact": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "eprHideOnDebugHud": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "handRestockListType": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "handRestockWhiteList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "handRestockBlackList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "lmOriginOverride000": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "minihudDisableLightOverlaySpawnCheck": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "ofWitchHat": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "ofRemoveSignTextRenderDistance": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "ofRemoveItemFrameItemRenderDistance": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "ofUnlockF3FpsLimit": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "ofUseVanillaBrightnessCache": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "replayFlySpeedLimitMultiplier": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "replayAccurateTimelineTimestamp": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "serverDataSyncer": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "serverDataSyncerQueryInterval": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "serverDataSyncerQueryLimit": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "shaderGameTimeAsWorldTime": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "xmapNoSessionFinalizationWait": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "lmPickBlockShulkersPorting": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "isScrollStacksFallbackFixPorting": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tkrDisableNauseaEffectPorting": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "hideDisabledOptions": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "openTweakerMoreConfigGui": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "preserveConfigUnknownEntries": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakerMoreDebugMode": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakerMoreDebugBool": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakerMoreDebugDouble": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakerMoreDebugInt": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakerMoreDebugResetOptionStatistic": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakerMoreDevMixinAudit": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "tweakerMoreDevPrintDoc": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      }
+    }
+  }
+}
