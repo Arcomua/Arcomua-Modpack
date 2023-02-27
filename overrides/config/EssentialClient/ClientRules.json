@@ -1,0 +1,226 @@
+{
+  "betterAccurateBlockPlacement": {
+    "value": false,
+    "extras": null
+  },
+  "carpetAlwaysSetDefault": {
+    "value": false,
+    "extras": null
+  },
+  "chunkDebugMinimapBackground": {
+    "value": true,
+    "extras": null
+  },
+  "chunkDebugShowUnloadedChunks": {
+    "value": false,
+    "extras": null
+  },
+  "clientScriptAnnouncements": {
+    "value": true,
+    "extras": null
+  },
+  "commandAlternateDimension": {
+    "value": false,
+    "extras": null
+  },
+  "commandClientNick": {
+    "value": false,
+    "extras": null
+  },
+  "commandPlayerClient": {
+    "value": false,
+    "extras": null
+  },
+  "commandPlayerList": {
+    "value": false,
+    "extras": null
+  },
+  "commandRegion": {
+    "value": false,
+    "extras": null
+  },
+  "commandSuggesterIgnoresSpaces": {
+    "value": false,
+    "extras": null
+  },
+  "craftingHax": {
+    "value": false,
+    "extras": null
+  },
+  "disableBobViewWhenHurt": {
+    "value": false,
+    "extras": null
+  },
+  "disableBossBar": {
+    "value": false,
+    "extras": null
+  },
+  "disableHotbarScrolling": {
+    "value": false,
+    "extras": null
+  },
+  "disableJoinLeaveMessages": {
+    "value": false,
+    "extras": null
+  },
+  "disableMapRendering": {
+    "value": false,
+    "extras": null
+  },
+  "disableNameTags": {
+    "value": false,
+    "extras": null
+  },
+  "disableNarrator": {
+    "value": false,
+    "extras": null
+  },
+  "disableNightVisionFlash": {
+    "value": false,
+    "extras": null
+  },
+  "disableOpMessages": {
+    "value": false,
+    "extras": null
+  },
+  "disableRecipeNotifications": {
+    "value": false,
+    "extras": null
+  },
+  "disableScreenshotMessage": {
+    "value": false,
+    "extras": null
+  },
+  "disableTutorialNotifications": {
+    "value": false,
+    "extras": null
+  },
+  "displayTimePlayed": {
+    "value": false,
+    "extras": null
+  },
+  "essentialClientButton": {
+    "value": false,
+    "extras": null
+  },
+  "titleTextToTop": {
+    "value": false,
+    "extras": null
+  },
+  "highlightLavaSources": {
+    "value": false,
+    "extras": null
+  },
+  "highlightWaterSources": {
+    "value": false,
+    "extras": null
+  },
+  "increaseSpectatorScrollSpeed": {
+    "value": false,
+    "extras": null
+  },
+  "openScreenshotDirectory": {
+    "value": false,
+    "extras": null
+  },
+  "permanentChatHud": {
+    "value": false,
+    "extras": null
+  },
+  "quickLockRecipe": {
+    "value": false,
+    "extras": null
+  },
+  "removeWarnReceivedPassengers": {
+    "value": false,
+    "extras": null
+  },
+  "stackableShulkersInPlayerInventories": {
+    "value": false,
+    "extras": null
+  },
+  "stackableShulkersWithItems": {
+    "value": false,
+    "extras": null
+  },
+  "startSelectedScriptsOnJoin": {
+    "value": false,
+    "extras": null
+  },
+  "survivalInventoryInCreative": {
+    "value": false,
+    "extras": null
+  },
+  "toggleTab": {
+    "value": false,
+    "extras": null
+  },
+  "unlockAllRecipesOnJoin": {
+    "value": false,
+    "extras": null
+  },
+  "clientscriptDebugger": {
+    "value": false,
+    "extras": null
+  },
+  "announceAFK": {
+    "value": 0,
+    "extras": null
+  },
+  "afkLogout": {
+    "value": 0,
+    "extras": null
+  },
+  "autoWalk": {
+    "value": 0,
+    "extras": null
+  },
+  "increaseSpectatorScrollSensitivity": {
+    "value": 0,
+    "extras": null
+  },
+  "switchToTotem": {
+    "value": 0,
+    "extras": null
+  },
+  "permanentTime": {
+    "value": -1,
+    "extras": null
+  },
+  "overrideCreativeWalkSpeed": {
+    "value": 0.0,
+    "extras": null
+  },
+  "soulSpeedFovMultiplier": {
+    "value": 0.0,
+    "extras": null
+  },
+  "waterFovMultiplier": {
+    "value": 0.0,
+    "extras": null
+  },
+  "announceAFKMessage": {
+    "value": "I am now AFK",
+    "extras": null
+  },
+  "announceBackMessage": {
+    "value": "",
+    "extras": null
+  },
+  "clientScriptFont": {
+    "value": "Minecraft",
+    "extras": null
+  },
+  "customClientCape": {
+    "value": "None",
+    "extras": null
+  },
+  "disableArmourRendering": {
+    "value": "None",
+    "extras": null
+  },
+  "displayRuleType": {
+    "value": "Alphabetical",
+    "extras": null
+  }
+}

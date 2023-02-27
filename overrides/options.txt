@@ -36,11 +36,11 @@ ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:true
-resourcePacks:["vanilla","file/Arcomua Transition 230224.zip","file/No Cave Ambience 1.18.2.zip","file/Minecraft-Mod-Language-Modpack-1-18-Fabric.zip"]
+resourcePacks:["vanilla","file/No Cave Ambience 1.18.2.zip","Fabric Mods","bedrockwaters/resources","continuity/default","continuity/glass_pane_culling_fix"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:zh_cn
-soundDevice:""
+soundDevice:OpenAL Soft on 扬声器 (Conexant SmartAudio HD)
 chatVisibility:0
 chatOpacity:1.0
 chatLineSpacing:0.0
@@ -117,15 +117,15 @@ key_key.gamma_utils.gamma_toggle:key.keyboard.g
 key_key.gamma_utils.increase_gamma:key.keyboard.up
 key_key.gamma_utils.decrease_gamma:key.keyboard.down
 key_key.gamma_utils.night_vision_toggle:key.keyboard.h
+key_key.imblocker.switchIMEState:key.keyboard.f6
+key_key.jade.config:key.keyboard.keypad.0
+key_key.jade.show_overlay:key.keyboard.keypad.1
+key_key.jade.toggle_liquid:key.keyboard.keypad.2
+key_key.jade.show_recipes:key.keyboard.keypad.3
+key_key.jade.show_uses:key.keyboard.keypad.4
+key_key.jade.narrate:key.keyboard.keypad.5
 key_key.lightoverlay.enable_overlay:key.keyboard.f7
 key_key.modmenu.open_menu:key.keyboard.unknown
-key_key.petowner.hide:key.keyboard.unknown
-key_key.waila.config:key.keyboard.unknown
-key_key.waila.show_overlay:key.keyboard.unknown
-key_key.waila.toggle_liquid:key.keyboard.unknown
-key_key.waila.show_recipe_input:key.keyboard.unknown
-key_key.waila.show_recipe_output:key.keyboard.unknown
-key_key.wthit-plugins.show_author:key.keyboard.unknown
 key_gui.xaero_switch_waypoint_set:key.keyboard.unknown
 key_gui.xaero_instant_waypoint:key.keyboard.keypad.add
 key_gui.xaero_toggle_slime:key.keyboard.unknown

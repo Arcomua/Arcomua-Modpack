@@ -474,7 +474,7 @@
   },
   "internal": {
     "configGui": {
-      "category": "FEATURES",
+      "category": "ALL",
       "sortingStrategy": "ALPHABET"
     },
     "configStatistic": {

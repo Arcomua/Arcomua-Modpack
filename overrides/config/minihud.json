@@ -30,6 +30,7 @@
     "infoLookingAtBlockInChunk": 26,
     "infoLookingAtEntity": 23,
     "infoMemoryUsage": 0,
+    "infoMobCaps": 10,
     "infoLoadedChunksCount": 31,
     "infoParticleCount": 17,
     "infoPing": 36,
@@ -86,7 +87,7 @@
     "spawnRealOuterOverlayColor": "#309D581A",
     "spawnableColumnHeightsOverlayColor": "#A0FF00FF",
     "textBackgroundColor": "#A0505050",
-    "textColor": "#00FFFFFF"
+    "textColor": "#FCFCFCFF"
   },
   "Generic": {
     "axolotlTooltipsTooltips": false,
@@ -115,7 +116,7 @@
     "structuresRenderThrough": false,
     "useCustomizedCoordinateFormat": true,
     "useFontShadow": false,
-    "useTextBackground": false,
+    "useTextBackground": true,
     "mainRenderingToggle": {
       "enabled": true,
       "hotkey": {
@@ -144,8 +145,8 @@
     "biomeOverlayRangeVertical": 0,
     "blockGridOverlayRadius": 32,
     "coordinateFormat": "x: %.1f y: %.1f z: %.1f",
-    "dateFormatReal": "yyyy-MM-dd HH:mm:ss",
-    "dateFormatMinecraft": "MC time: (day {DAY}) {HOUR}:{MIN}:xx",
+    "dateFormatReal": "现实时间: yyyy-MM-dd HH:mm:ss",
+    "dateFormatMinecraft": "游戏时间: (第{DAY}天) {HOUR}:{MIN}",
     "fontScale": 1.0,
     "lightLevelMarkerSize": 0.84,
     "lightLevelNumberOffsetBlockX": 0.26,
@@ -160,7 +161,7 @@
     "slimeChunkOverlayRadius": -1,
     "spawnableColumnHeightsOverlayRadius": 40,
     "textPosX": 0,
-    "textPosY": 11,
+    "textPosY": 0,
     "timeDayDivisor": 24000,
     "timeTotalDivisor": 24000
   },
@@ -171,7 +172,7 @@
     "infoBlockBreakSpeed": false,
     "infoBlockInChunk": false,
     "infoBlockPosition": false,
-    "infoBlockProperties": false,
+    "infoBlockProperties": true,
     "infoChunkPosition": false,
     "infoChunkSections": false,
     "infoChunkSectionsLine": false,
@@ -186,15 +187,16 @@
     "infoEntityRegistryName": false,
     "infoFacing": false,
     "infoFurnaceXp": false,
-    "infoFPS": false,
+    "infoFPS": true,
     "infoHoneyLevel": false,
     "infoHorseSpeed": false,
     "infoHorseJump": false,
     "infoLightLevel": false,
-    "infoLookingAtBlock": false,
+    "infoLookingAtBlock": true,
     "infoLookingAtBlockInChunk": false,
     "infoLookingAtEntity": false,
     "infoMemoryUsage": false,
+    "infoMobCaps": false,
     "infoLoadedChunksCount": false,
     "infoParticleCount": false,
     "infoPing": false,
@@ -303,6 +305,9 @@
       "keys": ""
     },
     "infoMemoryUsage": {
+      "keys": ""
+    },
+    "infoMobCaps": {
       "keys": ""
     },
     "infoLoadedChunksCount": {

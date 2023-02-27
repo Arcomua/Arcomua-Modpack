@@ -1,0 +1,38 @@
+{
+  "Accurate Reverse": {
+    "keys": [],
+    "canUseInGui": false
+  },
+  "Accurate Into": {
+    "keys": [],
+    "canUseInGui": false
+  },
+  "Toggle Selected Scripts": {
+    "keys": [],
+    "canUseInGui": false
+  },
+  "Stop Selected Scripts": {
+    "keys": [],
+    "canUseInGui": false
+  },
+  "Open Essential Client Menu": {
+    "keys": [],
+    "canUseInGui": false
+  },
+  "Open Client Script": {
+    "keys": [],
+    "canUseInGui": false
+  },
+  "Open Chunk Debug": {
+    "keys": [
+      "key.keyboard.f6"
+    ],
+    "canUseInGui": false
+  },
+  "Toggle Debug Menu": {
+    "keys": [
+      "key.keyboard.f3"
+    ],
+    "canUseInGui": false
+  }
+}
