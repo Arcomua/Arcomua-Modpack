@@ -2,14 +2,14 @@
   "main_menu": {
     "top_left": [],
     "top_right": [],
-    "bottom_left": ["Arcomua Modpack 230226"],
+    "bottom_left": ["Arcomua Modpack 230307"],
     "bottom_right": ["Made with ❤ by Arcomua Modpack Team"],
     "mod_blacklist": []
   },
   "pause_menu": {
     "top_left": [],
     "top_right": [],
-    "bottom_left": ["Arcomua Modpack 230226"],
+    "bottom_left": ["Arcomua Modpack 230307"],
     "bottom_right": [],
     "mod_blacklist": []
   }

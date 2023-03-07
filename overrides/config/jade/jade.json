@@ -8,7 +8,7 @@
     "hideFromTabList": true,
     "enableTextToSpeech": false,
     "ttsMode": "PRESS",
-    "fluidMode": "ANY",
+    "fluidMode": "NONE",
     "reachDistance": 0.0,
     "debug": false,
     "itemModNameTooltip": false,

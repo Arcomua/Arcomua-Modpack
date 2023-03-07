@@ -38,7 +38,7 @@ ao:true
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:["vanilla","fabric","continuity:default","continuity:glass_pane_culling_fix","file/No Cave Ambience 1.19.3.zip"]
+resourcePacks:["vanilla","fabric","continuity:default","continuity:glass_pane_culling_fix","bedrockwaters:resources","file/Arcomua Transition 230307.zip","file/No Cave Ambience 1.19.3.zip"]
 incompatibleResourcePacks:[]
 lastServer:
 lang:zh_cn
@@ -102,7 +102,7 @@ key_key.fullscreen:key.keyboard.f11
 key_key.spectatorOutlines:key.keyboard.unknown
 key_key.swapOffhand:key.keyboard.f
 key_key.saveToolbarActivator:key.keyboard.unknown
-key_key.loadToolbarActivator:key.keyboard.x
+key_key.loadToolbarActivator:key.keyboard.unknown
 key_key.advancements:key.keyboard.l
 key_key.hotbar.1:key.keyboard.1
 key_key.hotbar.2:key.keyboard.2
@@ -113,9 +113,10 @@ key_key.hotbar.6:key.keyboard.6
 key_key.hotbar.7:key.keyboard.7
 key_key.hotbar.8:key.keyboard.8
 key_key.hotbar.9:key.keyboard.9
+key_bbor.key.toggleActive:key.keyboard.b
 key_key.dynamicfps.toggle_forced:key.keyboard.unknown
 key_key.dynamicfps.toggle_disabled:key.keyboard.unknown
-key_key.antighost.reveal:key.keyboard.v
+key_key.antighost.reveal:key.keyboard.unknown
 key_key.entityculling.toggle:key.keyboard.unknown
 key_key.fabricskyboxes.toggle:key.keyboard.unknown
 key_key.gamma_utils.gamma_toggle:key.keyboard.g
@@ -143,7 +144,7 @@ key_gui.xaero_enlarge_map:key.keyboard.z
 key_gui.xaero_waypoints_key:key.keyboard.u
 key_gui.xaero_zoom_in:key.keyboard.unknown
 key_gui.xaero_zoom_out:key.keyboard.unknown
-key_gui.xaero_new_waypoint:key.keyboard.b
+key_gui.xaero_new_waypoint:key.keyboard.unknown
 key_gui.xaero_display_all_sets:key.keyboard.unknown
 key_gui.xaero_toggle_light_overlay:key.keyboard.unknown
 key_gui.xaero_toggle_entity_radar:key.keyboard.unknown
