@@ -40,7 +40,6 @@
     "afterClickerClickCount": 1,
     "blockReachDistance": 4.5,
     "breakingGridSize": 3,
-    "customInventoryGuiScale": 2,
     "fastBlockPlacementCount": 2,
     "fastLeftClickCount": 10,
     "fastRightClickCount": 10,
@@ -342,12 +341,6 @@
         "keys": ""
       }
     },
-    "disableBossBar": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
     "disableBossFog": {
       "enabled": true,
       "hotkey": {
@@ -522,12 +515,6 @@
         "keys": ""
       }
     },
-    "disableSkyDarkness": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
     "disableSlimeBlockSlowdown": {
       "enabled": false,
       "hotkey": {
@@ -588,9 +575,6 @@
       "keys": ""
     },
     "disableDoubleTapSprint": {
-      "keys": ""
-    },
-    "disableBossBar": {
       "keys": ""
     },
     "disableBossFog": {
@@ -680,9 +664,6 @@
     "disableSignGui": {
       "keys": ""
     },
-    "disableSkyDarkness": {
-      "keys": ""
-    },
     "disableSlimeBlockSlowdown": {
       "keys": ""
     },
@@ -718,8 +699,9 @@
     "tweakChatPersistentText": false,
     "tweakChatTimestamp": false,
     "tweakCommandBlockExtraFields": false,
+    "tweakCreativeExtraItems": false,
+    "tweakCustomFlatPresets": false,
     "tweakCustomFlyDeceleration": false,
-    "tweakCustomInventoryScreenScale": false,
     "tweakElytraCamera": false,
     "tweakEntityTypeAttackRestriction": false,
     "tweakEmptyShulkerBoxesStack": false,
@@ -821,10 +803,13 @@
     "tweakCommandBlockExtraFields": {
       "keys": ""
     },
-    "tweakCustomFlyDeceleration": {
+    "tweakCreativeExtraItems": {
       "keys": ""
     },
-    "tweakCustomInventoryScreenScale": {
+    "tweakCustomFlatPresets": {
+      "keys": ""
+    },
+    "tweakCustomFlyDeceleration": {
       "keys": ""
     },
     "tweakElytraCamera": {

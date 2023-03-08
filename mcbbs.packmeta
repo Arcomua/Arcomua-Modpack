@@ -1,8 +1,8 @@
 {
   "manifestType": "minecraftModpack",
   "manifestVersion": 2,
-  "name": "1.18.2 Fabric - Arcomua Modpack [230227]",
-  "version": "230227",
+  "name": "1.18.2 Fabric - Arcomua Modpack [230308]",
+  "version": "230308",
   "author": "Arcomua Modpack Team",
   "description": "",
   "fileApi": "",
@@ -34,6 +34,12 @@
       "type": "addon"
     },
     {
+      "path": "config/BBOutlineReloaded.cfg",
+      "hash": "cf1fc434629698cd561825c1e65abc7e493569e2",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "config/betterf3.json",
       "hash": "53049a265ba32fb5578b0594fe00d7a96425a723",
       "force": true,
@@ -48,6 +54,12 @@
     {
       "path": "config/boatiview/client.toml",
       "hash": "c185dacbc9b54a55e495a2bb98a2276226bc9ab2",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/borderlessmining.json",
+      "hash": "023a57dd3546fa35b4d0b25147d234c20f69bbe0",
       "force": true,
       "type": "addon"
     },
@@ -101,7 +113,13 @@
     },
     {
       "path": "config/customwindowtitle-client.toml",
-      "hash": "c8a01da18cbcee1af5f7beaf451608870092116b",
+      "hash": "328242c460799caf38a88b5a66cb0b5edc92d203",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/dark-loading-screen.json",
+      "hash": "fb38f4832de4c788c2a7baad88af645012896c0e",
       "force": true,
       "type": "addon"
     },
@@ -203,7 +221,7 @@
     },
     {
       "path": "config/fabric/indigo-renderer.properties",
-      "hash": "5bdc5e85b27804351be5a783ca5427bd1edd8a4f",
+      "hash": "56e3bbf45dd947f870f42c951dc8c6e2ba7ef0e6",
       "force": true,
       "type": "addon"
     },
@@ -244,6 +262,12 @@
       "type": "addon"
     },
     {
+      "path": "config/idwtialsimmoedm.json",
+      "hash": "284618fb6b0a15d7aa84f1d5e2f58219fcdaf377",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "config/immediatelyfast.json",
       "hash": "6d5d53bf9ba03a64fd37c525a24f05fc75ac947d",
       "force": true,
@@ -251,7 +275,7 @@
     },
     {
       "path": "config/indium-renderer.properties",
-      "hash": "f90b8a8957399cb71f110bb9065a41a2a658cfab",
+      "hash": "320ee44e4acdd33c8a1a421466b196c80550019b",
       "force": true,
       "type": "addon"
     },
@@ -269,13 +293,13 @@
     },
     {
       "path": "config/iris.properties",
-      "hash": "60a0a5a6dec65b456489efc154ef4f04ff873fd3",
+      "hash": "1f7eae605c14106b7095208c70d2a30e9ae62da7",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/isxander-main-menu-credits.json",
-      "hash": "537e22d72f73361318d478527c62dd65a4e5f3ff",
+      "hash": "869645973f5bba564da4648dcf487e9774abde30",
       "force": true,
       "type": "addon"
     },
@@ -300,12 +324,6 @@
     {
       "path": "config/jade/sort-order.json",
       "hash": "9bd5a58e9b76ac7544b8f39f0a9904151caf3241",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/jade/usernamecache.json",
-      "hash": "19af25108e236bc92fc409d1286304b514f561f3",
       "force": true,
       "type": "addon"
     },
@@ -352,8 +370,20 @@
       "type": "addon"
     },
     {
+      "path": "config/litematica/litematica_mc.calibur.tv.json",
+      "hash": "af8ee9713b815975fe500bc58d13cd6424fb4895",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/litematica/litematica_mc.calibur.tv_dim_minecraft_overworld.json",
+      "hash": "408e491552f7aa897a2b033695c059f16a0e7d55",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "config/litematica.json",
-      "hash": "5dcabab488d35b827c302fb8bcc0b565f7f5672b",
+      "hash": "ab501e30a49cace77c83d80f48ba46bda718ac9c",
       "force": true,
       "type": "addon"
     },
@@ -412,8 +442,20 @@
       "type": "addon"
     },
     {
+      "path": "config/minihud/mc.calibur.tv.json",
+      "hash": "63334c29f8821e7373ea30d1056de2651da42a93",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/minihud/mc.calibur.tv_dim_minecraft_overworld.json",
+      "hash": "91ab74c432fadc78cc85ab32fc3dc6bac46e0abe",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "config/minihud.json",
-      "hash": "500b406647e240dd937dc1f3538f3c4ba46b6f9a",
+      "hash": "cef2814d11909ccd0bcce445fa2cafff053225b4",
       "force": true,
       "type": "addon"
     },
@@ -539,7 +581,7 @@
     },
     {
       "path": "config/tweakeroo.json",
-      "hash": "3ce696a5084695ca540eebcc791217645c3c1f70",
+      "hash": "e98bb9d61d2d7ab5c6294ed0362e1c22898afbbd",
       "force": true,
       "type": "addon"
     },
@@ -557,13 +599,13 @@
     },
     {
       "path": "config/xaerominimap.txt",
-      "hash": "6eb0ed1639b8044c26f261028b8dd0cbcb92a187",
+      "hash": "f9ca1e6947aab90cd90e6b25a74ab22b3405fd29",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/xaerominimap_entities.json",
-      "hash": "14abb0ad66b0fdb549b859a4eef58ceae44cefb6",
+      "hash": "02c34c9fade852a7cd4493a6fa7aba90d97aa8d5",
       "force": true,
       "type": "addon"
     },
@@ -582,12 +624,6 @@
     {
       "path": "config/zoomify.json",
       "hash": "2dfd2983ba58b09181991e26ee8506068180d2ff",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "hmclversion.cfg",
-      "hash": "fc819b491293ba0bb0e6d4bb8c6d63343caf3161",
       "force": true,
       "type": "addon"
     },
@@ -634,6 +670,12 @@
       "type": "addon"
     },
     {
+      "path": "mods/BBOutlineReloaded-2.6-1.18.2-fabric.jar",
+      "hash": "20750cb4ceb70100973517b800cf767babab7d96",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "mods/bedrockwaters-1.6.2+1.18.2.jar",
       "hash": "7dd5d2c1dca866bc743419429d918ea89b98fd97",
       "force": true,
@@ -658,8 +700,8 @@
       "type": "addon"
     },
     {
-      "path": "mods/Bookshelf-Fabric-1.18.2-13.2.52.jar",
-      "hash": "75619e9e66cb1332d605f3a3fbb59559045637b7",
+      "path": "mods/borderless-mining-1.1.2+1.18.2.jar",
+      "hash": "2a7490d56d040529c86e0d1e4017cb825381bf78",
       "force": true,
       "type": "addon"
     },
@@ -672,6 +714,12 @@
     {
       "path": "mods/carpet-tis-addition-mc1.18.2-v1.45.0.jar",
       "hash": "9c2cc61f06ff0a85936b201c453df420531f3e33",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "mods/clearwater-1.18.2-1.8.jar",
+      "hash": "b44e01c34d11379bcc01a9584b33dbbd97835166",
       "force": true,
       "type": "addon"
     },
@@ -706,14 +754,14 @@
       "type": "addon"
     },
     {
-      "path": "mods/CustomSkinLoader_Fabric-14.15.2.jar",
-      "hash": "73a4dd111c6d0d4ccf1069891fd0fd179c265aed",
+      "path": "mods/CustomWindowTitle-Fabric-1.17.1+v1.1.1.jar",
+      "hash": "37a7b22dd075b1478a81cdc379900d1f9b19d326",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/CustomWindowTitle-Fabric-1.17.1+v1.1.1.jar",
-      "hash": "37a7b22dd075b1478a81cdc379900d1f9b19d326",
+      "path": "mods/dark-loading-screen-1.6.11.jar",
+      "hash": "4f93411b34bc03e6b6af00f70a6f45190aad9ba7",
       "force": true,
       "type": "addon"
     },
@@ -736,20 +784,20 @@
       "type": "addon"
     },
     {
-      "path": "mods/EnchantmentDescriptions-Fabric-1.18.2-10.0.12.jar",
-      "hash": "bc3dad71b4570f3a67e23dc2907764203aa2cad7",
+      "path": "mods/emi-0.6.6+1.18.2.jar",
+      "hash": "6e388cb3da1b2ffebd3562f4bf388a207e04d625",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "mods/enchlevel-langpatch-1.2.3.jar",
+      "hash": "b24a40b1c2bd68d776b7c53545ade44113317686",
       "force": true,
       "type": "addon"
     },
     {
       "path": "mods/entityculling-fabric-1.6.1-mc1.18.2.jar",
       "hash": "b0822232e9d7bdd5d084ebcf40e8ce9b37a96734",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "mods/essential-client-1.18.2-1.3.3.jar",
-      "hash": "15cd5e864a863ffb01ece200abc3f68b3a3f2df5",
       "force": true,
       "type": "addon"
     },
@@ -814,6 +862,12 @@
       "type": "addon"
     },
     {
+      "path": "mods/idwtialsimmoedm-0.1.1+1.18.jar",
+      "hash": "bb6a21c1a3e9b62d144c8a4a31fe24f767f03c0e",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "mods/IKnowWhatImDoing-4.1.1-fabric.jar",
       "hash": "6b8b9d16217798367e8ba2917e5357fef2bd7c43",
       "force": true,
@@ -862,14 +916,8 @@
       "type": "addon"
     },
     {
-      "path": "mods/JadeAddons-1.18.2-fabric-2.0.1.jar",
-      "hash": "6b14e4fbe882fa60fa034cd02647da2bfc650b9e",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "mods/jecharacters-fabric-1.18.2-4.3.12.jar",
-      "hash": "8191b8f2b5377f96158f8c44524f2756842ba213",
+      "path": "mods/jecharacters-fabric-1.18.2-4.3.13.jar",
+      "hash": "e0ea2d1fa628b9c32837fd350134efac089028b9",
       "force": true,
       "type": "addon"
     },
@@ -994,12 +1042,6 @@
       "type": "addon"
     },
     {
-      "path": "mods/RoughlyEnoughItems-8.3.590.jar",
-      "hash": "c7461623fac6ff3bd869e4b077617a6ff0e98ece",
-      "force": true,
-      "type": "addon"
-    },
-    {
       "path": "mods/Smooth Swapping 0.6.1 (1.18.2)-0.6.1.jar",
       "hash": "868c8684bf5803739948e79cff4adb68f37f482b",
       "force": true,
@@ -1024,12 +1066,6 @@
       "type": "addon"
     },
     {
-      "path": "mods/soundphysics-0.5.5.jar",
-      "hash": "45cfa18ebd47b2d5cf1c0dcc84e811b23cb19d5d",
-      "force": true,
-      "type": "addon"
-    },
-    {
       "path": "mods/starlight-1.0.2+fabric.89b8d9f.jar",
       "hash": "a436b72ee514bd2b59900159bcc4d461f96ef340",
       "force": true,
@@ -1048,8 +1084,8 @@
       "type": "addon"
     },
     {
-      "path": "mods/tweakermore-mc1.18.2-v3.9.2.jar",
-      "hash": "2d0291ad189388abc5922c6498c713a532f59d9c",
+      "path": "mods/tweakermore-mc1.18.2-v3.10.0.jar",
+      "hash": "020284b55f962660fdcfc585b97a6b923af7d257",
       "force": true,
       "type": "addon"
     },
@@ -1066,14 +1102,14 @@
       "type": "addon"
     },
     {
-      "path": "mods/XaerosWorldMap_1.28.9_Fabric_1.18.2.jar",
-      "hash": "ed4e068c5e1ca5bee55e4e439e9539f8b9bebdab",
+      "path": "mods/XaerosWorldMap_1.29.2_Fabric_1.18.2.jar",
+      "hash": "b2b3f1407805cd26017fc39c41ab1535634b08a8",
       "force": true,
       "type": "addon"
     },
     {
-      "path": "mods/Xaeros_Minimap_23.1.0_Fabric_1.18.2.jar",
-      "hash": "5f78e4ded3b758b76a02fdccdc6afd5e971e530e",
+      "path": "mods/Xaeros_Minimap_23.2.0_Fabric_1.18.2.jar",
+      "hash": "6d82a62de9fd3ad25a0f870a95fa2471d2148787",
       "force": true,
       "type": "addon"
     },
@@ -1091,7 +1127,7 @@
     },
     {
       "path": "options.txt",
-      "hash": "3714774aa8c6c4eb9fbb650c27e193c65a891313",
+      "hash": "b69f6703143688764d1a06efc8fc030ecff1c0c8",
       "force": true,
       "type": "addon"
     },
