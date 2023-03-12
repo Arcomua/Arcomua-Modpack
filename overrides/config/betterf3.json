@@ -1,12 +1,18 @@
 {
 	"general": {
-		"animationSpeed": 1.0,
 		"disable_mod": false,
+		"hide_bossbar": true,
+		"shadow_text": true,
+		"auto_start": false,
+		"animationSpeed": 1.0,
+		"hide_debug_crosshair": false,
 		"background_color": 1867534416,
 		"space_modules": false,
-		"shadow_text": true,
+		"always_show_profiler": false,
 		"animations": false,
-		"fontScale": 1.0
+		"fontScale": 1.0,
+		"hide_sidebar": true,
+		"always_show_tps": false
 	},
 	"modules_right": [
 		{
@@ -15,12 +21,14 @@
 			"value_color": 16775930,
 			"lines": {
 				"opengl_version": true,
+				"allocation_rate": true,
 				"display": true,
 				"java_version": true,
 				"gpu_driver": true,
 				"memory_usage": true,
 				"allocated_memory": true,
 				"cpu": true,
+				"time": true,
 				"gpu": true
 			},
 			"enabled": true
@@ -50,11 +58,11 @@
 				"id_fluid": true,
 				"fluid_tags": true,
 				"block_states": true,
-				"blank": true,
 				"targeted_block": true,
-				"blank2": true,
 				"block_tags": true,
 				"id_block": true,
+				"nothing": true,
+				"nothing2": true,
 				"targeted_fluid": true,
 				"targeted_entity": true,
 				"fluid_states": true
@@ -122,8 +130,10 @@
 		}, 
 		{
 			"name": "chunks",
+			"chunks_disabled_color": 16733525,
 			"name_color": 16766720,
 			"value_color": 16316671,
+			"total_chunks_color": 16755200,
 			"lines": {
 				"chunk_file": true,
 				"available_buffers": true,
@@ -137,6 +147,7 @@
 				"client_chunk_cache": true,
 				"chunk_sections": true
 			},
+			"chunks_enabled_color": 5635925,
 			"enabled": true
 		}, 
 		{
@@ -148,7 +159,9 @@
 				"biome": true,
 				"rotation": true,
 				"facing": true,
+				"slime_chunk": true,
 				"local_difficulty": true,
+				"day_ticks": true,
 				"days_played": true,
 				"dimension": true,
 				"highest_block": true,
@@ -161,6 +174,7 @@
 			"name": "entity",
 			"name_color": 16766720,
 			"value_color": 15132410,
+			"total_entities_color": 16755200,
 			"lines": {
 				"entities": true,
 				"water_creature": true,
@@ -176,6 +190,7 @@
 			"enabled": true
 		}, 
 		{
+			"maximum_color": 43690,
 			"name": "sound",
 			"name_color": 16645526,
 			"value_color": 15132410,
@@ -187,9 +202,11 @@
 			"enabled": true
 		}, 
 		{
+			"enabled_color": 5635925,
 			"name": "help",
 			"name_color": 16766720,
 			"value_color": 15132410,
+			"disabled_color": 16733525,
 			"lines": {
 				"help": true,
 				"pie_graph": true,

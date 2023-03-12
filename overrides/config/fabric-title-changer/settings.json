@@ -1,0 +1,23 @@
+{
+  "windowTitle": {
+    "includeAsterisk": {
+      "comment": "Include the asterisk for modded versions",
+      "value": false
+    },
+    "includeVersionNumber": {
+      "comment": "Include the version number (1.15.2, etc)",
+      "value": false
+    },
+    "includeNetworkStatus": {
+      "comment": "Include the network status (Singleplayer, Multiplayer, LAN, etc.)",
+      "value": false
+    },
+    "overrideMinecraftTitle": {
+      "comment": "Set to change the phrase \"Minecraft\" in the title."
+    },
+    "overrideFullTitle": {
+      "comment": "Set to ignore other settings and define a full pre-defined name.",
+      "value": "%username% - Arcomua Modpack 230312 - Minecraft 1.18.2 with Fabric Loader"
+    }
+  }
+}
