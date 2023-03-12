@@ -2,7 +2,7 @@
 	// Should we change the title?
 	"ChangeTitle": true,
 	// This is the window title,you can change it.
-	"Title": "%user% - Arcomua Modpack 230307 - Minecraft %mcversion% with Fabric Loader",
+	"Title": "%user% - Arcomua Modpack 230312 - Minecraft %mcversion% with Fabric Loader",
 	// %date% and %syncdate% placeholders' format.
 	"Dateformat": "yyyy-MM-dd HH:mm:ss",
 	/* %memory% display format.

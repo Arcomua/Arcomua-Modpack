@@ -25,9 +25,9 @@
         // Value for where fog starts. Vanilla is -8.0
         "fogNearPlaneWater": -8.0,
         // Value for where fog ends. Vanilla is 96.0
-        "fogFarPlaneWater": 128.0,
+        "fogFarPlaneWater": 250.0,
         // When enabled, makes vision fade in like vanilla behavior
-        "fadeInWater": true,
+        "fadeInWater": false,
         // The shape of the fog around the player
         "fogShapeWater": "CYLINDER"
     }
