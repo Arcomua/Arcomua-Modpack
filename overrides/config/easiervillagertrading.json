@@ -1,0 +1,8 @@
+{
+  "easiervillagertrading.config.swapshift": {
+    "key": "easiervillagertrading.config.swapshift",
+    "toolTip": "easiervillagertrading.config.tt.swapshift",
+    "value": false,
+    "defaultValue": false
+  }
+}

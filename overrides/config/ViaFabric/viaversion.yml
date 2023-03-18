@@ -10,7 +10,7 @@
 #----------------------------------------------------------#
 #
 # Should ViaVersion check for updates?
-checkforupdates: false
+checkforupdates: true
 # Send the supported versions with the Status (Ping) response packet
 send-supported-versions: false
 # Easier to configure alternative to 'block-protocols'. Uses readable version strings with possible '<' and '>' prefixes.
@@ -39,7 +39,7 @@ suppress-conversion-warnings: false
 #
 # What is the maximum per second a client can send (Use %pps to display their pps)
 # Use -1 to disable.
-max-pps: -1
+max-pps: 800
 max-pps-kick-msg: You are sending too many packets!
 #
 # We can also kick them if over a period they send over a threshold a certain amount of times.
@@ -117,6 +117,9 @@ chat-types-1_19:
   commands.message.display.incoming: '%s whispers to you: %s'
   chat.type.team.text: '%s <%s> %s'
   chat.type.emote: '* %s %s'
+#
+# Force-update 1.19.4+ player's inventory when they try to swap armor in a pre-occupied slot.
+armor-toggle-fix: true
 #
 #----------------------------------------------------------#
 #             1.9+ CLIENTS ON 1.8 SERVERS OPTIONS          #

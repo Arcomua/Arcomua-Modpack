@@ -15,14 +15,6 @@
   "modify_title_screen": true,
   "modify_game_menu": true,
   "hide_config_buttons": false,
-  "random_java_colors": true,
-  "translate_names": true,
-  "translate_descriptions": true,
-  "config_mode": false,
-  "disable_drag_and_drop": false,
   "hidden_mods": [],
-  "hidden_configs": [],
-  "disable_update_checker": [],
-  "update_checker": false,
-  "button_update_badge": false
+  "log_deprecation_warnings": false
 }

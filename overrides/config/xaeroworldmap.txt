@@ -1,4 +1,4 @@
-ignoreUpdate:1
+ignoreUpdate:0
 updateNotification:false
 differentiateByServerAddress:true
 netherlikeCaveMapAllowed:true
@@ -12,6 +12,7 @@ terrainDepth:true
 footsteps:true
 flowers:true
 coordinates:true
+hoveredBiome:true
 biomeColorsVanillaMode:false
 waypoints:true
 renderArrow:true
@@ -33,8 +34,4 @@ minimapRadar:true
 renderWaypoints:true
 partialYTeleportation:true
 displayStainedGlass:true
-pacPlayers:true
-displayClaims:true
-claimsFillOpacity:46
-claimsBorderOpacity:80
 globalVersion:1

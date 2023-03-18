@@ -1,0 +1,26 @@
+{
+  "minecraft": {
+    "crop_progress": true,
+    "comparator": true,
+    "hide_infestations": true,
+    "display_furnace_contents": true,
+    "hide_trapped_chest": true,
+    "player_head_name": true,
+    "jukebox": true,
+    "lever": true,
+    "spawner_type": true,
+    "redstone": true,
+    "repeater": true
+  },
+  "waila": {
+    "show_pos": false,
+    "show_blocks": true,
+    "show_registry": false,
+    "show_mod_name": false,
+    "show_fluids": false,
+    "show_entity_hp": true,
+    "show_states": false,
+    "show_item": true,
+    "show_entities": true
+  }
+}

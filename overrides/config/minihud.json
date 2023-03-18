@@ -12,7 +12,6 @@
     "infoChunkSectionsLine": 15,
     "infoChunkUpdates": 16,
     "infoCoordinates": 4,
-    "infoCoordinatesScaled": 4,
     "infoDifficulty": 18,
     "infoDimensionId": 5,
     "infoDistance": 33,
@@ -20,17 +19,13 @@
     "infoEntitiesClientWorld": 22,
     "infoEntityRegistryName": 24,
     "infoFacing": 8,
-    "infoFurnaceXp": 30,
     "infoFPS": 0,
     "infoHoneyLevel": 37,
-    "infoHorseSpeed": 36,
-    "infoHorseJump": 37,
     "infoLightLevel": 10,
     "infoLookingAtBlock": 25,
     "infoLookingAtBlockInChunk": 26,
     "infoLookingAtEntity": 23,
     "infoMemoryUsage": 0,
-    "infoMobCaps": 10,
     "infoLoadedChunksCount": 31,
     "infoParticleCount": 17,
     "infoPing": 36,
@@ -41,8 +36,6 @@
     "infoSlimeChunk": 22,
     "infoSpeed": 13,
     "infoSpeedAxis": 13,
-    "infoSpeedHV": 13,
-    "infoSprinting": 40,
     "infoTileEntities": 32,
     "infoTimeDayModulo": 35,
     "infoTimeIRL": 1,
@@ -51,32 +44,20 @@
     "infoWorldTimeFormatted": 3
   },
   "Colors": {
-    "beaconRangeLvl1": "#20E060FF",
-    "beaconRangeLvl2": "#20FFB040",
-    "beaconRangeLvl3": "#20FFF040",
-    "beaconRangeLvl4": "#2060FF40",
     "blockGridOverlayColor": "#80FFFFFF",
-    "conduitRange": "#2030FFFF",
-    "lightLevelMarkerBlockLit": "#FF209040",
     "lightLevelMarkerDark": "#FFFF4848",
-    "lightLevelMarkerDim": "#FFC0C040",
-    "lightLevelMarkerSkyLit": "#FFFFFF33",
+    "lightLevelMarkerLit": "#FFFFFF33",
     "lightLevelNumberBlockDark": "#FFC03030",
-    "lightLevelNumberBlockDim": "#FFC0C040",
     "lightLevelNumberBlockLit": "#FF20FF40",
     "lightLevelNumberSkyDark": "#FFFFF030",
-    "lightLevelNumberSkyDim": "#FFC0C030",
     "lightLevelNumberSkyLit": "#FF40E0FF",
     "randomTicksFixedOverlayColor": "#30F9F225",
     "randomTicksPlayerOverlayColor": "#3030FE73",
     "regionOverlayColor": "#30FF8019",
-    "shapeAdjustableSpawnSphere": "#6030B0B0",
-    "shapeBox": "#6050A0A0",
     "shapeCanDespawnSphere": "#60A04050",
     "shapeCanSpawnSphere": "#60A04050",
     "shapeCircle": "#6030B0B0",
     "shapeDespawnSphere": "#60A04050",
-    "shapeLineBlocky": "#6030F0B0",
     "shapeSphereBlocky": "#6030B0B0",
     "slimeChunksOverlayColor": "#3020F020",
     "spawnPlayerEntityOverlayColor": "#302050D0",
@@ -90,23 +71,16 @@
     "textColor": "#FCFCFCFF"
   },
   "Generic": {
-    "axolotlTooltipsTooltips": false,
     "beeTooltips": false,
     "honeyTooltips": false,
-    "biomeOverlaySingleColor": true,
+    "enabled": true,
     "debugMessages": false,
     "debugRendererPathFindingEnablePointWidth": true,
-    "dontClearStoredSeedOnDimensionChange": true,
+    "dontResetSeedOnDimensionChange": false,
     "enableVanillaDebugRendererFix": true,
-    "lightLevelAutoHeight": false,
-    "lightLevelCollisionCheck": false,
     "lightLevelColoredNumbers": true,
     "lightLevelNumberRotation": true,
-    "lightLevelRenderThrough": false,
-    "lightLevelSkipBlockCheck": false,
-    "lightLevelUnderWater": false,
     "mapPreview": false,
-    "offsetSubtitleHud": true,
     "requireSneak": false,
     "shulkerBoxPreview": false,
     "shulkerDisplayBgColor": true,
@@ -117,36 +91,74 @@
     "useCustomizedCoordinateFormat": true,
     "useFontShadow": false,
     "useTextBackground": true,
-    "mainRenderingToggle": {
-      "enabled": true,
-      "hotkey": {
-        "keys": "H"
+    "openConfigGui": {
+      "keys": "H,C",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
       }
     },
-    "openConfigGui": {
-      "keys": "H,C"
-    },
     "requiredKey": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": true,
+        "allow_extra_keys": true,
+        "order_sensitive": false,
+        "exclusive": false,
+        "cancel": false
+      }
     },
     "setDistanceReferencePoint": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "shapeEditor": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "toggleKey": {
+      "keys": "H",
+      "settings": {
+        "activate_on": "RELEASE",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": true,
+        "cancel": true
+      }
     },
     "blockGridOverlayMode": "all",
-    "lightLevelMarkerCondition": "spawnable",
     "lightLevelMarkers": "square",
-    "lightLevelNumberCondition": "always",
     "lightLevelNumbers": "block",
     "hudAlignment": "top_left",
-    "biomeOverlayRange": 4,
-    "biomeOverlayRangeVertical": 0,
     "blockGridOverlayRadius": 32,
     "coordinateFormat": "x: %.1f y: %.1f z: %.1f",
     "dateFormatReal": "现实时间: yyyy-MM-dd HH:mm:ss",
-    "dateFormatMinecraft": "游戏时间: (第{DAY}天) {HOUR}:{MIN}",
+    "dateFormatMinecraft": "游戏时间: (第{DAY}处1�7) {HOUR}:{MIN}",
     "fontScale": 1.0,
     "lightLevelMarkerSize": 0.84,
     "lightLevelNumberOffsetBlockX": 0.26,
@@ -154,9 +166,8 @@
     "lightLevelNumberOffsetSkyX": 0.42,
     "lightLevelNumberOffsetSkyY": 0.56,
     "lightLevelRange": 24,
-    "lightLevelThresholdDim": 0,
-    "lightLevelThresholdSafe": 1,
-    "lightLevelRenderOffset": 0.005,
+    "lightLevelThreshold": 8,
+    "lightLevelZOffset": 0.005,
     "mapPreviewSize": 160,
     "slimeChunkOverlayRadius": -1,
     "spawnableColumnHeightsOverlayRadius": 40,
@@ -178,7 +189,6 @@
     "infoChunkSectionsLine": false,
     "infoChunkUpdates": false,
     "infoCoordinates": true,
-    "infoCoordinatesScaled": false,
     "infoDifficulty": false,
     "infoDimensionId": false,
     "infoDistance": false,
@@ -186,17 +196,13 @@
     "infoEntitiesClientWorld": false,
     "infoEntityRegistryName": false,
     "infoFacing": false,
-    "infoFurnaceXp": false,
     "infoFPS": true,
     "infoHoneyLevel": false,
-    "infoHorseSpeed": false,
-    "infoHorseJump": false,
     "infoLightLevel": false,
     "infoLookingAtBlock": true,
     "infoLookingAtBlockInChunk": false,
     "infoLookingAtEntity": false,
     "infoMemoryUsage": false,
-    "infoMobCaps": false,
     "infoLoadedChunksCount": false,
     "infoParticleCount": false,
     "infoPing": false,
@@ -207,169 +213,528 @@
     "infoSlimeChunk": false,
     "infoSpeed": false,
     "infoSpeedAxis": false,
-    "infoSpeedHV": false,
-    "infoSprinting": false,
     "infoTileEntities": false,
     "infoTimeDayModulo": false,
-    "infoTimeIRL": true,
+    "infoTimeIRL": false,
     "infoTimeTotalModulo": false,
     "infoTimeWorld": false,
-    "infoWorldTimeFormatted": true
+    "infoWorldTimeFormatted": false
   },
   "InfoHotkeys": {
     "infoBeeCount": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoBiome": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoBiomeRegistryName": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoBlockBreakSpeed": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoBlockInChunk": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoBlockPosition": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoBlockProperties": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoChunkPosition": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoChunkSections": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoChunkSectionsLine": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoChunkUpdates": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoCoordinates": {
-      "keys": ""
-    },
-    "infoCoordinatesScaled": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoDifficulty": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoDimensionId": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoDistance": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoEntities": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoEntitiesClientWorld": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoEntityRegistryName": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoFacing": {
-      "keys": ""
-    },
-    "infoFurnaceXp": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoFPS": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoHoneyLevel": {
-      "keys": ""
-    },
-    "infoHorseSpeed": {
-      "keys": ""
-    },
-    "infoHorseJump": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoLightLevel": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoLookingAtBlock": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoLookingAtBlockInChunk": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoLookingAtEntity": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoMemoryUsage": {
-      "keys": ""
-    },
-    "infoMobCaps": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoLoadedChunksCount": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoParticleCount": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoPing": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoRegionFile": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoRotationPitch": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoRotationYaw": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoServerTPS": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoSlimeChunk": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoSpeed": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoSpeedAxis": {
-      "keys": ""
-    },
-    "infoSpeedHV": {
-      "keys": ""
-    },
-    "infoSprinting": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoTileEntities": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoTimeDayModulo": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoTimeIRL": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoTimeTotalModulo": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoTimeWorld": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoWorldTimeFormatted": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     }
   },
   "RendererToggles": {
-    "overlayBeaconRange": false,
-    "overlayBiomeBorder": false,
+    "debugChunkInfo": false,
+    "debugChunkOcclusion": false,
+    "debugCollisionBoxEnabled": false,
+    "debugNeighborsUpdateEnabled": false,
+    "debugPathfindingEnabled": false,
+    "debugSolidFaceEnabled": false,
+    "debugWaterEnabled": false,
     "overlayBlockGrid": false,
-    "overlayConduitRange": false,
     "overlayLightLevel": false,
     "overlayRandomTicksFixed": false,
     "overlayRandomTicksPlayer": false,
@@ -379,82 +744,224 @@
     "overlaySpawnChunkReal": false,
     "overlaySpawnChunkPlayer": false,
     "overlayStructureMainToggle": false,
-    "shapeRenderer": false,
-    "debugChunkBorder": false,
-    "debugChunkInfo": false,
-    "debugChunkOcclusion": false,
-    "debugCollisionBoxEnabled": false,
-    "debugNeighborsUpdateEnabled": false,
-    "debugPathfindingEnabled": false,
-    "debugSolidFaceEnabled": false,
-    "debugWaterEnabled": false
+    "shapeRenderer": false
   },
   "RendererHotkeys": {
-    "overlayBeaconRange": {
-      "keys": ""
-    },
-    "overlayBiomeBorder": {
-      "keys": ""
-    },
-    "overlayBlockGrid": {
-      "keys": ""
-    },
-    "overlayConduitRange": {
-      "keys": ""
-    },
-    "overlayLightLevel": {
-      "keys": ""
-    },
-    "overlayRandomTicksFixed": {
-      "keys": ""
-    },
-    "overlayRandomTicksPlayer": {
-      "keys": ""
-    },
-    "overlayRegionFile": {
-      "keys": ""
-    },
-    "overlaySlimeChunks": {
-      "keys": ""
-    },
-    "overlaySpawnableColumnHeights": {
-      "keys": ""
-    },
-    "overlaySpawnChunkReal": {
-      "keys": ""
-    },
-    "overlaySpawnChunkPlayer": {
-      "keys": ""
-    },
-    "overlayStructureMainToggle": {
-      "keys": ""
-    },
-    "shapeRenderer": {
-      "keys": ""
-    },
-    "debugChunkBorder": {
-      "keys": ""
-    },
     "debugChunkInfo": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "debugChunkOcclusion": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "debugCollisionBoxEnabled": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "debugNeighborsUpdateEnabled": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "debugPathfindingEnabled": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "debugSolidFaceEnabled": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "debugWaterEnabled": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlayBlockGrid": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlayLightLevel": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlayRandomTicksFixed": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlayRandomTicksPlayer": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlayRegionFile": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlaySlimeChunks": {
+      "keys": "",
+      "settings": {
+        "activate_on": "BOTH",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlaySpawnableColumnHeights": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlaySpawnChunkReal": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlaySpawnChunkPlayer": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "overlayStructureMainToggle": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "shapeRenderer": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     }
   },
   "StructureColors": {
@@ -493,67 +1000,224 @@
     "Village Main": "#3054CB4E",
     "Village Components": "#3054CB4E",
     "Witch Hut Main": "#30BE1DFC",
-    "Witch Hut Components": "#300099FF",
-    "Unknown Main": "#50FFFFFF",
-    "Unknown Components": "#50FFFFFF"
+    "Witch Hut Components": "#300099FF"
   },
   "StructureHotkeys": {
     "Toggle Bastion Remnant": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Buried Treasure": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Desert Pyramid": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle End City": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Igloo": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Jungle Temple": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Mansion": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Mineshaft": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Nether Fortress": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Nether Fossil": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Ocean Monument": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Ocean Ruin": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Pillager Outpost": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Ruined Portal": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Shipwreck": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Stronghold": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Village": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "Toggle Witch Hut": {
-      "keys": ""
-    },
-    "Toggle Unknown": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     }
   },
   "StructureToggles": {
@@ -574,8 +1238,7 @@
     "Shipwreck": false,
     "Stronghold": false,
     "Village": false,
-    "Witch Hut": false,
-    "Unknown": false
+    "Witch Hut": false
   },
   "config_version": 1
 }
