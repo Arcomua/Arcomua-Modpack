@@ -59,7 +59,7 @@ mainHand:right
 attackIndicator:1
 narrator:0
 tutorialStep:none
-mouseWheelSensitivity:2.005042947714451
+mouseWheelSensitivity:2.0050430297851562
 rawMouseInput:true
 glDebugVerbosity:1
 skipMultiplayerWarning:false
@@ -105,7 +105,7 @@ key_key.dynamicfps.toggle_forced:key.keyboard.unknown
 key_key.dynamicfps.toggle_disabled:key.keyboard.unknown
 key_key.fabrishot.screenshot:key.keyboard.f9
 key_key.wi_zoom.zoom:key.keyboard.v
-key_key.antighost.reveal:key.mouse.left
+key_key.antighost.reveal:key.keyboard.unknown
 key_bedrockIfy.key.settings:key.keyboard.unknown
 key_key.durabilityviewer.showhide:key.keyboard.unknown
 key_key.entityculling.toggle:key.keyboard.unknown

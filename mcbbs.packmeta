@@ -88,18 +88,6 @@
       "type": "addon"
     },
     {
-      "path": "config/carpet/default_carpet.conf",
-      "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/carpet/default_magiclib.conf",
-      "hash": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-      "force": true,
-      "type": "addon"
-    },
-    {
       "path": "config/carpettisaddition/mapping/yarn-1.16.5+build.10-v2.tiny",
       "hash": "fa74c95f52995aa723363010be0048a5447d6d9c",
       "force": true,
@@ -179,7 +167,7 @@
     },
     {
       "path": "config/fabric/indigo-renderer.properties",
-      "hash": "59e20d43997fccf9ea740e8f4be7aeba2510af40",
+      "hash": "76152f8938dfc78772e81018a73f850e183587a3",
       "force": true,
       "type": "addon"
     },
@@ -203,7 +191,7 @@
     },
     {
       "path": "config/indium-renderer.properties",
-      "hash": "4ae62e8543f54fb86762800168f76fbf7af17081",
+      "hash": "13e65786dc9d8ef8a0d7eb0b34d712198cc4dd50",
       "force": true,
       "type": "addon"
     },
@@ -221,7 +209,7 @@
     },
     {
       "path": "config/iris.properties",
-      "hash": "8cb4fb876ec82afc71e8bbc8ce3fea12b1d9f655",
+      "hash": "bffb3d0f2a54bb1777d4be820257b670990d6c12",
       "force": true,
       "type": "addon"
     },
@@ -533,13 +521,13 @@
     },
     {
       "path": "config/xaerominimap.txt",
-      "hash": "d5e9e4e95fb61705dc11e0ccbfc9db30769339f0",
+      "hash": "095ed57f37530e12de9f28a29e2e5e3f31dbcded",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/xaerominimap_entities.json",
-      "hash": "86b9b781edf83e4b23db9849863f058d0f5c1d4c",
+      "hash": "2eb09fc7056cd7b8d2656fc11eb122bf1fa74cb8",
       "force": true,
       "type": "addon"
     },
@@ -1127,7 +1115,7 @@
     },
     {
       "path": "options.txt",
-      "hash": "d046edfc2785505b6789d5d1cdebf65d6603b305",
+      "hash": "5a2da54a0770b07537d7824850573426824ea5e6",
       "force": true,
       "type": "addon"
     },
