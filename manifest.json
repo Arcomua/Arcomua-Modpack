@@ -1,12 +1,12 @@
 {
   "manifestType": "minecraftModpack",
   "manifestVersion": 1,
-  "name": "1.19.3 Fabric - Arcomua Modpack [230312]",
-  "version": "230312",
+  "name": "1.14.4 Fabric - Arcomua Modpack [230321]",
+  "version": "230321",
   "author": "Arcomua Modpack Team",
   "overrides": "overrides",
   "minecraft": {
-    "version": "1.19.3",
+    "version": "1.14.4",
     "modLoaders": [
       {
         "id": "fabric-0.14.17",
