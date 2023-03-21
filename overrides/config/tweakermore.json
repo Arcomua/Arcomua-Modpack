@@ -1,6 +1,8 @@
 {
   "Generic": {
     "autoFillContainerThreshold": 2,
+    "containerProcessorHintPos": "top_right",
+    "containerProcessorHintScale": 1.0,
     "infoViewBeamAngle": 40.0,
     "infoViewTargetDistance": 8.0,
     "infoViewCommandBlockMaxWidth": 200,
@@ -8,11 +10,11 @@
     "infoViewRedstoneDustUpdateOrderTextAlpha": 0.8,
     "infoViewRespawnBlockExplosionTextAlpha": 0.8,
     "safeAfkHealthThreshold": 10.0,
-    "tweakmContainerProcessorHintPos": "top_right",
-    "tweakmContainerProcessorHintScale": 1.0,
-    "tweakmSchematicBlockPlacementRestrictionMargin": 2,
-    "tweakmSchematicBlockPlacementRestrictionStrict": true,
+    "schematicBlockPlacementRestrictionMargin": 2,
+    "schematicBlockPlacementRestrictionStrict": true,
     "villagerOfferUsesDisplay": false,
+    "blockEventThrottlerThreshold": 200,
+    "blockEventThrottlerWhitelistRange": 8.0,
     "bossBarMaxEntry": -1,
     "bossBarScale": 1.0,
     "chatMessageLimit": 100,
@@ -34,7 +36,10 @@
     "eCraftItemScrollerCompact": false,
     "eprHideOnDebugHud": false,
     "lmOriginOverride000": false,
+    "lmRemoveEntityCommand": "kill",
+    "lmRemoveEntityCommandPolicy": "auto",
     "minihudDisableLightOverlaySpawnCheck": false,
+    "minihudHideIfChatScreenOpened": false,
     "ofRemoveSignTextRenderDistance": false,
     "ofRemoveItemFrameItemRenderDistance": false,
     "ofUnlockF3FpsLimit": false,
@@ -45,6 +50,8 @@
     "serverDataSyncerQueryLimit": 512,
     "shaderGameTimeAsWorldTime": false,
     "xmapNoSessionFinalizationWait": false,
+    "lmCustomSchematicBaseDirectoryEnabledPorting": false,
+    "lmCustomSchematicBaseDirectoryPorting": "D:\\Minecraft\\Arcomua Modpack - 1.19.3 Fabric [230312]\\.minecraft\\versions\\1.15.2 Fabric - Arcomua Modpack [230319]\\schematics",
     "lmPickBlockShulkersPorting": false,
     "hideDisabledOptions": false,
     "preserveConfigUnknownEntries": true,
@@ -54,44 +61,103 @@
   },
   "GenericHotkeys": {
     "copySignTextToClipBoard": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "creativePickBlockWithState": {
       "keys": "LEFT_ALT",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": true,
+        "order_sensitive": false,
+        "exclusive": false,
+        "cancel": false
+      },
       "enabled": false
     },
     "infoViewRenderingKey": {
-      "keys": "RIGHT_ALT"
+      "keys": "RIGHT_ALT",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": true,
+        "order_sensitive": false,
+        "exclusive": false,
+        "cancel": false
+      }
     },
     "refreshInventory": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "ANY",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "openTweakerMoreConfigGui": {
-      "keys": "K,C"
+      "keys": "K,C",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "tweakerMoreDebugResetOptionStatistic": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     }
   },
   "Lists": {
+    "autoCleanContainerListType": "none",
+    "autoCleanContainerWhiteList": [
+      "minecraft:shulker_box"
+    ],
+    "autoCleanContainerBlackList": [
+      "minecraft:shulker_box"
+    ],
+    "autoCollectMaterialListItemMessageType": "full",
     "infoViewCommandBlockRenderStrategy": "hotkey_held",
     "infoViewCommandBlockTargetStrategy": "pointed",
     "infoViewRedstoneDustUpdateOrderRenderStrategy": "hotkey_held",
     "infoViewRespawnBlockExplosionRenderStrategy": "always",
     "infoViewRespawnBlockExplosionTargetStrategy": "beam",
+    "schematicBlockPlacementRestrictionHint": "all",
+    "schematicBlockPlacementRestrictionItemWhitelist": [],
     "serverMsptMetricsStatisticType": {
       "value": "game_tick",
       "keybind": ""
     },
-    "tweakmAutoCleanContainerListType": "none",
-    "tweakmAutoCleanContainerWhiteList": [
-      "minecraft:shulker_box"
+    "blockEventThrottlerTargetBlocks": [
+      "minecraft:piston",
+      "minecraft:sticky_piston"
     ],
-    "tweakmAutoCleanContainerBlackList": [
-      "minecraft:shulker_box"
-    ],
-    "tweakmSchematicBlockPlacementRestrictionHint": "all",
-    "tweakmSchematicBlockPlacementRestrictionItemWhitelist": [],
     "playerNameTagRenderStrategyList": [],
     "playerNameTagRenderStrategyType": "none",
     "prioritizedCommandSuggestions": [],
@@ -103,368 +169,741 @@
     "handRestockBlackList": [
       "minecraft:lava_bucket"
     ],
+    "ofSantaHat": {
+      "value": "untouched",
+      "keybind": ""
+    },
     "ofWitchHat": {
       "value": "untouched",
       "keybind": ""
     }
   },
   "TweakToggles": {
+    "autoCleanContainer": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "autoCollectMaterialListItem": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "autoFillContainer": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "autoPickSchematicBlock": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "autoPutBackExistedItem": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "autoVillagerTradeFavorites": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "containerProcessorHint": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "infoView": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
     "infoViewCommandBlock": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "infoViewRedstoneDustUpdateOrder": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "infoViewRespawnBlockExplosion": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmAutoCleanContainer": {
+    "safeAfk": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmAutoCollectMaterialListItem": {
+    "schematicProPlace": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmAutoFillContainer": {
+    "schematicBlockPlacementRestriction": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmAutoPickSchematicBlock": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
-    "tweakmAutoPutBackExistedItem": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
-    "tweakmAutoVillagerTradeFavorites": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
-    "tweakmContainerProcessorHint": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
-    "tweakmInfoView": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
-    "tweakmSchematicProPlace": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
-    "tweakmSafeAfk": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
-    "tweakmSchematicBlockPlacementRestriction": {
-      "enabled": false,
-      "hotkey": {
-        "keys": ""
-      }
-    },
-    "tweakmSchematicBlockPlacementRestrictionCheckFacing": {
+    "schematicBlockPlacementRestrictionCheckFacing": {
       "enabled": true,
       "hotkey": {
-        "keys": ""
+        "keys": "true"
       }
     },
-    "tweakmSchematicBlockPlacementRestrictionCheckSlab": {
+    "schematicBlockPlacementRestrictionCheckSlab": {
       "enabled": true,
       "hotkey": {
-        "keys": ""
+        "keys": "true"
       }
     },
-    "tweakmDaytimeOverride": {
+    "blockEventThrottler": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmFakeNightVision": {
+    "daytimeOverride": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmFlawlessFrames": {
+    "fakeNightVision": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmUnlimitedBlockEntityRenderDistance": {
+    "flawlessFrames": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmUnlimitedEntityRenderDistance": {
+    "unlimitedBlockEntityRenderDistance": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
-    "tweakmWeatherOverride": {
+    "unlimitedEntityRenderDistance": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
+      }
+    },
+    "weatherOverride": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
       }
     },
     "serverDataSyncer": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "tweakerMoreDebugMode": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     }
   },
   "TweakHotkeys": {
+    "autoCleanContainer": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "autoCollectMaterialListItem": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "autoFillContainer": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "autoPickSchematicBlock": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "autoPutBackExistedItem": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "autoVillagerTradeFavorites": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "containerProcessorHint": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "infoView": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
     "infoViewCommandBlock": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoViewRedstoneDustUpdateOrder": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "infoViewRespawnBlockExplosion": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmAutoCleanContainer": {
-      "keys": ""
+    "safeAfk": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmAutoCollectMaterialListItem": {
-      "keys": ""
+    "schematicProPlace": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmAutoFillContainer": {
-      "keys": ""
+    "schematicBlockPlacementRestriction": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmAutoPickSchematicBlock": {
-      "keys": ""
+    "schematicBlockPlacementRestrictionCheckFacing": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmAutoPutBackExistedItem": {
-      "keys": ""
+    "schematicBlockPlacementRestrictionCheckSlab": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmAutoVillagerTradeFavorites": {
-      "keys": ""
+    "blockEventThrottler": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmContainerProcessorHint": {
-      "keys": ""
+    "daytimeOverride": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmInfoView": {
-      "keys": ""
+    "fakeNightVision": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmSchematicProPlace": {
-      "keys": ""
+    "flawlessFrames": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmSafeAfk": {
-      "keys": ""
+    "unlimitedBlockEntityRenderDistance": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmSchematicBlockPlacementRestriction": {
-      "keys": ""
+    "unlimitedEntityRenderDistance": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
-    "tweakmSchematicBlockPlacementRestrictionCheckFacing": {
-      "keys": ""
-    },
-    "tweakmSchematicBlockPlacementRestrictionCheckSlab": {
-      "keys": ""
-    },
-    "tweakmDaytimeOverride": {
-      "keys": ""
-    },
-    "tweakmFakeNightVision": {
-      "keys": ""
-    },
-    "tweakmFlawlessFrames": {
-      "keys": ""
-    },
-    "tweakmUnlimitedBlockEntityRenderDistance": {
-      "keys": ""
-    },
-    "tweakmUnlimitedEntityRenderDistance": {
-      "keys": ""
-    },
-    "tweakmWeatherOverride": {
-      "keys": ""
+    "weatherOverride": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "serverDataSyncer": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "tweakerMoreDebugMode": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     }
   },
   "DisableToggles": {
     "disableBeaconBeamRendering": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableCameraFrustumCulling": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableCameraSubmersionFog": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableCreativeFlyClimbingCheck": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableDarkSkyRendering": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableEntityModelRendering": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableEntityRenderInterpolation": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableHorizonShadingRendering": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableLightUpdates": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disablePistonBlockBreakingParticle": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableRedstoneParticle": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableSignTextLengthLimit": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableSlimeBlockBouncing": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "disableVignetteDarkness": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     },
     "tkrDisableNauseaEffectPorting": {
       "enabled": false,
       "hotkey": {
-        "keys": ""
+        "keys": "false"
       }
     }
   },
   "DisableHotkeys": {
     "disableBeaconBeamRendering": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableCameraFrustumCulling": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableCameraSubmersionFog": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableCreativeFlyClimbingCheck": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableDarkSkyRendering": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableEntityModelRendering": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableEntityRenderInterpolation": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableHorizonShadingRendering": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableLightUpdates": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disablePistonBlockBreakingParticle": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableRedstoneParticle": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableSignTextLengthLimit": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableSlimeBlockBouncing": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "disableVignetteDarkness": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     },
     "tkrDisableNauseaEffectPorting": {
-      "keys": ""
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
     }
   },
   "Fixes": {
@@ -474,11 +913,63 @@
   },
   "internal": {
     "configGui": {
-      "category": "ALL",
+      "category": "FEATURES",
       "sortingStrategy": "ALPHABET"
     },
     "configStatistic": {
+      "autoCleanContainer": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCleanContainerListType": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCleanContainerWhiteList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCleanContainerBlackList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCollectMaterialListItem": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCollectMaterialListItemMessageType": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoFillContainer": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
       "autoFillContainerThreshold": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoPickSchematicBlock": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoPutBackExistedItem": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoVillagerTradeFavorites": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "containerProcessorHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "containerProcessorHintPos": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "containerProcessorHintScale": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -487,6 +978,10 @@
         "useAmount": 0
       },
       "creativePickBlockWithState": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoView": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -554,7 +1049,43 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
+      "safeAfk": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
       "safeAfkHealthThreshold": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicProPlace": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestriction": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionItemWhitelist": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionMargin": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionCheckFacing": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionCheckSlab": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionStrict": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -562,95 +1093,23 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
-      "tweakmAutoCleanContainer": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoCleanContainerListType": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoCleanContainerWhiteList": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoCleanContainerBlackList": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoCollectMaterialListItem": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoFillContainer": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoPickSchematicBlock": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoPutBackExistedItem": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoVillagerTradeFavorites": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmContainerProcessorHint": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmContainerProcessorHintPos": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmContainerProcessorHintScale": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmInfoView": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicProPlace": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSafeAfk": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestriction": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionHint": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionItemWhitelist": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionMargin": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionCheckFacing": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionCheckSlab": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionStrict": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
       "villagerOfferUsesDisplay": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "blockEventThrottler": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "blockEventThrottlerTargetBlocks": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "blockEventThrottlerThreshold": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "blockEventThrottlerWhitelistRange": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -667,6 +1126,10 @@
         "useAmount": 0
       },
       "connectionSimulatedDelay": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "daytimeOverride": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -730,11 +1193,19 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
+      "fakeNightVision": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
       "fixChestMirroring": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
       "fixHoverTextScale": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "flawlessFrames": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -798,27 +1269,15 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
-      "tweakmDaytimeOverride": {
+      "unlimitedBlockEntityRenderDistance": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
-      "tweakmFakeNightVision": {
+      "unlimitedEntityRenderDistance": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
-      "tweakmFlawlessFrames": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmUnlimitedBlockEntityRenderDistance": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmUnlimitedEntityRenderDistance": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmWeatherOverride": {
+      "weatherOverride": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -854,7 +1313,23 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
+      "lmRemoveEntityCommand": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "lmRemoveEntityCommandPolicy": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
       "minihudDisableLightOverlaySpawnCheck": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "minihudHideIfChatScreenOpened": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "ofSantaHat": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -903,6 +1378,14 @@
         "useAmount": 0
       },
       "xmapNoSessionFinalizationWait": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "lmCustomSchematicBaseDirectoryEnabledPorting": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "lmCustomSchematicBaseDirectoryPorting": {
         "lastUsedTime": 0,
         "useAmount": 0
       },

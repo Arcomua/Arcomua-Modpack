@@ -1,0 +1,160 @@
+{
+  "generic": {
+    "searchMobSpawnPointBlackList": [],
+    "autoSyncEntityData": true,
+    "debug": false,
+    "renderZombieVillagerConvertTime": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    },
+    "renderTradeEnchantedBook": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    },
+    "searchMobSpawnPoint": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "renderNextRestockTime": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    },
+    "cacheContainerMenu": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    },
+    "syncAllEntityData": {
+      "keys": "",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    },
+    "openConfigGui": {
+      "keys": "G,C",
+      "settings": {
+        "activate_on": "PRESS",
+        "context": "INGAME",
+        "allow_empty": false,
+        "allow_extra_keys": false,
+        "order_sensitive": true,
+        "exclusive": false,
+        "cancel": true
+      }
+    }
+  },
+  "litematica": {
+    "disableLitematicaEasyPlaceFailTip": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "useRelativePath": false,
+    "betterEasyPlaceMode": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "saveInventoryToSchematicInServer": false,
+    "fixAccurateProtocol": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "nudgeSelectionSupportFreeCamera": true
+  },
+  "malilib": {
+    "fastSwitchMasaConfigGui": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    },
+    "optimizeConfigWidgetSearch": true,
+    "showOriginalConfigNameScale": 0.65,
+    "backportI18nSupport": true,
+    "fixGetInventoryType": true,
+    "fixConfigWidgetWidth": true,
+    "fixSearchbarHotkeyInput": true,
+    "showOriginalConfigName": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "favoritesSupport": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "favorites": {},
+    "favoritesFilter": false
+  },
+  "minihud": {
+    "pcaSyncProtocolSyncBeehive": true,
+    "minihudI18n": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    }
+  },
+  "tweakeroo": {
+    "inventoryPreviewSyncDataClientOnly": {
+      "enabled": false,
+      "hotkey": {
+        "keys": "false"
+      }
+    },
+    "restockWithCraftingRecipes": [],
+    "inventoryPreviewUseCache": true,
+    "inventoryPreviewSupportShulkerBoxItemEntity": true,
+    "restockWithCrafting": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    },
+    "inventoryPreviewSupportComparator": true,
+    "inventoryPreviewSupportSelect": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    },
+    "inventoryPreviewSyncData": {
+      "enabled": true,
+      "hotkey": {
+        "keys": "true"
+      }
+    },
+    "inventoryPreviewSupportTradeOfferList": true,
+    "inventoryPreviewSupportPlayer": true
+  },
+  "configVersion": 1
+}

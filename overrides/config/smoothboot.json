@@ -1,0 +1,13 @@
+{
+  "threadCount": {
+    "main": 10
+  },
+  "threadPriority": {
+    "game": 5,
+    "main": 1,
+    "integratedServer": 5
+  },
+  "optimizations": {
+    "dataFixers": true
+  }
+}
