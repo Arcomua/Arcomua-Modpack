@@ -29,7 +29,7 @@
     },
     {
       "path": "config/cloth-config2/config.properties",
-      "hash": "809dede5e12c0a61e8cd38e7b644b3d07ca7b8d4",
+      "hash": "f9e15b5097eb83a146a09e4d3654121f33f5ed37",
       "force": true,
       "type": "addon"
     },
@@ -41,7 +41,13 @@
     },
     {
       "path": "config/fabric/indigo-renderer.properties",
-      "hash": "01dc06bc281b4eed0afdd733e773243be8e6a42a",
+      "hash": "2b563e82786106ebdadbfc320ccc5d9444220720",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "config/ias.json",
+      "hash": "5b77673bd5988e7b1346407a723c08501f580aed",
       "force": true,
       "type": "addon"
     },
@@ -316,6 +322,12 @@
       "type": "addon"
     },
     {
+      "path": "mods/InGameAccountSwitcher-Fabric-1.15-8.0.1.jar",
+      "hash": "11ac4df40f058700c1d1df6779331ee341155932",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "mods/InventoryProfilesNext-fabric-1.15-1.8.6.jar",
       "hash": "b7db8d58b5b5b929cf5406e7a543e54c7b4fa8e8",
       "force": true,
@@ -400,12 +412,6 @@
       "type": "addon"
     },
     {
-      "path": "mods/ReAuth-1.14-1.15-4.0.7.jar",
-      "hash": "e127d8f578ab4f9bc96da37e93fde3f22f1953bb",
-      "force": true,
-      "type": "addon"
-    },
-    {
       "path": "mods/RoughlyEnoughItems-3.6.21.jar",
       "hash": "7a68825e472bb6f214dfc87b00c48f477f0332af",
       "force": true,
@@ -479,13 +485,19 @@
     },
     {
       "path": "options.txt",
-      "hash": "4de73edec56dcbdebd257b1ced8349112d7783b8",
+      "hash": "c47fd92dd954fe142800720f8906b8985fc71f46",
       "force": true,
       "type": "addon"
     },
     {
       "path": "optionsof.txt",
       "hash": "8eab9a86f8788d33b82c451b06fe356f60be34b3",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "optionsshaders.txt",
+      "hash": "5d2413fc70873a443061c52c53d0964e22b329ef",
       "force": true,
       "type": "addon"
     },

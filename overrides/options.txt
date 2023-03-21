@@ -54,10 +54,10 @@ mainHand:right
 attackIndicator:1
 narrator:0
 tutorialStep:movement
-mouseWheelSensitivity:2.008245957432889
+mouseWheelSensitivity:2.0082459449768066
 rawMouseInput:true
 glDebugVerbosity:1
-skipMultiplayerWarning:false
+skipMultiplayerWarning:true
 key_key.attack:key.mouse.left
 key_key.use:key.mouse.right
 key_key.forward:key.keyboard.w
