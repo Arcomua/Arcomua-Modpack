@@ -5,15 +5,15 @@
     "displayEntities": true,
     "displayMode": "TOGGLE",
     "hideFromDebug": true,
-    "hideFromTabList": true,
     "enableTextToSpeech": false,
     "ttsMode": "PRESS",
+    "maxHealthForRender": 40,
+    "maxHeartsPerLine": 10,
     "fluidMode": "NONE",
     "reachDistance": 0.0,
     "debug": false,
     "itemModNameTooltip": false,
-    "bossBarOverlapMode": "PUSH_DOWN",
-    "hintOverlayToggle": true
+    "bossBarOverlapMode": "PUSH_DOWN"
   },
   "overlay": {
     "overlayPosX": 0.5,
@@ -64,8 +64,7 @@
       }
     },
     "activeTheme": "jade:dark",
-    "iconMode": "TOP",
-    "animation": true
+    "iconMode": "TOP"
   },
   "formatting": {
     "modName": "§9§o%s"

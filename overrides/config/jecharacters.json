@@ -1,0 +1,16 @@
+{
+  "General": {
+    "EnumKeyboard": "QUANPIN",
+    "EnableFZh2z": "false",
+    "EnableFSh2s": "false",
+    "EnableFCh2c": "false",
+    "EnableFAng2an": "false",
+    "EnableFIng2in": "false",
+    "EnableFEng2en": "false",
+    "EnableFU2v": "false",
+    "EnableQuote": "false"
+  },
+  "Utilities": {
+    "EnableVerbose": "false"
+  }
+}

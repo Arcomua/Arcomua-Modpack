@@ -50,7 +50,18 @@
     "preserveConfigUnknownEntries": true,
     "tweakerMoreDebugBool": false,
     "tweakerMoreDebugDouble": 0.0,
-    "tweakerMoreDebugInt": 0
+    "tweakerMoreDebugInt": 0,
+    "containerProcessorHintPos": "top_right",
+    "containerProcessorHintScale": 1.0,
+    "schematicBlockPlacementRestrictionMargin": 2,
+    "schematicBlockPlacementRestrictionStrict": true,
+    "blockEventThrottlerThreshold": 200,
+    "blockEventThrottlerWhitelistRange": 8.0,
+    "lmRemoveEntityCommand": "kill",
+    "lmRemoveEntityCommandPolicy": "auto",
+    "minihudHideIfChatScreenOpened": false,
+    "lmCustomSchematicBaseDirectoryEnabledPorting": false,
+    "lmCustomSchematicBaseDirectoryPorting": "D:\\Minecraft\\Arcomua Modpack - 1.19.3 Fabric [230312]\\.minecraft\\versions\\1.18.2 Fabric - Arcomua Modpack [230312]\\schematics"
   },
   "GenericHotkeys": {
     "copySignTextToClipBoard": {
@@ -97,13 +108,31 @@
     "prioritizedCommandSuggestions": [],
     "weatherOverrideValue": "clear",
     "handRestockListType": "none",
-    "handRestockWhiteList": [
-      "minecraft:bucket"
-    ],
+    "handRestockWhiteList": [],
     "handRestockBlackList": [
-      "minecraft:lava_bucket"
+      "minecraft:bucket",
+      "minecraft:lava_bucket",
+      "minecraft:water_bucket"
     ],
     "ofWitchHat": {
+      "value": "untouched",
+      "keybind": ""
+    },
+    "autoCleanContainerListType": "none",
+    "autoCleanContainerWhiteList": [
+      "minecraft:shulker_box"
+    ],
+    "autoCleanContainerBlackList": [
+      "minecraft:shulker_box"
+    ],
+    "autoCollectMaterialListItemMessageType": "full",
+    "schematicBlockPlacementRestrictionHint": "all",
+    "schematicBlockPlacementRestrictionItemWhitelist": [],
+    "blockEventThrottlerTargetBlocks": [
+      "minecraft:piston",
+      "minecraft:sticky_piston"
+    ],
+    "ofSantaHat": {
       "value": "untouched",
       "keybind": ""
     }
@@ -252,6 +281,126 @@
       "hotkey": {
         "keys": ""
       }
+    },
+    "autoCleanContainer": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "autoCollectMaterialListItem": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "autoFillContainer": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "autoPickSchematicBlock": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "autoPutBackExistedItem": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "autoVillagerTradeFavorites": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "containerProcessorHint": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "infoView": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "safeAfk": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "schematicProPlace": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "schematicBlockPlacementRestriction": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "schematicBlockPlacementRestrictionCheckFacing": {
+      "enabled": true,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "schematicBlockPlacementRestrictionCheckSlab": {
+      "enabled": true,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "blockEventThrottler": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "daytimeOverride": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "fakeNightVision": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "flawlessFrames": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "unlimitedBlockEntityRenderDistance": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "unlimitedEntityRenderDistance": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
+    },
+    "weatherOverride": {
+      "enabled": false,
+      "hotkey": {
+        "keys": ""
+      }
     }
   },
   "TweakHotkeys": {
@@ -325,6 +474,66 @@
       "keys": ""
     },
     "tweakerMoreDebugMode": {
+      "keys": ""
+    },
+    "autoCleanContainer": {
+      "keys": ""
+    },
+    "autoCollectMaterialListItem": {
+      "keys": ""
+    },
+    "autoFillContainer": {
+      "keys": ""
+    },
+    "autoPickSchematicBlock": {
+      "keys": ""
+    },
+    "autoPutBackExistedItem": {
+      "keys": ""
+    },
+    "autoVillagerTradeFavorites": {
+      "keys": ""
+    },
+    "containerProcessorHint": {
+      "keys": ""
+    },
+    "infoView": {
+      "keys": ""
+    },
+    "safeAfk": {
+      "keys": ""
+    },
+    "schematicProPlace": {
+      "keys": ""
+    },
+    "schematicBlockPlacementRestriction": {
+      "keys": ""
+    },
+    "schematicBlockPlacementRestrictionCheckFacing": {
+      "keys": ""
+    },
+    "schematicBlockPlacementRestrictionCheckSlab": {
+      "keys": ""
+    },
+    "blockEventThrottler": {
+      "keys": ""
+    },
+    "daytimeOverride": {
+      "keys": ""
+    },
+    "fakeNightVision": {
+      "keys": ""
+    },
+    "flawlessFrames": {
+      "keys": ""
+    },
+    "unlimitedBlockEntityRenderDistance": {
+      "keys": ""
+    },
+    "unlimitedEntityRenderDistance": {
+      "keys": ""
+    },
+    "weatherOverride": {
       "keys": ""
     }
   },
@@ -478,7 +687,59 @@
       "sortingStrategy": "ALPHABET"
     },
     "configStatistic": {
+      "autoCleanContainer": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCleanContainerListType": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCleanContainerWhiteList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCleanContainerBlackList": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCollectMaterialListItem": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoCollectMaterialListItemMessageType": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoFillContainer": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
       "autoFillContainerThreshold": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoPickSchematicBlock": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoPutBackExistedItem": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "autoVillagerTradeFavorites": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "containerProcessorHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "containerProcessorHintPos": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "containerProcessorHintScale": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -487,6 +748,10 @@
         "useAmount": 0
       },
       "creativePickBlockWithState": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "infoView": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -554,7 +819,43 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
+      "safeAfk": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
       "safeAfkHealthThreshold": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicProPlace": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestriction": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionHint": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionItemWhitelist": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionMargin": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionCheckFacing": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionCheckSlab": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "schematicBlockPlacementRestrictionStrict": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -562,95 +863,23 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
-      "tweakmAutoCleanContainer": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoCleanContainerListType": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoCleanContainerWhiteList": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoCleanContainerBlackList": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoCollectMaterialListItem": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoFillContainer": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoPickSchematicBlock": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoPutBackExistedItem": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmAutoVillagerTradeFavorites": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmContainerProcessorHint": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmContainerProcessorHintPos": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmContainerProcessorHintScale": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmInfoView": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicProPlace": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSafeAfk": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestriction": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionHint": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionItemWhitelist": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionMargin": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionCheckFacing": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionCheckSlab": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmSchematicBlockPlacementRestrictionStrict": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
       "villagerOfferUsesDisplay": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "blockEventThrottler": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "blockEventThrottlerTargetBlocks": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "blockEventThrottlerThreshold": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "blockEventThrottlerWhitelistRange": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -667,6 +896,10 @@
         "useAmount": 0
       },
       "connectionSimulatedDelay": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "daytimeOverride": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -730,11 +963,19 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
+      "fakeNightVision": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
       "fixChestMirroring": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
       "fixHoverTextScale": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "flawlessFrames": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -798,27 +1039,15 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
-      "tweakmDaytimeOverride": {
+      "unlimitedBlockEntityRenderDistance": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
-      "tweakmFakeNightVision": {
+      "unlimitedEntityRenderDistance": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
-      "tweakmFlawlessFrames": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmUnlimitedBlockEntityRenderDistance": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmUnlimitedEntityRenderDistance": {
-        "lastUsedTime": 0,
-        "useAmount": 0
-      },
-      "tweakmWeatherOverride": {
+      "weatherOverride": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -854,7 +1083,23 @@
         "lastUsedTime": 0,
         "useAmount": 0
       },
+      "lmRemoveEntityCommand": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "lmRemoveEntityCommandPolicy": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
       "minihudDisableLightOverlaySpawnCheck": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "minihudHideIfChatScreenOpened": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "ofSantaHat": {
         "lastUsedTime": 0,
         "useAmount": 0
       },
@@ -903,6 +1148,14 @@
         "useAmount": 0
       },
       "xmapNoSessionFinalizationWait": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "lmCustomSchematicBaseDirectoryEnabledPorting": {
+        "lastUsedTime": 0,
+        "useAmount": 0
+      },
+      "lmCustomSchematicBaseDirectoryPorting": {
         "lastUsedTime": 0,
         "useAmount": 0
       },

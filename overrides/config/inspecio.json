@@ -1,0 +1,63 @@
+{
+  "jukebox": "fancy",
+  "sign": "fancy",
+  "advanced_tooltips": {
+    "repair_cost": true,
+    "lodestone_coords": false
+  },
+  "filled_map": {
+    "enabled": true,
+    "show_player_icon": false
+  },
+  "food": {
+    "hunger": true,
+    "saturation": "merged"
+  },
+  "containers": {
+    "campfire": true,
+    "storage": {
+      "enabled": true,
+      "compact": false,
+      "loot_table": true
+    },
+    "shulker_box": {
+      "enabled": true,
+      "compact": false,
+      "loot_table": true,
+      "color": true
+    }
+  },
+  "effects": {
+    "food": true,
+    "hidden_motion": true,
+    "beacon": true,
+    "potions": true,
+    "tipped_arrows": true,
+    "spectral_arrow": true
+  },
+  "entities": {
+    "fish_bucket": {
+      "enabled": true,
+      "always_show_name": false,
+      "spin": true
+    },
+    "spawn_egg": {
+      "enabled": true,
+      "always_show_name": false,
+      "spin": true
+    },
+    "pufferfish_puff_state": 2,
+    "armor_stand": {
+      "enabled": true,
+      "always_show_name": false,
+      "spin": true
+    },
+    "bee": {
+      "enabled": true,
+      "always_show_name": false,
+      "spin": true
+    }
+  },
+  "armor": true,
+  "banner_pattern": true
+}

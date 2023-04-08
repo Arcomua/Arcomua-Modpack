@@ -30,7 +30,6 @@
     "infoLookingAtBlockInChunk": 26,
     "infoLookingAtEntity": 23,
     "infoMemoryUsage": 0,
-    "infoMobCaps": 10,
     "infoLoadedChunksCount": 31,
     "infoParticleCount": 17,
     "infoPing": 36,
@@ -196,7 +195,6 @@
     "infoLookingAtBlockInChunk": false,
     "infoLookingAtEntity": false,
     "infoMemoryUsage": false,
-    "infoMobCaps": false,
     "infoLoadedChunksCount": false,
     "infoParticleCount": false,
     "infoPing": false,
@@ -305,9 +303,6 @@
       "keys": ""
     },
     "infoMemoryUsage": {
-      "keys": ""
-    },
-    "infoMobCaps": {
       "keys": ""
     },
     "infoLoadedChunksCount": {
