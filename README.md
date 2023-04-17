@@ -23,3 +23,22 @@ Currently we do not support MultiMC or any fork of MultiMC(like PrismLauncher), 
 ### Usage
 
 You can launch it as a game version.
+
+### Update Plan
+
+Version|Latest|Status
+:---:|:---:|:---:
+1.19.4 - Fabric|230414|Continue updating
+1.19.3 - Fabric|230316|Stop supporting
+1.19.2 - Fabric|230409|End service after 23/07/01
+1.18.2 - Fabric|230408|Continue updating
+1.17.1 - Fabric|230312|Fixes only
+1.16.5 - Fabric|230409|Continue updating
+1.15.2 - Fabric|230321|End service after 23/05/31
+1.14.4 - Fabric|230321|End service after 23/05/31
+1.13.2 - Rift|230416|Stop supporting
+1.13.2 - Forge|230416|End service after 23/06/01
+1.12.2 - Forge|230415|Fixes only
+
+
+
