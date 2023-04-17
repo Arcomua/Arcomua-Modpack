@@ -39,6 +39,9 @@ Version|Latest|Status
 1.13.2 - Rift|230416|Stop supporting
 1.13.2 - Forge|230416|End service after 23/06/01
 1.12.2 - Forge|230415|Fixes only
-
-
-
+1.11.2 - Forge|230417|End service after 23/05/15
+1.10.2 - Forge|230417|End service after 23/05/15
+1.9.4 - Forge|Not yet|To be continue
+1.8.9 - Forge|Not yet|To be continue
+1.7.10 - Forge|Not yet|To be continue
+1.7.2 - Forge|Not yet|To be continue
