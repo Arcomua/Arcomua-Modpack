@@ -31,8 +31,8 @@ Version|Latest|Status
 1.19.4 - Fabric|230414|Continue updating
 1.19.3 - Fabric|230316|Stop supporting
 1.19.2 - Fabric|230409|End service after 23/07/01
-1.18.2 - Fabric|230408|Continue updating
-1.17.1 - Fabric|230312|Fixes only
+1.18.2 - Fabric|230419|Continue updating
+1.17.1 - Fabric|230420|Fixes only
 1.16.5 - Fabric|230409|Continue updating
 1.15.2 - Fabric|230321|End service after 23/05/31
 1.14.4 - Fabric|230321|End service after 23/05/31
@@ -41,7 +41,7 @@ Version|Latest|Status
 1.12.2 - Forge|230415|Fixes only
 1.11.2 - Forge|230417|End service after 23/05/15
 1.10.2 - Forge|230417|End service after 23/05/15
-1.9.4 - Forge|Not yet|To be continue
+1.9.4 - Forge|230420|End service after 23/05/15
 1.8.9 - Forge|Not yet|To be continue
 1.7.10 - Forge|Not yet|To be continue
 1.7.2 - Forge|Not yet|To be continue
