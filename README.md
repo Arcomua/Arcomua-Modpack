@@ -34,8 +34,8 @@ Version|Latest|Status
 1.18.2 - Fabric|230419|Continue updating
 1.17.1 - Fabric|230420|Fixes only
 1.16.5 - Fabric|230409|Continue updating
-1.15.2 - Fabric|230321|End service after 23/05/31
-1.14.4 - Fabric|230321|End service after 23/05/31
+1.15.2 - Fabric|230424|End service after 23/05/31
+1.14.4 - Fabric|230423|End service after 23/05/31
 1.13.2 - Rift|230416|Stop supporting
 1.13.2 - Forge|230416|End service after 23/06/01
 1.12.2 - Forge|230415|Fixes only
