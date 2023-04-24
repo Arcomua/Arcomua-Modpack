@@ -28,9 +28,9 @@
       }
     },
     "renderNextRestockTime": {
-      "enabled": true,
+      "enabled": false,
       "hotkey": {
-        "keys": "true"
+        "keys": "false"
       }
     },
     "cacheContainerMenu": {

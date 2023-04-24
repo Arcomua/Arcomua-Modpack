@@ -1,8 +1,8 @@
 {
   "manifestType": "minecraftModpack",
   "manifestVersion": 2,
-  "name": "1.14.4 Fabric - Arcomua Modpack [230321]",
-  "version": "230321",
+  "name": "1.14.4 Fabric - Arcomua Modpack [230423]",
+  "version": "230423",
   "author": "Arcomua Modpack Team",
   "description": "",
   "fileApi": "",
@@ -16,56 +16,20 @@
     },
     {
       "id": "fabric",
-      "version": "0.14.17"
+      "version": "0.14.19"
     }
   ],
   "libraries": [],
   "files": [
     {
-      "path": "config/BBOutlineReloaded.cfg",
-      "hash": "0800230480906652d3340dda2c0b8d26e7e26304",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/cloth-config2/config.properties",
-      "hash": "7233c6bf54aac33b6607a79a4c1cd8657b25217e",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/CSB/config.json",
-      "hash": "5dba532842bafac38c508894689e2f33b87ae171",
-      "force": true,
-      "type": "addon"
-    },
-    {
       "path": "config/customwindowtitle-client.toml",
-      "hash": "ce4efcad03b0678405dcf127d2e8119bd363b274",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/durabilityviewer.json",
-      "hash": "2fb9de5b8ac94138c903d6e413a9483bedcac4de",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/fabric/indigo-renderer.properties",
-      "hash": "44346f669e27f196ba7fc3a3930c9415793b32f8",
+      "hash": "cfd1cb276b501abe1239c892a86fc23d4770fad8",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/gamma_utils.json5",
       "hash": "3b8e3c4693d874ecec3d372b0a0e06e00af87aa1",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/ias.json",
-      "hash": "5b77673bd5988e7b1346407a723c08501f580aed",
       "force": true,
       "type": "addon"
     },
@@ -82,42 +46,6 @@
       "type": "addon"
     },
     {
-      "path": "config/itemscroller.json",
-      "hash": "fb62622abe9d3e4b0f86837defa8b5acb291f703",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/lightoverlay.properties",
-      "hash": "11e133ff8ab9b76010e802598c0bbab5957c12da",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/litematica/litematica_新的世界.json",
-      "hash": "af8ee9713b815975fe500bc58d13cd6424fb4895",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/litematica/litematica_新的世界_dim0.json",
-      "hash": "14ecc01a180b8b7c96a92bfe896965152e673ce1",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/litematica.json",
-      "hash": "725899f2b4546cdcbd41d5b0a772b669c1952a07",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/magiclib.json",
-      "hash": "ade9cf2d5c209c09833a6f78a1629283fae0272b",
-      "force": true,
-      "type": "addon"
-    },
-    {
       "path": "config/malilib.json",
       "hash": "18b3177f7bec0b96bc2b97b79c52a30db629fa99",
       "force": true,
@@ -125,25 +53,13 @@
     },
     {
       "path": "config/masa_gadget_mod.json",
-      "hash": "9acef455933fcb269a8036c8aaf5c69785f18789",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/minihud/新的世界.json",
-      "hash": "63334c29f8821e7373ea30d1056de2651da42a93",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/minihud/新的世界_dim0.json",
-      "hash": "e708f04f738ce50f0f384bbb09fb8a6e50fa3537",
+      "hash": "a41859b4de461093d649a868c3509a78b528cbf9",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/minihud.json",
-      "hash": "7ba8bb6b3cb78a2ee5153f860c5a3be3b4dbb38e",
+      "hash": "133a2eabc2a97cda6c476bb4231a2e5eb3b29dbc",
       "force": true,
       "type": "addon"
     },
@@ -154,26 +70,14 @@
       "type": "addon"
     },
     {
-      "path": "config/orderly.json",
-      "hash": "0756a32ef80fe9978fb030532b1689c736c59970",
-      "force": true,
-      "type": "addon"
-    },
-    {
       "path": "config/roughlyenoughitems/config.json5",
-      "hash": "5377e2d4f290740a9e67155cab9f68ff5a63fff5",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/shulkerboxtooltip.json",
-      "hash": "d247dbac7c867cdd6ec710082a7c22cacbcf5942",
+      "hash": "d2f332d51634e367c86c0bcb1a1480b9144ef001",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/smoothscrollingeverywhere/config.properties",
-      "hash": "5ca1b3035e8a7e33a1fbf80c03ef7ec8208c5f9f",
+      "hash": "f3bfce95f1f5f868c2327f59a3e92e25f9c40000",
       "force": true,
       "type": "addon"
     },
@@ -185,19 +89,25 @@
     },
     {
       "path": "config/xaerominimap.txt",
-      "hash": "4dcf43c05861ef726e3918615003f7b6361e6a73",
+      "hash": "cbc7f46434543107c6c6e88ff95e86e39f8c7097",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/xaeropatreon.txt",
-      "hash": "ea102322bdf5be36acef1ed783e85b6a0d1ee418",
+      "hash": "80846d8687ebeab12e5d0d3a6579675d900cee5a",
       "force": true,
       "type": "addon"
     },
     {
       "path": "config/xaeroworldmap.txt",
       "hash": "8d375e247a3ff8bed002a4b4fd520c84d5fc3bd4",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "hmclversion.cfg",
+      "hash": "cde82800c3043868d0eb1a713d2e64da7900d578",
       "force": true,
       "type": "addon"
     },
@@ -274,8 +184,14 @@
       "type": "addon"
     },
     {
-      "path": "mods/fabric-language-kotlin-1.9.2+kotlin.1.8.10.jar",
-      "hash": "5a68b37cd9e3f13337f7959d82fcfe21b749e5c6",
+      "path": "mods/fabric-language-kotlin-1.9.3+kotlin.1.8.20.jar",
+      "hash": "2a3d3f8aa263ba7748550a94e97cf760712bc2c6",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "mods/fabriccontrolling-1.0.3.jar",
+      "hash": "65384bb35bbb5c68c8738c384a71703d7003db5d",
       "force": true,
       "type": "addon"
     },
@@ -311,7 +227,7 @@
     },
     {
       "path": "mods/libIPN-fabric-1.14-1.0.8.jar",
-      "hash": "9108da3311246445c8a2679e1965f0ab5e9e6646",
+      "hash": "d620848ce1d1e8b20e4f6d247405f47791a7f6e2",
       "force": true,
       "type": "addon"
     },
@@ -322,8 +238,8 @@
       "type": "addon"
     },
     {
-      "path": "mods/magiclib-0.5.37.jar",
-      "hash": "db727c64dba42540f0a447b9c42c5e19f6872b9a",
+      "path": "mods/magiclib-0.7.293+17aa28c-stable.jar",
+      "hash": "4ad2e17e84677348e75a9d96adf2d8413b63798d",
       "force": true,
       "type": "addon"
     },
@@ -334,8 +250,8 @@
       "type": "addon"
     },
     {
-      "path": "mods/MasaGadget-3.0.0.jar",
-      "hash": "48243aa10318aa349d52ffa4ece5aa4031226e2a",
+      "path": "mods/MasaGadget-3.1.289+1ca4352-stable.jar",
+      "hash": "8e9e51a3c5bfc1ef2844cfb69e31d9cceefbc9c7",
       "force": true,
       "type": "addon"
     },
@@ -370,8 +286,8 @@
       "type": "addon"
     },
     {
-      "path": "mods/RoughlyEnoughItems-3.3.0.jar",
-      "hash": "54789e6b477e6390b51d5d78a2ddcd062c2ac125",
+      "path": "mods/reloadAudioDriver-1.0.0.jar",
+      "hash": "0e47967e207c92ce008d97e73f1c888690cb7d69",
       "force": true,
       "type": "addon"
     },
@@ -388,8 +304,32 @@
       "type": "addon"
     },
     {
+      "path": "mods/StackDeobfuscator-1.3.2+fabric.4bca927.jar",
+      "hash": "a55b50a24f266e98ac2a42100cbff68affe2e310",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "mods/tweakeroo-fabric-1.14.4-0.10.0-dev.20191218.170529.jar",
       "hash": "0fc51b859c7e06d702d7a07fbfca5677e90fbacf",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "mods/ViaBackwards-4.6.1.jar",
+      "hash": "b2e34bcb808dc9badaf46080718d693d1332b7cd",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "mods/viafabric-0.4.10+33-dev.jar",
+      "hash": "b72413d475bb48a2835b1efe71944b43b9070b93",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "mods/ViaVersion-4.6.2.jar",
+      "hash": "8799374bd85e355c63645f4179277e69c83be690",
       "force": true,
       "type": "addon"
     },
@@ -413,7 +353,7 @@
     },
     {
       "path": "options.txt",
-      "hash": "cec64a15b3d0ad6630b0f0cf1ba97ebb13d7eec0",
+      "hash": "f3bf5251948aea46fb0555d7f426c0226b5c7593",
       "force": true,
       "type": "addon"
     },

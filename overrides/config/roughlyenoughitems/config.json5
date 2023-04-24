@@ -1,34 +1,34 @@
 { 
+	"modules": { 
+		"showUtilsButtons": false,
+		"fixTabCloseContainer": false,
+		"toastDisplayedOnCopyIdentifier": true,
+		"enableCraftableOnlyButton": true,
+		"disableRecipeBook": false
+	},
 	"appearance": { 
-		"mirrorItemPanel": false,
-		"maxRecipePerPage": 3,
-		"villagerScreenPermanentScrollBar": false,
-		"recipeScreenType": "UNSET",
-		"clickableRecipeArrows": true,
-		"appendModNames": false,
 		"darkTheme": false,
-		"renderEntryExtraOverlay": true,
-		"scrollingEntryListWidget": false,
 		"lightGrayRecipeBorder": false,
 		"itemCheatingMode": "REI_LIKE",
 		"itemListOrdering": "REGISTRY_ASCENDING",
-		"searchFieldLocation": "CENTER"
+		"renderEntryExtraOverlay": true,
+		"villagerScreenPermanentScrollBar": false,
+		"scrollingEntryListWidget": false,
+		"appendModNames": false,
+		"clickableRecipeArrows": true,
+		"searchFieldLocation": "CENTER",
+		"recipeScreenType": "UNSET",
+		"maxRecipePerPage": 3,
+		"mirrorItemPanel": false
 	},
 	"technical": { 
-		"gamemodeCommand": "/gamemode {gamemode}",
-		"giveCommand": "/give {player_name} {item_identifier}{nbt} {count}",
 		"loadDefaultPlugin": true,
+		"giveCommand": "/give {player_name} {item_identifier}{nbt} {count}",
+		"gamemodeCommand": "/gamemode {gamemode}",
 		"registerRecipesInAnotherThread": true,
 		"weatherCommand": "/weather {weather}"
 	},
 	"!general": { 
 		"cheating": false
-	},
-	"modules": { 
-		"enableCraftableOnlyButton": true,
-		"showUtilsButtons": false,
-		"disableRecipeBook": false,
-		"toastDisplayedOnCopyIdentifier": true,
-		"fixTabCloseContainer": false
 	}
 }
