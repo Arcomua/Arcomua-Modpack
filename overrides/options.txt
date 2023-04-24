@@ -53,7 +53,7 @@ useNativeTransport:true
 mainHand:right
 attackIndicator:1
 narrator:0
-tutorialStep:movement
+tutorialStep:none
 mouseWheelSensitivity:2.0082459449768066
 rawMouseInput:true
 glDebugVerbosity:1
