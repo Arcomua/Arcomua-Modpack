@@ -9,7 +9,7 @@ entityShadows:true
 forceUnicodeFont:false
 discrete_mouse_scroll:false
 invertYMouse:false
-realmsNotifications:true
+realmsNotifications:false
 reducedDebugInfo:false
 snooperEnabled:false
 showSubtitles:false
@@ -22,7 +22,7 @@ gamma:1.0
 renderDistance:8
 guiScale:4
 particles:0
-maxFps:260
+maxFps:120
 difficulty:2
 fancyGraphics:true
 ao:2
@@ -95,13 +95,6 @@ key_key.gamma_utils.increase_gamma:key.keyboard.up
 key_key.gamma_utils.decrease_gamma:key.keyboard.down
 key_key.durabilityviewer.showhide:key.keyboard.h
 key_key.orderly.toggle:key.keyboard.unknown
-key_key.roughlyenoughitems.recipe_keybind:key.keyboard.r
-key_key.roughlyenoughitems.usage_keybind:key.keyboard.unknown
-key_key.roughlyenoughitems.hide_keybind:key.keyboard.o
-key_key.roughlyenoughitems.previous_page:key.keyboard.unknown
-key_key.roughlyenoughitems.next_page:key.keyboard.unknown
-key_key.roughlyenoughitems.focus_search:key.keyboard.unknown
-key_key.roughlyenoughitems.copy_recipe_id:key.keyboard.unknown
 key_gui.xaero_switch_waypoint_set:key.keyboard.unknown
 key_gui.xaero_instant_waypoint:key.keyboard.keypad.add
 key_gui.xaero_toggle_slime:key.keyboard.unknown

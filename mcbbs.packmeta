@@ -1,8 +1,8 @@
 {
   "manifestType": "minecraftModpack",
   "manifestVersion": 2,
-  "name": "1.14.4 Fabric - Arcomua Modpack [230423]",
-  "version": "230423",
+  "name": "1.14.4 Fabric - Arcomua Modpack [230502]",
+  "version": "230502",
   "author": "Arcomua Modpack Team",
   "description": "",
   "fileApi": "",
@@ -23,7 +23,7 @@
   "files": [
     {
       "path": "config/customwindowtitle-client.toml",
-      "hash": "cfd1cb276b501abe1239c892a86fc23d4770fad8",
+      "hash": "e7fc4e76e259ee165daf8814c011fbeb779b7eb5",
       "force": true,
       "type": "addon"
     },
@@ -59,7 +59,7 @@
     },
     {
       "path": "config/minihud.json",
-      "hash": "133a2eabc2a97cda6c476bb4231a2e5eb3b29dbc",
+      "hash": "4ceb11d1ed158a1d590aaaf9d8fc8a30ac14c689",
       "force": true,
       "type": "addon"
     },
@@ -77,13 +77,7 @@
     },
     {
       "path": "config/smoothscrollingeverywhere/config.properties",
-      "hash": "f3bfce95f1f5f868c2327f59a3e92e25f9c40000",
-      "force": true,
-      "type": "addon"
-    },
-    {
-      "path": "config/tweakeroo.json",
-      "hash": "982bb221bf436fbf3ce595fc7d7970c28c82feff",
+      "hash": "0f77bc9da3d4f063c43929314c740572635b861f",
       "force": true,
       "type": "addon"
     },
@@ -184,8 +178,14 @@
       "type": "addon"
     },
     {
-      "path": "mods/fabric-language-kotlin-1.9.3+kotlin.1.8.20.jar",
+      "path": "mods/fabric-language-kotlin-1.9.3+kotlin.1.8.20.jar.old",
       "hash": "2a3d3f8aa263ba7748550a94e97cf760712bc2c6",
+      "force": true,
+      "type": "addon"
+    },
+    {
+      "path": "mods/fabric-language-kotlin-1.9.4+kotlin.1.8.21.jar",
+      "hash": "98d00c8bb595e7569fadd49290e1a6253d015ed7",
       "force": true,
       "type": "addon"
     },
@@ -328,6 +328,12 @@
       "type": "addon"
     },
     {
+      "path": "mods/ViaRewind-2.0.3.jar",
+      "hash": "295486e2fd5fdf31b6605a6d9a4e7b40836bfecd",
+      "force": true,
+      "type": "addon"
+    },
+    {
       "path": "mods/ViaVersion-4.6.2.jar",
       "hash": "8799374bd85e355c63645f4179277e69c83be690",
       "force": true,
@@ -353,7 +359,7 @@
     },
     {
       "path": "options.txt",
-      "hash": "f3bf5251948aea46fb0555d7f426c0226b5c7593",
+      "hash": "122f95a94c9d778a75eca38be9c021d6f6a18dc8",
       "force": true,
       "type": "addon"
     },

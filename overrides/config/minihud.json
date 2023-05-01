@@ -63,7 +63,7 @@
     "spawnableChunksPlayerOverlayColor": "#FFFF3030",
     "spawnableColumnHeightsOverlayColor": "#A0FF00FF",
     "spawnableSubChunksOverlayColor": "#FF2050D0",
-    "textBackgroundColor": "#A0505050",
+    "textBackgroundColor": "#00000000",
     "textColor": "#FCFCFCFF"
   },
   "Generic": {
