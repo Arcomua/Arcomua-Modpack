@@ -42,5 +42,5 @@ Version|Latest|Status
 1.11.2 - Forge|230417|End service after 23/05/15
 1.10.2 - Forge|230417|End service after 23/05/15
 1.9.4 - Forge|230420|End service after 23/05/15
-1.8.9 - Forge|230422|End service after 23/05/14
-1.7.10 - Forge|230422|End service after 23/05/14
+1.8.9 - Forge|230512|Stop supporting
+1.7.10 - Forge|230512|Stop supporting
