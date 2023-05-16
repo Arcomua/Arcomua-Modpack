@@ -29,13 +29,19 @@ You can launch it as a game version.
 Version|Latest|Status
 :---:|:---:|:---:
 1.19.4 - Fabric|230509|Continue updating
+1.19.4 - Forge|23xxxx|Working
 1.19.3 - Fabric|230316|Stop supporting
 1.19.2 - Fabric|230409|End service after 23/07/01
 1.18.2 - Fabric|230419|Continue updating
+1.18.2 - Forge|23xxxx|Working
 1.17.1 - Fabric|230420|Fixes only
+1.17.1 - Forge|23xxxx|Working
 1.16.5 - Fabric|230409|Continue updating
+1.16.5 - Forge|23xxxx|Working
 1.15.2 - Fabric|230424|End service after 23/05/31
+1.15.2 - Forge|230515|Fixes only
 1.14.4 - Fabric|230502|Stop supporting
+1.14.4 - Forge|230514|Fixes only
 1.13.2 - Rift|230416|Stop supporting
 1.13.2 - Forge|230416|End service after 23/06/01
 1.12.2 - Forge|230415|Fixes only
