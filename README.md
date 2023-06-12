@@ -1,11 +1,11 @@
 [![Cover](https://repository-images.githubusercontent.com/605815963/acf90131-3a24-4fc3-b3af-17404082f735)](#arcoma-modpack)
 
 <div align="center">
- <h1>Arcomua Modpack</h1>
- <p>
-  <img src="https://img.shields.io/badge/Mod%20Loader-Fabric-dbd0b4?style=flat" alt="Fabric Mod Loader" />
-  <img src="https://img.shields.io/badge/Version-230316-blue?style=flat" alt="Version" />
- </p>
+    <h1>Arcomua Modpack</h1>
+    <p>
+        <img src="https://img.shields.io/badge/Mod%20Loader-Fabric-dbd0b4?style=flat" alt="Fabric Mod Loader" />
+        <img src="https://img.shields.io/badge/Version-230316-blue?style=flat" alt="Version" />
+    </p>
 </div>
 
 **Arcomua Modpack**, a powerful modpack specially designed to give you a better Minecraft experience with lots of optimization and useful modifications.
@@ -28,22 +28,24 @@ You can launch it as a game version.
 
 Version|Latest|Status
 :---:|:---:|:---:
+1.20 - Fabric|230609|Continue updating
 1.19.4 - Fabric|230509|Continue updating
-1.19.4 - Forge|23xxxx|Working
+1.19.4 - Forge|230609|Continue updating
 1.19.3 - Fabric|230316|Stop supporting
-1.19.2 - Fabric|230409|End service after 23/07/01
-1.18.2 - Fabric|230419|Continue updating
-1.18.2 - Forge|23xxxx|Working
+1.19.2 - Fabric|230409|Fixes only
+1.19.2 - Forge|230609|Fixes only
+1.18.2 - Fabric|230419|Fixes only
+1.18.2 - Forge|230525|Fixes only
 1.17.1 - Fabric|230420|Fixes only
-1.17.1 - Forge|23xxxx|Working
-1.16.5 - Fabric|230409|Continue updating
-1.16.5 - Forge|23xxxx|Working
-1.15.2 - Fabric|230424|End service after 23/05/31
+1.17.1 - Forge|230522|Fixes only
+1.16.5 - Fabric|230409|Fixes only
+1.16.5 - Forge|230521|Fixes only
+1.15.2 - Fabric|230516|Stop supporting
 1.15.2 - Forge|230515|Fixes only
 1.14.4 - Fabric|230502|Stop supporting
 1.14.4 - Forge|230514|Fixes only
-1.13.2 - Rift|230416|Stop supporting
-1.13.2 - Forge|230416|End service after 23/06/01
+1.13.2 - Rift|230416|Fixes only
+1.13.2 - Forge|230416|Fixes only
 1.12.2 - Forge|230415|Fixes only
 1.11.2 - Forge|230513|Stop supporting
 1.10.2 - Forge|230513|Stop supporting
