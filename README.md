@@ -12,13 +12,13 @@
 
 ### Install
 
-We use [MCBBS Modpack Format](https://www.mcbbs.net/thread-1247765-1-1.html) to pack our work. You can import Arcomua Modpack in HMCL/PCL2/BakaXL.
+We highly recommend you install our pack via [Modrinth](https://modrinth.com/modpack/arcomua).
 
-Download the .zip file and install it as a modpack in your game launcher.
+You can import Arcomua Modpack in HMCL/PCL2/BakaXL. Zip files shared on the website MCBBS using [MCBBS Modpack Format](https://www.mcbbs.net/thread-1247765-1-1.html). 
 
 We made some video tutorials for [HMCL](https://www.bilibili.com/video/av438701520) or [PCL2/BakaXL](https://www.bilibili.com/video/av908952920) users. You can find them on Bilibili.
 
-Currently, we do not support MultiMC or any fork of MultiMC(like PrismLauncher), you can use ATLauncher instead.
+It should be noted that MultiMC and its fork version cannot support MCBBS Modpack Format. Therefore, it is only possible to use the .mrpack format.
 
 ### Usage
 
@@ -35,9 +35,9 @@ Version|Latest|Status
 1.19.4 - Fabric|230720|Continue updating
 1.19.4 - Forge|230609|Continue updating
 1.19.3 - Fabric|230316|Stop supporting
-1.19.2 - Fabric|230409|Fixes only
+1.19.2 - Fabric|230731|Stop supporting
 1.19.2 - Forge|230609|Fixes only
-1.18.2 - Fabric|230419|Stop supporting
+1.18.2 - Fabric|230803|Stop supporting
 1.18.2 - Forge|230525|Stop supporting
 1.17.1 - Fabric|230420|Stop supporting
 1.17.1 - Forge|230522|Stop supporting
