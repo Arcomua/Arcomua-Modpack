@@ -32,17 +32,14 @@ Version|Latest|Status
 1.20.1 - Fabric|230720|Continue updating
 1.20.1 - Forge|230808|Continue updating
 1.20.1 - Quilt|230630|Continue updating
-1.19.4 - Fabric|230720|Fixes only
-1.19.4 - Forge|230609|Fixes only
-1.16.5 - Fabric|230706|Fixes only
-1.16.5 - Forge|230521|Fixes only
-1.12.2 - Forge|230415|Fixes only
 
 No longer receive updated versions.
 Version|Latest
 :---:|:---:
 1.20 - Fabric|230609
 1.20 - Quilt|230622
+1.19.4 - Fabric|230814
+1.19.4 - Forge|230814
 1.19.3 - Fabric|230316
 1.19.2 - Fabric|230731
 1.19.2 - Forge|230810
@@ -50,12 +47,15 @@ Version|Latest
 1.18.2 - Forge|230810
 1.17.1 - Fabric|230803
 1.17.1 - Forge|230810
+1.16.5 - Fabric|230813
+1.16.5 - Forge|230811
 1.15.2 - Fabric|230516
 1.15.2 - Forge|230810
 1.14.4 - Fabric|230502
 1.14.4 - Forge|230810
 1.13.2 - Rift|230416
 1.13.2 - Forge|230808
+1.12.2 - Forge|230814
 1.11.2 - Forge|230513
 1.10.2 - Forge|230513
 1.9.4 - Forge|230513
