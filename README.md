@@ -29,13 +29,17 @@ You can launch it as a game version.
 Continuously receive updated versions.
 Version|Latest|Status
 :---:|:---:|:---:
-1.20.1 - Fabric|230720|Continue updating
+1.20.2 - Fabric|230922|Continue updating
+1.20.2 - Quilt||Preparing
+1.20.2 - Forge||Preparing
 1.20.1 - Forge|230808|Continue updating
-1.20.1 - Quilt|230630|Continue updating
+
 
 No longer receive updated versions.
 Version|Latest
 :---:|:---:
+1.20.1 - Fabric|230922
+1.20.1 - Quilt|230923
 1.20 - Fabric|230609
 1.20 - Quilt|230622
 1.19.4 - Fabric|230814
