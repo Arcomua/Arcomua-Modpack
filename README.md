@@ -1,11 +1,10 @@
 <img width="1280" alt="Arcomua Modpack" src="https://github.com/Arcomua-Modpack/Arcomua-Modpack/assets/88249678/40c8c43a-3229-48f7-8dfd-099c5cfaff7e">
 
-
 <div align="center">
     <h1>Arcomua Modpack</h1>
     <p>
         <img src="https://img.shields.io/badge/Mod%20Loader-Fabric-dbd0b4?style=flat" alt="Fabric Mod Loader" />
-        <img src="https://img.shields.io/badge/Version-230316-blue?style=flat" alt="Version" />
+        <img src="https://img.shields.io/badge/Version-230922-blue?style=flat" alt="Version" />
     </p>
 </div>
 
@@ -19,7 +18,7 @@ You can import Arcomua Modpack in HMCL/PCL2/BakaXL. Zip files shared on the webs
 
 We made some video tutorials for [HMCL](https://www.bilibili.com/video/av438701520) or [PCL2/BakaXL](https://www.bilibili.com/video/av908952920) users. You can find them on Bilibili.
 
-It should be noted that MultiMC and its fork version cannot support MCBBS Modpack Format. Therefore, it is only possible to use the .mrpack format.
+It should be noted that MultiMC and its fork version cannot support MCBBS Modpack Format. Therefore, it is only possible to use the Modrinth mopdack format (.mrpack).
 
 ### Usage
 
@@ -31,7 +30,6 @@ Continuously receive updated versions.
 Version|Latest|Status
 :---:|:---:|:---:
 1.20.2 - Fabric|230922|Continue updating
-1.20.2 - Quilt||Preparing
 1.20.2 - Forge||Preparing
 1.20.1 - Forge|230808|Continue updating
 
