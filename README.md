@@ -26,19 +26,21 @@ You can launch it as a game version.
 
 ### Update Plan
 
-Continuously receive updated versions.
+#### Continuously receive updated versions.
 Version|Latest|Status
 :---:|:---:|:---:
-1.20.4 - Fabric|240122|Continue updating
+1.20.4 - Fabric|240415|Continue updating
+1.20.4 - Quilt|240416|Bug fixes only
 
-No longer receive updated versions.
+#### No longer receive updated versions.
 Version|Latest
 :---:|:---:
 1.20.3 - Fabric|231206
 1.20.2 - Fabric|240117
+1.20.2 - Quilt|240416
 1.20.2 - Forge|231203
-1.20.1 - Fabric|231130
-1.20.1 - Quilt|231130
+1.20.1 - Fabric|240413
+1.20.1 - Quilt|240222
 1.20.1 - Forge|240110
 1.20 - Fabric|230609
 1.20 - Quilt|230622
