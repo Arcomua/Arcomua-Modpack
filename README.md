@@ -4,11 +4,13 @@
     <h1>Arcomua Modpack</h1>
     <p>
         <img src="https://img.shields.io/badge/Mod%20Loader-Fabric-dbd0b4?style=flat" alt="Fabric Mod Loader" />
-        <img src="https://img.shields.io/badge/Version-230922-blue?style=flat" alt="Version" />
+<!--         <img src="https://img.shields.io/badge/Version-230922-blue?style=flat" alt="Version" /> -->
     </p>
 </div>
 
-**Arcomua Modpack**, is a powerful modpack specially designed to give you a better Minecraft experience with lots of optimization and valuable modifications.
+**Arcomua Modpack** is mainly designed to **improve your vanilla gameplay experience**. You can get better **performance**, and **better graphics** without modifications to the game's mechanism.
+
+Arcomua Modpack = Arcomua Cloth + Arcomua Anvil
 
 ### Install
 
@@ -29,12 +31,15 @@ You can launch it as a game version.
 #### Continuously receive updated versions.
 Version|Latest|Status
 :---:|:---:|:---:
-1.20.4 - Fabric|240415|Continue updating
-1.20.4 - Quilt|240416|Bug fixes only
+1.21 - Fabric|240826|Continue updating
 
 #### No longer receive updated versions.
 Version|Latest
 :---:|:---:
+1.20.6 - Fabric|240708
+1.20.5 - Fabric|240430
+1.20.4 - Fabric|240521
+1.20.4 - Quilt|240416
 1.20.3 - Fabric|231206
 1.20.2 - Fabric|240117
 1.20.2 - Quilt|240416
