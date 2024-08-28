@@ -1,9 +1,9 @@
 ---
 name: Bug report
 about: Create a report to help us improve
-title: "[BUG]"
-labels: bug
-assignees: Trcmoe
+title: ''
+labels: ''
+assignees: ''
 
 ---
 
@@ -23,12 +23,16 @@ A clear and concise description of what you expected to happen.
 **Screenshots**
 If applicable, add screenshots to help explain your problem.
 
-**Environment (please complete the following information):**
- - OS: [e.g. Windows]
- - OS Version [e.g. 22H2]
- - Minecraft Version [e.g. 1.20.1]
- - Modpack Version: [e.g. Fabric 230816]
- - Java Version: [e.g.  Zulu JRE 17.44.15 (17.0.8), 64-bit]
+**Desktop (please complete the following information):**
+ - OS: [e.g. iOS]
+ - Browser [e.g. chrome, safari]
+ - Version [e.g. 22]
+
+**Smartphone (please complete the following information):**
+ - Device: [e.g. iPhone6]
+ - OS: [e.g. iOS8.1]
+ - Browser [e.g. stock browser, safari]
+ - Version [e.g. 22]
 
 **Additional context**
-Attach your log files here, and add any other context about the problem here.
+Add any other context about the problem here. Please upload the full log file to mclo.gs and paste the link here.

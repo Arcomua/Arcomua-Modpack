@@ -31,4 +31,4 @@ If applicable, add screenshots to help explain your problem.
  - Java Version: [e.g.  Zulu JRE 17.44.15 (17.0.8), 64-bit]
 
 **Additional context**
-Attach your log files here, and add any other context about the problem here.
+Add any other context about the problem here. Please upload the full log file to mclo.gs and paste the link here.
