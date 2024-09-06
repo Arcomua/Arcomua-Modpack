@@ -1,39 +1,41 @@
-<img width="1280" alt="Arcomua Modpack" src="https://github.com/Arcomua-Modpack/Arcomua-Modpack/assets/88249678/40c8c43a-3229-48f7-8dfd-099c5cfaff7e">
-
 <div align="center">
-    <h1>Arcomua Modpack</h1>
-    <p>
-        <img src="https://img.shields.io/badge/Mod%20Loader-Fabric-dbd0b4?style=flat" alt="Fabric Mod Loader" />
-<!--         <img src="https://img.shields.io/badge/Version-230922-blue?style=flat" alt="Version" /> -->
-    </p>
+    <img width="1280" alt="Arcomua Cloth" src="https://github.com/Arcomua/Arcomua-Modpack/assets/88249678/40c8c43a-3229-48f7-8dfd-099c5cfaff7e">
+
+# Arcomua Modpack
+
+![img-shidld-fabric]
+![img-shidld-quilt]
+![img-shidld-forge]
+![img-shidld-neoforge]
+
 </div>
 
 **Arcomua Modpack** is mainly designed to **improve your vanilla gameplay experience**. You can get better **performance**, and **better graphics** without modifications to the game's mechanism.
 
 Arcomua Modpack = Arcomua Cloth + Arcomua Anvil
 
-### Install
+# Install
 
-We highly recommend you install our pack via [Modrinth](https://modrinth.com/modpack/arcomua).
+1. Download from [Modrinth](https://modrinth.com/modpack/arcomua).
 
-You can import Arcomua Modpack in HMCL/PCL2/BakaXL. Zip files shared on the website MCBBS using [MCBBS Modpack Format](https://www.mcbbs.net/thread-1247765-1-1.html). 
+2. Install by drag the .mrpack file to your launcher.
 
-We made some video tutorials for [HMCL](https://www.bilibili.com/video/av438701520) or [PCL2/BakaXL](https://www.bilibili.com/video/av908952920) users. You can find them on Bilibili.
+3. Enjoy!
 
-It should be noted that MultiMC and its fork version cannot support MCBBS Modpack Format. Therefore, it is only possible to use the Modrinth mopdack format (.mrpack).
+# Usage
 
-### Usage
+Launch it as a game version, play it as Vanilla.
 
-You can launch it as a game version.
+# Update Plan
 
-### Update Plan
+## Current Updating Versions
 
-#### Continuously receive updated versions.
 Version|Latest|Status
 :---:|:---:|:---:
 1.21 - Fabric|240826|Continue updating
 
-#### No longer receive updated versions.
+<details><summary>Archived Versions</summary>
+
 Version|Latest
 :---:|:---:
 1.20.6 - Fabric|240708
@@ -72,3 +74,11 @@ Version|Latest
 1.9.4 - Forge|230513
 1.8.9 - Forge|230512
 1.7.10 - Forge|230512
+
+</detail>
+
+<!-- Links -->
+[img-shidld-fabric]: <https://img.shields.io/badge/Mod%20Loader-Fabric-dbd0b4?style=flat>
+[img-shidld-quilt]: <https://img.shields.io/badge/Mod%20Loader-Quilt-9f00ff?style=flat>
+[img-shidld-forge]: <https://img.shields.io/badge/Mod%20Loader-Forge-272f3d?style=flat>
+[img-shidld-neoforge]: <https://img.shields.io/badge/Mod%20Loader-NeoForge-d37731?style=flat>
