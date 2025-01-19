@@ -3,7 +3,7 @@
     "hotfixesFormat": null,
     "versions": [
         {
-            "id": "1.21.4-fabric-250120",
+            "id": "1.21.1-fabric-250120",
             "releasedAt": 1737302400000,
             "promotions": {
                 "downloads": {
