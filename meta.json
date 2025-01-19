@@ -10,7 +10,8 @@
                     "modrinth": "https://modrinth.com/modpack/arcomua/",
                     "generic": "https://dl.arcomua.com/"
                 }
-            }
+            },
+            "updateType":"major"
         }
     ]
 }
