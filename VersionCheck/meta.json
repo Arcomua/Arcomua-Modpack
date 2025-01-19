@@ -1,0 +1,16 @@
+{
+    "schemaVersion": 1,
+    "hotfixesFormat": null,
+    "versions": [
+        {
+            "id": "1.21.4-fabric-250120",
+            "releasedAt": 1737302400000,
+            "promotions": {
+                "downloads": {
+                    "modrinth": "https://modrinth.com/modpack/arcomua/",
+                    "generic": "https://dl.arcomua.com/"
+                }
+            }
+        }
+    ]
+}
