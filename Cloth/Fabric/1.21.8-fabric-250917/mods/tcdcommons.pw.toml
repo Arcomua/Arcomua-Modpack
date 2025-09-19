@@ -1,0 +1,16 @@
+filename = 'tcdcommons-4.0.1+fabric-1.21.8.jar'
+name = 'TCD Commons API'
+side = 'both'
+x-prismlauncher-loaders = [ 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'c3ae15e691bdef48a2cac4f876399815661280dc4efe0fc1290e98397801c44a51357b574250fcfc69e15557f9690834e9197d3ec6b7ddbf499e433b6af654e5'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/Eldc1g37/versions/mPtjd8Nu/tcdcommons-4.0.1%2Bfabric-1.21.8.jar'
+
+[update.modrinth]
+mod-id = 'Eldc1g37'
+version = 'mPtjd8Nu'

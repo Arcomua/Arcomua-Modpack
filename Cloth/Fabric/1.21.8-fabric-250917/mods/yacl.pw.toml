@@ -1,0 +1,16 @@
+filename = 'yet_another_config_lib_v3-3.7.1+1.21.6-fabric.jar'
+name = 'YetAnotherConfigLib (YACL)'
+side = 'both'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.6', '1.21.7', '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '838f57724346a295ed82eba0e9e94880273cc20a7b7825f5d17cac711989311aa4040c61964e9c4a18ef56dba5ec066d3537ad540196eed66c6a56940ac9a1fa'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/1eAoo2KR/versions/WxYlHLu6/yet_another_config_lib_v3-3.7.1%2B1.21.6-fabric.jar'
+
+[update.modrinth]
+mod-id = '1eAoo2KR'
+version = 'WxYlHLu6'

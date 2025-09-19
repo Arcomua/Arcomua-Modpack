@@ -1,0 +1,16 @@
+filename = 'paginatedadvancements-2.7.0+1.21.8.jar'
+name = 'Paginated Advancements'
+side = 'both'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'd197e53bc7753d985d33a346139568267a92774017e7d9a0b7f1581da55d54d3559b5c05832b91ae6ee84929289d299f7d957fc91d0037a729625c168e9fcaea'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/pJogNFap/versions/yErEOfqA/paginatedadvancements-2.7.0%2B1.21.8.jar'
+
+[update.modrinth]
+mod-id = 'pJogNFap'
+version = 'yErEOfqA'

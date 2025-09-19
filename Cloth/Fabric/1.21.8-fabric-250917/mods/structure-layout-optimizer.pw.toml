@@ -1,0 +1,16 @@
+filename = 'structure_layout_optimizer-1.1.1+1.21.6-fabric.jar'
+name = 'Structure Layout Optimizer'
+side = 'server'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.6', '1.21.7', '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '9b8e1aa2d7997bab8d952ef765aa78f63b2ebdad8864fa292e337e37db45ff3f99aab7eb8ad42f0bd8643c2ba9a3102d66288a01f9c16c5a6d0cbe164f347037'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ayPU0OHc/versions/Vj2lSmzq/structure_layout_optimizer-1.1.1%2B1.21.6-fabric.jar'
+
+[update.modrinth]
+mod-id = 'ayPU0OHc'
+version = 'Vj2lSmzq'

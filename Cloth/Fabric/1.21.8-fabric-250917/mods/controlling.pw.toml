@@ -1,0 +1,16 @@
+filename = 'Controlling-fabric-1.21.8-26.0.3.jar'
+name = 'Controlling'
+side = 'both'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'e1a4779633f0967243b60253b99aa3f91f1c97edd8ffe6883b5491acc2be847833aa94aef6970e293a42d50033304f931a0e1c86939bc7fe9b0e620671d76c8c'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/xv94TkTM/versions/15AHrwi3/Controlling-fabric-1.21.8-26.0.3.jar'
+
+[update.modrinth]
+mod-id = 'xv94TkTM'
+version = '15AHrwi3'

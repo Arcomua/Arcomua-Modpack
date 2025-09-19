@@ -1,0 +1,16 @@
+filename = 'draggable_lists-mc1.21.6-1.0.15-build.63.jar'
+name = 'Draggable Lists'
+side = 'client'
+x-prismlauncher-loaders = [ 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.6', '1.21.7', '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '9cd6f0be8aa59d265ebfd3f71d761e01b73fa9e46d5afd8492219871b27dfa43ba99a1a947d82e317f9b727fd5e3b675c7cea0825c69412b48d8ea8030caa64b'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/aLcHfalx/versions/XCl53IP8/draggable_lists-mc1.21.6-1.0.15-build.63.jar'
+
+[update.modrinth]
+mod-id = 'aLcHfalx'
+version = 'XCl53IP8'

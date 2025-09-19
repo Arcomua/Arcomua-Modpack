@@ -1,0 +1,16 @@
+filename = 'dynamiccrosshair-9.8+1.21.6-fabric.jar'
+name = 'Dynamic Crosshair'
+side = 'client'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.6', '1.21.7', '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '012c815a07ba6154e40e705e7d26feb5944391bf1c69dfc2890bbb4701691bdd6381457c420fe0908c4881c7e2662b208c39b78789a986cf4a2136418f89e0d6'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/ZcR9weSm/versions/b821t23w/dynamiccrosshair-9.8%2B1.21.6-fabric.jar'
+
+[update.modrinth]
+mod-id = 'ZcR9weSm'
+version = 'b821t23w'

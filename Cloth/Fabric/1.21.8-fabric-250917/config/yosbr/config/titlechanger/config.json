@@ -1,0 +1,20 @@
+{
+  "generalSettings": {
+    "enabled": true,
+    "title": "%playername% - Arcomua Cloth 250804 - Minecraft %mcver% with Fabric Loader ",
+    "updateInterval": 1000
+  },
+  "placeholderSettings": {
+    "defaultTimeFormat": "yyyy-MM-dd HH:mm:ss",
+    "playTimeFormat": "%h:%m:%s"
+  },
+  "iconSettings": {
+    "enabled": true,
+    "icon": "32x.png",
+    "randomIcons": false
+  },
+  "splashTextSettings": {
+    "enabled": false,
+    "mode": "REPLACE"
+  }
+}

@@ -1,0 +1,16 @@
+filename = 'cherishedworlds-fabric-13.0.1+1.21.8.jar'
+name = 'Cherished Worlds'
+side = 'both'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.6', '1.21.7', '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '41c91c2104417d20857f014658afd7f038c6548f84e3682e373d60beef3fc4f4e6741fd835b77f487c201ae6344904f7c53f25f7b86b8675e8e7640f2dbf9c3b'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/3azQ6p0W/versions/Gkt4GHxZ/cherishedworlds-fabric-13.0.1%2B1.21.8.jar'
+
+[update.modrinth]
+mod-id = '3azQ6p0W'
+version = 'Gkt4GHxZ'

@@ -1,0 +1,16 @@
+filename = 'polytone-1.21.8-3.5.3-alpha-fabric.jar'
+name = 'Polytone'
+side = 'both'
+x-prismlauncher-loaders = [ 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = '636ac0dd92309f0d59f7948652e2d97da50f8656ee9257b096ccb0cb371c6c76853c443b1b8f93dd971900a5c9d00382654871a4466e1e54b771302524e705db'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/3qAYkBMB/versions/4GDReXC6/polytone-1.21.8-3.5.3-alpha-fabric.jar'
+
+[update.modrinth]
+mod-id = '3qAYkBMB'
+version = '4GDReXC6'

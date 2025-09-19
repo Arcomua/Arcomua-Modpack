@@ -1,0 +1,16 @@
+filename = 'status-effect-bars-1.0.9.jar'
+name = 'Status Effect Bars'
+side = 'client'
+x-prismlauncher-loaders = [ 'quilt', 'fabric' ]
+x-prismlauncher-mc-versions = [ '1.21.6', '1.21.7', '1.21.8' ]
+x-prismlauncher-release-type = 'release'
+
+[download]
+hash = 'c35c4b74c95a472c91614563bd3ed1093ea1caad86b570da35e71da048fb58cc98a1bb000fa3529285f6fa2bb8d840252406ab929ad7a6f6f61b292706ebd0b5'
+hash-format = 'sha512'
+mode = 'url'
+url = 'https://cdn.modrinth.com/data/x02cBj9Y/versions/sxd3IyH5/status-effect-bars-1.0.9.jar'
+
+[update.modrinth]
+mod-id = 'x02cBj9Y'
+version = 'sxd3IyH5'
