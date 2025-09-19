@@ -1,7 +1,6 @@
 <div align="center">
     <img width="1280" alt="Arcomua Cloth" src="https://github.com/Arcomua/Arcomua-Modpack/assets/88249678/40c8c43a-3229-48f7-8dfd-099c5cfaff7e">
-
-# Arcomua Modpack
+    <h1>Arcomua Modpack</h1>
 
 ![img-shidld-fabric]
 ![img-shidld-quilt]
@@ -10,9 +9,16 @@
 
 </div>
 
+<p align="center">
+    <img src="https://www.arcomua.com/cloth_logo.png" width="50" height="50" />
+    <img src="https://www.arcomua.com/anvil_logo.png" width="50" height="50" />
+</p>
+
 **Arcomua Modpack** is mainly designed to **improve your vanilla gameplay experience**. You can get better **performance**, and **better graphics** without modifications to the game's mechanism.
 
 Arcomua Modpack = Arcomua Cloth + Arcomua Anvil
+
+[中文文档](https://support.arcomua.com/)
 
 # Install
 
@@ -22,41 +28,46 @@ Arcomua Modpack = Arcomua Cloth + Arcomua Anvil
 
 3. Enjoy!
 
-# Usage
-
-Launch it as a game version, play it as Vanilla.
-
 # Update Plan
 
 ## Current Updating Versions
 
 Version|Latest|Status
 :---:|:---:|:---:
-1.21 - Fabric|240826|Continue updating
+
+Nothing, waiting for 1.21.9 release.
 
 <details><summary>Archived Versions</summary>
 
 Version|Latest
 :---:|:---:
+1.21.8 - Fabric|250917
+1.21.7 - Fabric|250811
+1.21.6 - Fabric|250728
+1.21.5 - Fabric|250705
+1.21.4 - Fabric|250329
+1.21.3 - Fabric|241027
+1.21.1 - Fabric|241206
+1.21 - Fabric|240912
 1.20.6 - Fabric|240708
 1.20.5 - Fabric|240430
 1.20.4 - Fabric|240521
 1.20.4 - Quilt|240416
 1.20.3 - Fabric|231206
-1.20.2 - Fabric|240117
+1.20.2 - Fabric|250812
 1.20.2 - Quilt|240416
 1.20.2 - Forge|231203
-1.20.1 - Fabric|240413
+1.20.1 - Fabric|250812
 1.20.1 - Quilt|240222
 1.20.1 - Forge|240110
 1.20 - Fabric|230609
 1.20 - Quilt|230622
-1.19.4 - Fabric|230814
+1.19.4 - Fabric|250812
 1.19.4 - Forge|230814
 1.19.3 - Fabric|230316
-1.19.2 - Fabric|230731
+1.19.2 - Fabric|250812
 1.19.2 - Forge|230810
-1.18.2 - Fabric|230803
+1.18.2 - Fabric|250812
 1.18.2 - Forge|230810
 1.17.1 - Fabric|230803
 1.17.1 - Forge|230810
