@@ -1,0 +1,17 @@
+[build-system]
+requires = ["setuptools>=65"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "arcomua-pack-workflow"
+version = "0.3.0"
+description = "Prism-first, version-branch Modrinth publishing workflow for Arcomua Modpack"
+requires-python = ">=3.11"
+license = "CC0-1.0"
+authors = [{ name = "Arcomua Team" }]
+
+[project.scripts]
+arpack = "arpack.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["arpack*"]

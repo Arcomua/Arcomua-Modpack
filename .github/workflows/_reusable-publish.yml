@@ -1,0 +1,85 @@
+name: Reusable Modpack Publisher
+
+on:
+  workflow_call:
+    secrets:
+      MODRINTH_TOKEN:
+        required: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: arcomua-release-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out version branch
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          path: source
+
+      - name: Check out central tooling from Main
+        uses: actions/checkout@v6
+        with:
+          ref: Main
+          path: tooling
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Validate, generate changelog, build, and publish to Modrinth
+        id: release
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: |
+          python tooling/ci/release.py \
+            --source source \
+            --config tooling/config/products.toml \
+            --verify-reproducible \
+            --publish
+
+      - name: Create or update draft GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ steps.release.outputs.tag }}
+          TITLE: ${{ steps.release.outputs.title }}
+          ARTIFACT: ${{ steps.release.outputs.artifact }}
+          SHA_FILE: ${{ steps.release.outputs.sha256_file }}
+          CHANGELOG: ${{ steps.release.outputs.changelog_file }}
+          PRERELEASE: ${{ steps.release.outputs.prerelease }}
+        working-directory: source
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          if gh release view "$TAG" >/dev/null 2>&1; then
+            gh release upload "$TAG" \
+              "$ARTIFACT#Modrinth modpack" \
+              "$SHA_FILE#SHA-256 checksum" \
+              --clobber
+            gh release edit "$TAG" \
+              --title "$TITLE" \
+              --notes-file "$CHANGELOG" \
+              --draft=false
+          else
+            args=(
+              "$TAG"
+              "$ARTIFACT#Modrinth modpack"
+              "$SHA_FILE#SHA-256 checksum"
+              --target "$GITHUB_SHA"
+              --title "$TITLE"
+              --notes-file "$CHANGELOG"
+            )
+            if [[ "$PRERELEASE" == "true" ]]; then
+              args+=(--prerelease)
+            fi
+            gh release create "${args[@]}"
+          fi

@@ -1,0 +1,101 @@
+name: Manage published version
+
+run-name: >-
+  ${{ inputs.action }} ${{ inputs.line }}/${{ inputs.minecraft }} ${{ inputs.date }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: Archive a buggy version or restore it
+        required: true
+        type: choice
+        options:
+          - yank
+          - restore
+      line:
+        description: Product line
+        required: true
+        type: choice
+        options:
+          - cloth
+          - anvil
+      minecraft:
+        description: Minecraft version, for example 26.2
+        required: true
+        type: string
+      date:
+        description: Published version date in YYMMDD format
+        required: true
+        type: string
+      reason:
+        description: Optional internal reason
+        required: false
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: manage-${{ inputs.line }}-${{ inputs.minecraft }}-${{ inputs.date }}
+  cancel-in-progress: false
+
+jobs:
+  manage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Main
+        uses: actions/checkout@v6
+        with:
+          ref: Main
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Change Modrinth version status
+        env:
+          MODRINTH_TOKEN: ${{ secrets.MODRINTH_TOKEN }}
+        run: |
+          python ci/manage_version.py \
+            --config config/products.toml \
+            --action "${{ inputs.action }}" \
+            --line "${{ inputs.line }}" \
+            --minecraft "${{ inputs.minecraft }}" \
+            --date "${{ inputs.date }}"
+
+      - name: Hide or restore GitHub Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: ${{ inputs.line }}-${{ inputs.minecraft }}-${{ inputs.date }}
+          ACTION: ${{ inputs.action }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          gh release view "$TAG" >/dev/null
+          if [[ "$ACTION" == "yank" ]]; then
+            gh release edit "$TAG" --draft=true
+          else
+            gh release edit "$TAG" --draft=false
+          fi
+
+      - name: Write operation summary
+        env:
+          ACTION: ${{ inputs.action }}
+          LINE: ${{ inputs.line }}
+          MINECRAFT: ${{ inputs.minecraft }}
+          DATE: ${{ inputs.date }}
+          REASON: ${{ inputs.reason }}
+        shell: bash
+        run: |
+          {
+            echo "## Version management"
+            echo
+            echo "- Action: $ACTION"
+            echo "- Product: $LINE"
+            echo "- Minecraft: $MINECRAFT"
+            echo "- Date: $DATE"
+            echo "- Reason: ${REASON:-Not provided}"
+          } >> "$GITHUB_STEP_SUMMARY"

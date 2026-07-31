@@ -1,0 +1,23 @@
+[repository]
+default_branch = "Main"
+branch_pattern = "{line}/{minecraft}"
+tag_pattern = "{line}-{minecraft}-{release_date}"
+release_timezone_offset_hours = 8
+
+[products.cloth]
+display_name = "Arcomua Cloth"
+filename_name = "Arcomua-Cloth"
+branch_line = "cloth"
+modrinth_project_id = "KxWXUpxk"
+allowed_loader_dependencies = ["fabric-loader"]
+modrinth_loader = "fabric"
+environment = "client_only"
+
+[products.anvil]
+display_name = "Arcomua Anvil"
+filename_name = "Arcomua-Anvil"
+branch_line = "anvil"
+modrinth_project_id = "FM4SVeFi"
+allowed_loader_dependencies = ["neoforge"]
+modrinth_loader = "neoforge"
+environment = "client_and_server"
