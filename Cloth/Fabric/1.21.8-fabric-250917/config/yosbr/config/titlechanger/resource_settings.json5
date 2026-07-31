@@ -1,9 +1,0 @@
-{
-	"modpackName": "Arcomua Modpack",
-	"modpackVersion": "1.0.0",
-	// Only usable in modrinth
-	"checkUpdates": false,
-	// The project ID of the modpack in modrinth
-	"modrinthProjectId": "",
-	"enableWelcomeScreen": false
-}
