@@ -1,4 +1,4 @@
-# Arcomua Modpack Workflow Maintainer Guide (v4)
+# Arcomua Modpack Workflow Maintainer Guide (v5)
 
 ## 1. Branch layout
 
@@ -52,12 +52,12 @@ git switch Main
 git pull --ff-only origin Main
 ```
 
-Copy the v4 files, then remove active release source that must not remain on `Main`:
+Copy the v5 files, then remove active release source that must not remain on `Main`:
 
 ```bash
 git rm -r pack release
 git add -A
-git commit -m "Upgrade Arcomua workflow to v4"
+git commit -m "Upgrade Arcomua workflow to v5"
 git push origin Main
 python -m pip install --upgrade .
 ```
@@ -210,3 +210,52 @@ Restore it with:
 ```bash
 arpack restore --line cloth --minecraft 26.2 --date 260801 --release-id fix1
 ```
+
+## 12. Embedded mods in automatic changelogs
+
+Some launchers place mods that cannot be represented as Modrinth download entries directly in:
+
+```text
+pack/overrides/mods/
+```
+
+v5 reads metadata from these JARs and compares them together with remote mods listed in `modrinth.index.json`.
+
+Recognized metadata formats:
+
+```text
+Fabric: fabric.mod.json
+NeoForge: META-INF/neoforge.mods.toml
+Forge: META-INF/mods.toml
+Quilt: quilt.mod.json
+Legacy Forge: mcmod.info
+```
+
+For Forge and NeoForge `${file.jarVersion}` values, the workflow attempts to read `Implementation-Version` from `META-INF/MANIFEST.MF`.
+
+Replacing a JAR with the same mod ID and a newer version produces an entry such as:
+
+```markdown
+### Updated
+- Example Mod: `1.0.0` → `1.1.0`
+```
+
+A JAR with unrecognized metadata still participates in added, removed, and changed detection through its path and hash.
+
+## 13. Automatic options.txt sanitization
+
+Every import and build checks:
+
+```text
+pack/overrides/options.txt
+pack/overrides/config/yosbr/options.txt
+```
+
+When present, the following values are normalized:
+
+```text
+lastServer:example.com  → lastServer: 
+lang:zh_cn             → lang:en_us
+```
+
+Missing files and missing keys are skipped. All other settings remain unchanged.

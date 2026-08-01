@@ -1,4 +1,4 @@
-# Arcomua Modpack 工作流维护说明（v4）
+# Arcomua Modpack 工作流维护说明（v5）
 
 ## 1. 分支结构
 
@@ -59,7 +59,7 @@ git switch Main
 git pull --ff-only origin Main
 ```
 
-复制 v4 文件后，删除不应保存在 `Main` 的活动发布源：
+复制 v5 文件后，删除不应保存在 `Main` 的活动发布源：
 
 ```bash
 git rm -r pack release
@@ -69,7 +69,7 @@ git rm -r pack release
 
 ```bash
 git add -A
-git commit -m "Upgrade Arcomua workflow to v4"
+git commit -m "Upgrade Arcomua workflow to v5"
 git push origin Main
 python -m pip install --upgrade .
 ```
@@ -222,3 +222,52 @@ arpack yank \
 ```bash
 arpack restore --line cloth --minecraft 26.2 --date 260801 --release-id fix1
 ```
+
+## 12. 内嵌 Mod 的自动 Changelog
+
+部分启动器会把无法通过 Modrinth 下载清单表达的 Mod 直接放进：
+
+```text
+pack/overrides/mods/
+```
+
+v5 会在生成 Changelog 时读取这些 JAR 内的元数据，并把它们与 `modrinth.index.json` 中的远程 Mod 一起比较。
+
+当前识别：
+
+```text
+Fabric：fabric.mod.json
+NeoForge：META-INF/neoforge.mods.toml
+Forge：META-INF/mods.toml
+Quilt：quilt.mod.json
+旧 Forge：mcmod.info
+```
+
+对于 Forge/NeoForge 中的 `${file.jarVersion}`，工作流会尝试从 `META-INF/MANIFEST.MF` 读取 `Implementation-Version`。
+
+同一 Mod ID 的 JAR 从旧版本替换为新版本时，会生成：
+
+```markdown
+### Updated
+- Example Mod: `1.0.0` → `1.1.0`
+```
+
+无法识别元数据的 JAR 仍会按文件路径和哈希参与增删改比较，不会被忽略。
+
+## 13. options.txt 自动清理
+
+每次导入和构建时，工作流会检查：
+
+```text
+pack/overrides/options.txt
+pack/overrides/config/yosbr/options.txt
+```
+
+存在文件时自动执行：
+
+```text
+lastServer:example.com  → lastServer: 
+lang:zh_cn             → lang:en_us
+```
+
+如果目标文件不存在，或者文件中没有对应设置项，工作流直接跳过。其他 `options.txt` 设置保持不变。

@@ -19,6 +19,9 @@ from datetime import datetime, timedelta, timezone
 from pathlib import Path, PurePosixPath
 from typing import Any, Iterable
 
+from .embedded import read_embedded_mod_metadata
+from .options import pack_file_bytes, sanitize_pack_options
+
 API_BASE = "https://api.modrinth.com/v2"
 FIXED_ZIP_TIME = (2020, 1, 1, 0, 0, 0)
 CHANNELS = {"release", "beta", "alpha"}
@@ -69,6 +72,9 @@ class ModEntry:
     path: str
     filename: str
     sha512: str
+    display_name: str | None = None
+    detected_version: str | None = None
+    source: str = "manifest"
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -152,6 +158,20 @@ def run_git(repo: Path, *args: str, check: bool = True) -> subprocess.CompletedP
         stderr = result.stderr or ""
         stdout = result.stdout or ""
         detail = stderr.strip() or stdout.strip()
+        raise WorkflowError(f"{command} failed: {detail}")
+    return result
+
+
+def run_git_bytes(repo: Path, *args: str, check: bool = True) -> subprocess.CompletedProcess[bytes]:
+    result = subprocess.run(
+        ["git", *args],
+        cwd=repo,
+        text=False,
+        capture_output=True,
+    )
+    if check and result.returncode != 0:
+        command = "git " + " ".join(args)
+        detail = (result.stderr or result.stdout or b"").decode("utf-8", errors="replace").strip()
         raise WorkflowError(f"{command} failed: {detail}")
     return result
 
@@ -441,6 +461,7 @@ def extract_mrpack(source: Path, destination: Path) -> dict[str, Any]:
             manifest = read_json(temp / "modrinth.index.json")
             validate_manifest(manifest)
             write_json(temp / "modrinth.index.json", manifest)
+            sanitize_pack_options(temp)
 
             if destination.exists():
                 shutil.rmtree(destination)
@@ -488,7 +509,7 @@ def build_mrpack(pack_dir: Path, output: Path) -> None:
             info = zipfile.ZipInfo(rel.as_posix(), FIXED_ZIP_TIME)
             info.compress_type = zipfile.ZIP_DEFLATED
             info.external_attr = (stat.S_IFREG | 0o644) << 16
-            archive.writestr(info, source.read_bytes())
+            archive.writestr(info, pack_file_bytes(source, rel))
 
 
 def manifest_mods(manifest: dict[str, Any]) -> dict[str, ModEntry]:
@@ -520,6 +541,102 @@ def manifest_mods(manifest: dict[str, Any]) -> dict[str, ModEntry]:
         )
     return result
 
+
+def _embedded_mod_entry(relative_path: str, data: bytes) -> ModEntry:
+    filename = PurePosixPath(relative_path).name
+    metadata = read_embedded_mod_metadata(data, filename)
+    if metadata.mod_id:
+        identity = f"embedded:{metadata.loader}:{metadata.mod_id.casefold()}"
+    else:
+        identity = f"embedded-file:{relative_path.casefold()}"
+    return ModEntry(
+        identity=identity,
+        project_id=None,
+        version_id=None,
+        path=relative_path,
+        filename=filename,
+        sha512=hashlib.sha512(data).hexdigest(),
+        display_name=metadata.name,
+        detected_version=metadata.version,
+        source="embedded",
+    )
+
+
+def embedded_mods_from_pack(pack_dir: Path) -> dict[str, ModEntry]:
+    result: dict[str, ModEntry] = {}
+    mods_dir = pack_dir / "overrides" / "mods"
+    if not mods_dir.is_dir():
+        return result
+
+    for jar_path in sorted(mods_dir.rglob("*"), key=lambda item: item.as_posix().casefold()):
+        if not jar_path.is_file() or jar_path.suffix.casefold() != ".jar":
+            continue
+        relative = jar_path.relative_to(pack_dir).as_posix()
+        entry = _embedded_mod_entry(relative, jar_path.read_bytes())
+        identity = entry.identity
+        if identity in result:
+            identity = f"{identity}:{relative.casefold()}"
+            entry = ModEntry(
+                identity=identity,
+                project_id=entry.project_id,
+                version_id=entry.version_id,
+                path=entry.path,
+                filename=entry.filename,
+                sha512=entry.sha512,
+                display_name=entry.display_name,
+                detected_version=entry.detected_version,
+                source=entry.source,
+            )
+        result[identity] = entry
+    return result
+
+
+def embedded_mods_from_git(repo: Path, tag: str) -> dict[str, ModEntry]:
+    result: dict[str, ModEntry] = {}
+    listing = run_git(
+        repo,
+        "ls-tree",
+        "-r",
+        "--name-only",
+        tag,
+        "--",
+        "pack/overrides/mods",
+    ).stdout
+    for tracked_path in sorted(listing.splitlines(), key=str.casefold):
+        tracked_path = tracked_path.strip()
+        if not tracked_path.casefold().endswith(".jar"):
+            continue
+        data = run_git_bytes(repo, "show", f"{tag}:{tracked_path}").stdout
+        relative = tracked_path.removeprefix("pack/")
+        entry = _embedded_mod_entry(relative, data)
+        identity = entry.identity
+        if identity in result:
+            identity = f"{identity}:{relative.casefold()}"
+            entry = ModEntry(
+                identity=identity,
+                project_id=entry.project_id,
+                version_id=entry.version_id,
+                path=entry.path,
+                filename=entry.filename,
+                sha512=entry.sha512,
+                display_name=entry.display_name,
+                detected_version=entry.detected_version,
+                source=entry.source,
+            )
+        result[identity] = entry
+    return result
+
+
+def collect_mods(manifest: dict[str, Any], pack_dir: Path) -> dict[str, ModEntry]:
+    result = manifest_mods(manifest)
+    result.update(embedded_mods_from_pack(pack_dir))
+    return result
+
+
+def collect_mods_from_git(repo: Path, tag: str) -> dict[str, ModEntry]:
+    result = manifest_mods(manifest_from_git(repo, tag))
+    result.update(embedded_mods_from_git(repo, tag))
+    return result
 
 def api_get_json(url: str, token: str | None = None) -> Any:
     headers = {
@@ -606,12 +723,14 @@ def render_mod(entry: ModEntry, projects: dict[str, dict[str, Any]], versions: d
         name = str(project.get("title") or project.get("slug") or entry.filename)
         slug = str(project.get("slug") or entry.project_id)
         label = f"[{name}](https://modrinth.com/mod/{slug})"
+    elif entry.display_name:
+        label = entry.display_name
     else:
         label = f"`{entry.filename}`"
 
-    version = entry.filename
+    version = entry.detected_version or entry.filename
     if entry.version_id and entry.version_id in versions:
-        version = str(versions[entry.version_id].get("version_number") or entry.filename)
+        version = str(versions[entry.version_id].get("version_number") or version)
     return label, version
 
 
@@ -619,6 +738,7 @@ def generate_changelog(
     repo: Path,
     *,
     current_manifest: dict[str, Any],
+    current_pack_dir: Path,
     previous_tag: str | None,
     manual_notes: str,
     lookup_metadata: bool = True,
@@ -626,9 +746,8 @@ def generate_changelog(
     if previous_tag is None:
         return "Initial version\n"
 
-    old_manifest = manifest_from_git(repo, previous_tag)
-    old = manifest_mods(old_manifest)
-    new = manifest_mods(current_manifest)
+    old = collect_mods_from_git(repo, previous_tag)
+    new = collect_mods(current_manifest, current_pack_dir)
 
     added_keys = sorted(new.keys() - old.keys())
     removed_keys = sorted(old.keys() - new.keys())
@@ -636,7 +755,11 @@ def generate_changelog(
     updated_keys = [
         key
         for key in shared_keys
-        if old[key].sha512 != new[key].sha512 or old[key].version_id != new[key].version_id
+        if (
+            old[key].sha512 != new[key].sha512
+            or old[key].version_id != new[key].version_id
+            or old[key].detected_version != new[key].detected_version
+        )
     ]
 
     project_ids = {

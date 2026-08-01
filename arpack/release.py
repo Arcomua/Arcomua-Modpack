@@ -31,6 +31,8 @@ from .core import (
     write_json,
 )
 
+from .options import sanitize_pack_options
+
 
 def run_release(
     *,
@@ -42,6 +44,7 @@ def run_release(
     api_base: str = "https://api.modrinth.com/v2",
 ) -> dict[str, object]:
     source = source.resolve()
+    sanitize_pack_options(source / "pack")
     branch = os.getenv("GITHUB_REF_NAME") or run_git(
         source, "branch", "--show-current"
     ).stdout.strip()
@@ -93,6 +96,7 @@ def run_release(
     changelog = generate_changelog(
         source,
         current_manifest=manifest,
+        current_pack_dir=source / "pack",
         previous_tag=previous_tag,
         manual_notes=manual_notes,
         lookup_metadata=not offline,
