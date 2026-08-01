@@ -1,0 +1,22 @@
+{
+  "checkIntervalMilli": 100,
+  "screenBlacklist": [
+    "com.mamiyaotaru.voxelmap.persistent.GuiPersistentMap"
+  ],
+  "screenWhitelist": [
+    "net.minecraft.class_473",
+    "net.minecraft.class_498",
+    "net.minecraft.class_7744",
+    "net.minecraft.class_442",
+    "journeymap.client.ui.waypoint.WaypointEditor",
+    "com.ldtteam.blockout.BOScreen"
+  ],
+  "inputBlacklist": [
+    ""
+  ],
+  "inputWhitelist": [],
+  "enableScreenRecovering": false,
+  "recoveredScreens": [],
+  "useExperimental": false,
+  "checkCommandChat": true
+}
