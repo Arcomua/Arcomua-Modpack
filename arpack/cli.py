@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -10,6 +11,7 @@ from pathlib import Path
 
 from .core import (
     BRANCH_RE,
+    RepositoryConfig,
     WorkflowError,
     current_release_date,
     detect_product,
@@ -17,14 +19,38 @@ from .core import (
     find_repo_root,
     load_config,
     normalize_manifest_for_release,
+    parse_config_text,
     read_release_toml,
+    release_tag,
     require_clean_repo,
     run_git,
     validate_manifest,
     validate_release_date,
+    validate_release_id,
     write_json,
     write_release_toml,
 )
+from .release import run_release
+
+VERSION_WORKFLOW_PATH = Path(".github/workflows/publish-version.yml")
+VERSION_BRANCH_ALLOWED_PREFIXES = (
+    ".github/workflows/publish-version.yml",
+    ".gitignore",
+    "pack/",
+    "release/",
+)
+VERSION_BRANCH_GITIGNORE = """# Local build output
+dist/
+*.mrpack
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+.venv/
+venv/
+"""
 
 
 def remote_branch_exists(repo: Path, branch: str) -> bool:
@@ -53,50 +79,130 @@ def local_branch_exists(repo: Path, branch: str) -> bool:
     )
 
 
-def switch_version_branch(repo: Path, default_branch: str, target_branch: str) -> bool:
+def config_from_repository(
+    repo: Path,
+    relative_path: str,
+    default_branch: str = "Main",
+) -> RepositoryConfig:
+    current_branch = run_git(repo, "branch", "--show-current").stdout.strip()
+    if not BRANCH_RE.fullmatch(current_branch):
+        local_path = repo / relative_path
+        if local_path.exists():
+            return load_config(local_path)
+
+    result = run_git(
+        repo,
+        "show",
+        f"{default_branch}:{relative_path}",
+        check=False,
+    )
+    if result.returncode != 0:
+        raise WorkflowError(
+            f"Unable to load {relative_path} from the working tree or {default_branch}"
+        )
+    return parse_config_text(result.stdout)
+
+
+def main_branch_file(repo: Path, default_branch: str, relative_path: Path) -> str:
+    result = run_git(
+        repo,
+        "show",
+        f"{default_branch}:{relative_path.as_posix()}",
+        check=False,
+    )
+    if result.returncode != 0:
+        raise WorkflowError(
+            f"Missing {relative_path.as_posix()} on {default_branch}. "
+            "Upgrade and commit the workflow on Main first."
+        )
+    return result.stdout
+
+
+def is_allowed_version_file(path: str) -> bool:
+    normalized = path.replace("\\", "/")
+    return any(
+        normalized == prefix.rstrip("/") or normalized.startswith(prefix)
+        for prefix in VERSION_BRANCH_ALLOWED_PREFIXES
+    )
+
+
+def remove_empty_directories(repo: Path) -> None:
+    for directory in sorted(
+        (path for path in repo.rglob("*") if path.is_dir()),
+        key=lambda path: len(path.parts),
+        reverse=True,
+    ):
+        if ".git" in directory.parts:
+            continue
+        try:
+            directory.rmdir()
+        except OSError:
+            pass
+
+
+def ensure_version_branch_layout(repo: Path, default_branch: str) -> list[str]:
+    removed: list[str] = []
+    tracked = run_git(repo, "ls-files", "-z").stdout.split("\0")
+    for relative in tracked:
+        if not relative or is_allowed_version_file(relative):
+            continue
+        target = repo / relative
+        if target.is_file() or target.is_symlink():
+            target.unlink()
+        removed.append(relative)
+
+    remove_empty_directories(repo)
+
+    workflow_text = main_branch_file(repo, default_branch, VERSION_WORKFLOW_PATH)
+    workflow_path = repo / VERSION_WORKFLOW_PATH
+    workflow_path.parent.mkdir(parents=True, exist_ok=True)
+    workflow_path.write_text(workflow_text, encoding="utf-8", newline="\n")
+    (repo / ".gitignore").write_text(
+        VERSION_BRANCH_GITIGNORE,
+        encoding="utf-8",
+        newline="\n",
+    )
+    return removed
+
+
+def switch_version_branch(
+    repo: Path,
+    default_branch: str,
+    target_branch: str,
+) -> tuple[bool, list[str]]:
     run_git(repo, "fetch", "origin", default_branch, "--tags")
 
     if local_branch_exists(repo, target_branch):
         run_git(repo, "switch", target_branch)
         if remote_branch_exists(repo, target_branch):
             run_git(repo, "pull", "--ff-only", "origin", target_branch)
-        return False
+        return False, ensure_version_branch_layout(repo, default_branch)
 
     if remote_branch_exists(repo, target_branch):
         run_git(repo, "switch", "--track", "-c", target_branch, f"origin/{target_branch}")
-        return False
+        return False, ensure_version_branch_layout(repo, default_branch)
 
     run_git(repo, "switch", default_branch)
     run_git(repo, "pull", "--ff-only", "origin", default_branch)
-    run_git(repo, "switch", "-c", target_branch)
-    return True
+    run_git(repo, "switch", "--orphan", target_branch)
+    return True, ensure_version_branch_layout(repo, default_branch)
 
 
 def run_local_check(
     repo: Path,
-    config_relative: str,
+    config: RepositoryConfig,
     *,
     offline: bool = False,
     verify_reproducible: bool = True,
 ) -> None:
-    command = [
-        sys.executable,
-        str(repo / "ci/release.py"),
-        "--source",
-        str(repo),
-        "--config",
-        str(repo / config_relative),
-    ]
-    if offline:
-        command.append("--offline")
-    if verify_reproducible:
-        command.append("--verify-reproducible")
-
     print("\nRunning the same build and changelog logic used by GitHub Actions...\n")
-    result = subprocess.run(command, cwd=repo)
-    if result.returncode != 0:
-        raise WorkflowError("Local release check failed. Nothing was committed or pushed.")
-
+    run_release(
+        source=repo,
+        config=config,
+        publish=False,
+        offline=offline,
+        verify_reproducible=verify_reproducible,
+    )
     print("\nLocal release check passed.")
     print(f"Test artifact: {repo / 'dist'}")
 
@@ -104,12 +210,13 @@ def run_local_check(
 def import_command(args: argparse.Namespace) -> int:
     repo = find_repo_root(Path.cwd())
     require_clean_repo(repo)
-    config = load_config(repo / args.config)
+    config = config_from_repository(repo, args.config)
     release_date = (
         validate_release_date(args.date)
         if args.date
         else current_release_date(config)
     )
+    release_id = validate_release_id(args.release_id)
 
     source = args.mrpack.expanduser().resolve()
     with zipfile.ZipFile(source, "r") as archive:
@@ -121,7 +228,7 @@ def import_command(args: argparse.Namespace) -> int:
     minecraft, loaders = validate_manifest(manifest)
     product = detect_product(config, loaders)
     branch = config.branch_pattern.format(line=product.branch_line, minecraft=minecraft)
-    new_branch = switch_version_branch(repo, config.default_branch, branch)
+    new_branch, removed = switch_version_branch(repo, config.default_branch, branch)
 
     manifest = extract_mrpack(source, repo / "pack")
     minecraft_after, loaders_after = validate_manifest(manifest)
@@ -134,11 +241,13 @@ def import_command(args: argparse.Namespace) -> int:
         product=product,
         minecraft=minecraft,
         release_date=release_date,
+        release_id=release_id,
     )
     write_json(repo / "pack/modrinth.index.json", manifest)
     write_release_toml(
         repo / "release/release.toml",
         release_date=release_date,
+        release_id=release_id,
         channel=args.channel,
         product=product,
         minecraft=minecraft,
@@ -159,25 +268,28 @@ def import_command(args: argparse.Namespace) -> int:
 
     print(f"Product: {product.display_name}")
     print(f"Minecraft: {minecraft}")
-    print(f"Target branch: {branch}" + (" (created)" if new_branch else ""))
+    print(f"Target branch: {branch}" + (" (created as orphan)" if new_branch else ""))
     print(f"Release channel: {args.channel}")
     print(f"Release date: {release_date}")
+    print(f"Release ID: {release_id or '(none)'}")
     print(f"Modrinth version number: {full_version}")
+    if removed:
+        print(f"Removed {len(removed)} duplicated tracked file(s) from the version branch.")
 
     if not args.skip_check:
         run_local_check(
             repo,
-            args.config,
+            config,
             offline=args.offline,
             verify_reproducible=True,
         )
     else:
         print("\nWarning: local release check was skipped.")
 
-    print("\nReview `git diff` and import dist/*.mrpack into a clean Prism instance.")
+    print("\nReview `git diff` and import dist/*.mrpack into a clean test instance.")
 
     if args.commit or args.push:
-        run_git(repo, "add", "pack", "release")
+        run_git(repo, "add", "-A")
         message = args.message or f"Release {product.display_name} {full_version}"
         run_git(repo, "commit", "-m", message)
         print(f"Created commit: {message}")
@@ -197,16 +309,50 @@ def import_command(args: argparse.Namespace) -> int:
 
 def check_command(args: argparse.Namespace) -> int:
     repo = find_repo_root(Path.cwd())
+    config = config_from_repository(repo, args.config)
     run_local_check(
         repo,
-        args.config,
+        config,
         offline=args.offline,
         verify_reproducible=not args.skip_reproducible,
     )
     return 0
 
 
-def product_for_line(config, line: str):
+def clean_branch_command(args: argparse.Namespace) -> int:
+    repo = find_repo_root(Path.cwd())
+    require_clean_repo(repo)
+    config = config_from_repository(repo, args.config)
+    branch = run_git(repo, "branch", "--show-current").stdout.strip()
+    if not BRANCH_RE.fullmatch(branch):
+        raise WorkflowError("clean-branch must be run on cloth/<minecraft> or anvil/<minecraft>")
+
+    removed = ensure_version_branch_layout(repo, config.default_branch)
+    run_local_check(
+        repo,
+        config,
+        offline=args.offline,
+        verify_reproducible=True,
+    )
+    print(f"Version branch layout cleaned. Removed {len(removed)} duplicated tracked file(s).")
+
+    if args.commit or args.push:
+        run_git(repo, "add", "-A")
+        message = args.message or f"Clean version branch layout for {branch}"
+        run_git(repo, "commit", "-m", message)
+        print(f"Created commit: {message}")
+
+    if args.push:
+        if not args.yes:
+            answer = input(f"Push the cleaned {branch} branch? Type CLEAN: ").strip()
+            if answer != "CLEAN":
+                raise WorkflowError("Operation cancelled")
+        run_git(repo, "push", "origin", branch)
+        print("Cleaned version branch pushed.")
+    return 0
+
+
+def product_for_line(config: RepositoryConfig, line: str):
     matches = [product for product in config.products.values() if product.branch_line == line]
     if len(matches) != 1:
         raise WorkflowError(f"Unknown product line: {line}")
@@ -215,12 +361,13 @@ def product_for_line(config, line: str):
 
 def resolve_manage_target(
     repo: Path,
-    config,
+    config: RepositoryConfig,
     args: argparse.Namespace,
-) -> tuple[str, str, str]:
+) -> tuple[str, str, str, str]:
     line = args.line
     minecraft = args.minecraft
     release_date = args.date
+    release_id = args.release_id
 
     branch = run_git(repo, "branch", "--show-current").stdout.strip()
     branch_match = BRANCH_RE.fullmatch(branch)
@@ -234,6 +381,7 @@ def resolve_manage_target(
         line = line or str(release.get("product", ""))
         minecraft = minecraft or str(release.get("minecraft", ""))
         release_date = release_date or release["date"]
+        release_id = release_id if release_id is not None else release.get("release_id", "")
 
     if not line or not minecraft or not release_date:
         raise WorkflowError(
@@ -243,7 +391,7 @@ def resolve_manage_target(
 
     product = product_for_line(config, line)
     validate_release_date(release_date)
-    return product.branch_line, minecraft, release_date
+    return product.branch_line, minecraft, release_date, validate_release_id(release_id)
 
 
 def dispatch_manage_workflow(
@@ -254,11 +402,12 @@ def dispatch_manage_workflow(
     line: str,
     minecraft: str,
     release_date: str,
+    release_id: str,
     reason: str,
     yes: bool,
     dry_run: bool,
 ) -> None:
-    tag = f"{line}-{minecraft}-{release_date}"
+    tag = release_tag(line, minecraft, release_date, release_id)
     if dry_run:
         print("Dry run only. No GitHub workflow was dispatched.")
         print(f"Action: {action}")
@@ -278,9 +427,7 @@ def dispatch_manage_workflow(
 
     confirmation = "YANK" if action == "yank" else "RESTORE"
     if not yes:
-        answer = input(
-            f"{confirmation} {tag}? Type {confirmation} to continue: "
-        ).strip()
+        answer = input(f"{confirmation} {tag}? Type {confirmation} to continue: ").strip()
         if answer != confirmation:
             raise WorkflowError("Operation cancelled")
 
@@ -300,6 +447,8 @@ def dispatch_manage_workflow(
         "-f",
         f"date={release_date}",
         "-f",
+        f"release_id={release_id}",
+        "-f",
         f"reason={reason}",
     ]
     result = subprocess.run(command, cwd=repo)
@@ -313,8 +462,8 @@ def dispatch_manage_workflow(
 
 def manage_command(args: argparse.Namespace, action: str) -> int:
     repo = find_repo_root(Path.cwd())
-    config = load_config(repo / args.config)
-    line, minecraft, release_date = resolve_manage_target(repo, config, args)
+    config = config_from_repository(repo, args.config)
+    line, minecraft, release_date, release_id = resolve_manage_target(repo, config, args)
     dispatch_manage_workflow(
         repo=repo,
         default_branch=config.default_branch,
@@ -322,6 +471,7 @@ def manage_command(args: argparse.Namespace, action: str) -> int:
         line=line,
         minecraft=minecraft,
         release_date=release_date,
+        release_id=release_id,
         reason=args.reason or "",
         yes=args.yes,
         dry_run=args.dry_run,
@@ -333,6 +483,7 @@ def add_manage_arguments(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--line", choices=["cloth", "anvil"])
     parser.add_argument("--minecraft", help="Minecraft version, for example 26.2")
     parser.add_argument("--date", help="Published version date in YYMMDD format")
+    parser.add_argument("--release-id", help="Optional release ID, for example fix1")
     parser.add_argument("--reason", help="Optional internal reason recorded in the workflow run")
     parser.add_argument("--yes", action="store_true", help="Skip confirmation")
     parser.add_argument("--dry-run", action="store_true", help="Print the target only")
@@ -346,17 +497,24 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "--config",
         default="config/products.toml",
-        help="Path relative to repository root",
+        help="Path on Main containing product configuration",
     )
 
     subparsers = parser.add_subparsers(dest="command", required=True)
 
-    imp = subparsers.add_parser("import", help="Import a Prism-exported .mrpack")
+    imp = subparsers.add_parser(
+        "import",
+        help="Import an .mrpack exported by any Modrinth-format-capable launcher",
+    )
     imp.add_argument("mrpack", type=Path)
     imp.add_argument("--channel", required=True, choices=["release", "beta", "alpha"])
     imp.add_argument(
         "--date",
         help="Override automatic YYMMDD date; intended only for migration/backfill",
+    )
+    imp.add_argument(
+        "--release-id",
+        help="Optional suffix for multiple releases on one date, for example fix1",
     )
     imp.add_argument("--notes-file", type=Path)
     imp.add_argument("--note")
@@ -378,6 +536,16 @@ def main(argv: list[str] | None = None) -> int:
         help="Build only once instead of verifying identical output",
     )
 
+    clean = subparsers.add_parser(
+        "clean-branch",
+        help="Remove duplicated Main files from the current version branch",
+    )
+    clean.add_argument("--offline", action="store_true")
+    clean.add_argument("--commit", action="store_true")
+    clean.add_argument("--push", action="store_true")
+    clean.add_argument("--yes", action="store_true")
+    clean.add_argument("--message")
+
     yank = subparsers.add_parser(
         "yank",
         help="Archive a buggy Modrinth version and hide its GitHub Release",
@@ -396,6 +564,8 @@ def main(argv: list[str] | None = None) -> int:
             return import_command(args)
         if args.command == "check":
             return check_command(args)
+        if args.command == "clean-branch":
+            return clean_branch_command(args)
         if args.command == "yank":
             return manage_command(args, "yank")
         if args.command == "restore":

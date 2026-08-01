@@ -13,6 +13,7 @@ from arpack.core import (  # noqa: E402
     load_config,
     modify_modrinth_version_status,
     validate_release_date,
+    validate_release_id,
 )
 
 
@@ -25,6 +26,7 @@ def main() -> int:
     parser.add_argument("--line", choices=["cloth", "anvil"], required=True)
     parser.add_argument("--minecraft", required=True)
     parser.add_argument("--date", required=True)
+    parser.add_argument("--release-id", default="")
     parser.add_argument("--api-base", default="https://api.modrinth.com/v2")
     args = parser.parse_args()
 
@@ -42,12 +44,14 @@ def main() -> int:
         raise WorkflowError(f"Unknown product line: {args.line}")
 
     release_date = validate_release_date(args.date)
+    release_id = validate_release_id(args.release_id)
     target_status = "archived" if args.action == "yank" else "listed"
     result = modify_modrinth_version_status(
         token=token,
         project=matches[0],
         minecraft=args.minecraft,
         release_date=release_date,
+        release_id=release_id,
         status_value=target_status,
         api_base=args.api_base,
     )

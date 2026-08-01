@@ -29,6 +29,7 @@ ALLOWED_PACK_ROOTS = {
     "server-overrides",
 }
 RELEASE_DATE_RE = re.compile(r"^\d{6}$")
+RELEASE_ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._-]{0,31}$")
 BRANCH_RE = re.compile(r"^(cloth|anvil)/(.+)$")
 MODRINTH_CDN_RE = re.compile(
     r"^https://cdn\.modrinth\.com/data/(?P<project>[^/]+)/versions/(?P<version>[^/]+)/"
@@ -48,6 +49,7 @@ class Product:
     modrinth_project_id: str
     allowed_loader_dependencies: tuple[str, ...]
     modrinth_loader: str
+    loader_display_name: str
     environment: str
 
 
@@ -55,7 +57,6 @@ class Product:
 class RepositoryConfig:
     default_branch: str
     branch_pattern: str
-    tag_pattern: str
     release_timezone_offset_hours: int
     products: dict[str, Product]
 
@@ -91,13 +92,11 @@ def write_json(path: Path, value: Any) -> None:
     )
 
 
-def load_config(path: Path) -> RepositoryConfig:
+def parse_config_text(text: str) -> RepositoryConfig:
     try:
-        raw = tomllib.loads(path.read_text(encoding="utf-8"))
-    except FileNotFoundError as exc:
-        raise WorkflowError(f"Missing configuration: {path}") from exc
+        raw = tomllib.loads(text)
     except tomllib.TOMLDecodeError as exc:
-        raise WorkflowError(f"Invalid TOML in {path}: {exc}") from exc
+        raise WorkflowError(f"Invalid products.toml: {exc}") from exc
 
     repo = raw.get("repository", {})
     products_raw = raw.get("products", {})
@@ -116,17 +115,24 @@ def load_config(path: Path) -> RepositoryConfig:
             modrinth_project_id=str(item["modrinth_project_id"]),
             allowed_loader_dependencies=tuple(item["allowed_loader_dependencies"]),
             modrinth_loader=str(item["modrinth_loader"]),
+            loader_display_name=str(item["loader_display_name"]),
             environment=str(item["environment"]),
         )
 
     return RepositoryConfig(
         default_branch=str(repo.get("default_branch", "Main")),
         branch_pattern=str(repo.get("branch_pattern", "{line}/{minecraft}")),
-        tag_pattern=str(repo.get("tag_pattern", "{line}-{minecraft}-{release_date}")),
         release_timezone_offset_hours=int(repo.get("release_timezone_offset_hours", 8)),
         products=products,
     )
 
+
+def load_config(path: Path) -> RepositoryConfig:
+    try:
+        text = path.read_text(encoding="utf-8")
+    except FileNotFoundError as exc:
+        raise WorkflowError(f"Missing configuration: {path}") from exc
+    return parse_config_text(text)
 
 def run_git(repo: Path, *args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
     result = subprocess.run(
@@ -258,15 +264,14 @@ def read_release_toml(path: Path) -> dict[str, str]:
         raise WorkflowError("release/release.toml must contain a [release] table")
     result = {key: str(val) for key, val in release.items()}
     channel = result.get("channel")
-    # v2 used `id`; accept it temporarily when it already contains YYMMDD.
     release_date = result.get("date") or result.get("id")
     if channel not in CHANNELS:
         raise WorkflowError("release.channel must be release, beta, or alpha")
     if not release_date or not RELEASE_DATE_RE.fullmatch(release_date):
         raise WorkflowError("release.date must use the YYMMDD format")
     result["date"] = release_date
+    result["release_id"] = validate_release_id(result.get("release_id", ""))
     return result
-
 
 def current_release_date(config: RepositoryConfig) -> str:
     offset = timezone(timedelta(hours=config.release_timezone_offset_hours))
@@ -283,18 +288,32 @@ def validate_release_date(value: str) -> str:
     return value
 
 
+def validate_release_id(value: str | None) -> str:
+    normalized = (value or "").strip()
+    if not normalized:
+        return ""
+    if not RELEASE_ID_RE.fullmatch(normalized):
+        raise WorkflowError(
+            "Release ID must be 1-32 characters and use only letters, numbers, dot, underscore, or hyphen"
+        )
+    return normalized
+
+
 def write_release_toml(
     path: Path,
     *,
     release_date: str,
+    release_id: str,
     channel: str,
     product: Product,
     minecraft: str,
 ) -> None:
     validate_release_date(release_date)
+    release_id = validate_release_id(release_id)
     content = (
         "[release]\n"
         f'date = "{release_date}"\n'
+        f'release_id = "{release_id}"\n'
         f'channel = "{channel}"\n'
         f'product = "{product.key}"\n'
         f'minecraft = "{minecraft}"\n'
@@ -303,9 +322,59 @@ def write_release_toml(
     path.write_text(content, encoding="utf-8", newline="\n")
 
 
-def version_number(product: Product, minecraft: str, release_date: str) -> str:
+def version_number(
+    product: Product,
+    minecraft: str,
+    release_date: str,
+    release_id: str = "",
+) -> str:
     validate_release_date(release_date)
-    return f"{minecraft}-{product.modrinth_loader}-{release_date}"
+    release_id = validate_release_id(release_id)
+    base = f"{minecraft}-{product.modrinth_loader}-{release_date}"
+    return f"{base}-{release_id}" if release_id else base
+
+
+def version_display_name(
+    product: Product,
+    minecraft: str,
+    release_date: str,
+    release_id: str = "",
+) -> str:
+    validate_release_date(release_date)
+    release_id = validate_release_id(release_id)
+    parts = [minecraft, product.loader_display_name, release_date]
+    if release_id:
+        parts.extend(release_id.split("-"))
+    return " ".join(parts)
+
+
+def release_tag(
+    line: str,
+    minecraft: str,
+    release_date: str,
+    release_id: str = "",
+) -> str:
+    validate_release_date(release_date)
+    release_id = validate_release_id(release_id)
+    base = f"{line}-{minecraft}-{release_date}"
+    return f"{base}-{release_id}" if release_id else base
+
+
+def release_tag_prefix(line: str, minecraft: str) -> str:
+    return f"{line}-{minecraft}-"
+
+
+def artifact_filename(
+    product: Product,
+    minecraft: str,
+    release_date: str,
+    release_id: str = "",
+) -> str:
+    suffix = f"-{validate_release_id(release_id)}" if release_id else ""
+    return (
+        f"{product.filename_name}-{minecraft}-{product.loader_display_name}-"
+        f"{release_date}{suffix}.mrpack"
+    )
 
 
 def normalize_manifest_for_release(
@@ -314,12 +383,12 @@ def normalize_manifest_for_release(
     product: Product,
     minecraft: str,
     release_date: str,
+    release_id: str = "",
 ) -> str:
-    full_version = version_number(product, minecraft, release_date)
+    full_version = version_number(product, minecraft, release_date, release_id)
     manifest["name"] = product.display_name
     manifest["versionId"] = full_version
     return full_version
-
 
 def extract_mrpack(source: Path, destination: Path) -> dict[str, Any]:
     if not source.is_file() or source.suffix.casefold() != ".mrpack":
@@ -493,6 +562,8 @@ def previous_release_tag(
     prefix: str,
     current_tag: str,
 ) -> str | None:
+    if run_git(repo, "rev-parse", "--verify", "HEAD", check=False).returncode != 0:
+        return None
     result = run_git(
         repo,
         "for-each-ref",
@@ -684,6 +755,8 @@ def publish_modrinth(
     project: Product,
     minecraft: str,
     full_version: str,
+    release_date: str,
+    release_id: str,
     channel: str,
     changelog: str,
     artifact: Path,
@@ -708,13 +781,13 @@ def publish_modrinth(
             return
         raise WorkflowError(
             "Modrinth already contains this version number with a different file. "
-            "The YYMMDD version already exists with different content. A product/loader/Minecraft line can publish only once per calendar day."
+            "This version number already exists with different content. Use a different --release-id instead of overwriting a published version."
         )
     if status != 404:
         raise WorkflowError(f"Unable to query Modrinth version (HTTP {status}): {existing}")
 
     data = {
-        "name": f"{project.display_name} {minecraft} {project.modrinth_loader.title()} {full_version.rsplit('-', 1)[-1]}",
+        "name": version_display_name(project, minecraft, release_date, release_id),
         "version_number": full_version,
         "changelog": changelog,
         "dependencies": [],
@@ -751,13 +824,14 @@ def modify_modrinth_version_status(
     project: Product,
     minecraft: str,
     release_date: str,
+    release_id: str,
     status_value: str,
     api_base: str = API_BASE,
 ) -> dict[str, Any]:
     if status_value not in {"archived", "listed"}:
         raise WorkflowError(f"Unsupported Modrinth status transition: {status_value}")
 
-    full_version = version_number(project, minecraft, release_date)
+    full_version = version_number(project, minecraft, release_date, release_id)
     project_id = urllib.parse.quote(project.modrinth_project_id, safe="")
     version_number_encoded = urllib.parse.quote(full_version, safe="")
     status, existing = api_request(

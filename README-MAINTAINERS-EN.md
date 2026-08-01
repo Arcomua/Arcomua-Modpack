@@ -1,37 +1,37 @@
-# English Maintainer Guide
+# Arcomua Modpack Workflow Maintainer Guide (v4)
 
-## 1. Repository model
+## 1. Branch layout
 
-`Main` is the control branch. It stores shared tooling, GitHub Actions, product configuration, and maintainer documentation. Actual pack sources live in long-lived product/version branches:
+`Main` is the control branch. It contains shared tooling, GitHub Actions, product configuration, and documentation. It does not contain an active `pack/` directory or release-specific source.
 
-```text
-cloth/26.1.2
-cloth/26.2
-anvil/26.1.2
-anvil/26.2
-```
-
-Mapping:
+Each version branch contains only:
 
 ```text
-Fabric   → Arcomua Cloth → cloth/<Minecraft version>
-NeoForge → Arcomua Anvil → anvil/<Minecraft version>
+.github/workflows/publish-version.yml
+.gitignore
+pack/
+release/
 ```
 
-Use external tool to remains the graphical authoring and testing environment. The repository tooling handles import, validation, changelog generation, build, publication, and version withdrawal.
+Version branches use:
 
-## 2. Initial setup
+```text
+cloth/<Minecraft version>
+anvil/<Minecraft version>
+```
 
-### 2.1 Requirements
+New version branches are created as orphan branches, so they do not inherit all files and history from `Main`. Existing v3 branches can be cleaned with `arpack clean-branch`.
+
+## 2. Requirements
 
 - Git
-- Python 3.11+
-- Game launcher allow you export modpack as Modrinth format
-- GitHub CLI `gh` for the one-command yank/restore feature
+- Python 3.11 or newer
+- Any launcher or management tool capable of exporting a Modrinth-format `.mrpack`
+- GitHub CLI `gh` only for local `yank` and `restore` commands
 
-### 2.2 Install `arpack`
+## 3. Install or upgrade `arpack`
 
-Install:
+Run in the repository root on `Main`:
 
 ```bash
 python -m pip install --upgrade .
@@ -43,140 +43,150 @@ Verify:
 arpack --help
 ```
 
-Fallback:
+## 4. Upgrade from v3
+
+On `Main`:
 
 ```bash
-python -m arpack --help
+git switch Main
+git pull --ff-only origin Main
 ```
 
-### 2.3 GitHub configuration
-
-Create the repository Actions secret:
-
-```text
-MODRINTH_TOKEN
-```
-
-Enable:
-
-```text
-Settings → Actions → General → Workflow permissions
-Read and write permissions
-```
-
-For local yank/restore commands, authenticate GitHub CLI:
+Copy the v4 files, then remove active release source that must not remain on `Main`:
 
 ```bash
-gh auth login
+git rm -r pack release
+git add -A
+git commit -m "Upgrade Arcomua workflow to v4"
+git push origin Main
+python -m pip install --upgrade .
 ```
 
-## 3. Normal release procedure
-
-### Step 1: Maintain the pack in game launcher
-
-Use a development instance and a separate clean-test instance.
-
-### Step 2: Export a Modrinth `.mrpack`
-
-The temporary version entered in launcher does not matter. `arpack` replaces it.
-
-### Step 3: Optionally write manual notes
-
-Example `notes.md`:
-
-```markdown
-- Fixed the default graphics preset.
-- Improved resource-pack compatibility.
-```
-
-### Step 4: Import and validate
+Clean an existing version branch such as `cloth/26.2`:
 
 ```bash
-arpack import "/path/to/exported.mrpack" \
-  --channel beta \
+git switch cloth/26.2
+git pull --ff-only origin cloth/26.2
+arpack clean-branch --commit --push
+```
+
+Type `CLEAN` when prompted. The command keeps `pack/` and `release/` while removing duplicated tooling, documentation, and product directories inherited from `Main`.
+
+## 5. Import and publish a modpack
+
+Export a `.mrpack` using any compatible tool, then run:
+
+```bash
+arpack import "/path/to/export.mrpack" \
+  --channel release \
   --notes-file "/path/to/notes.md"
 ```
 
-The tool automatically detects the product and Minecraft version, switches or creates the correct branch, uses the current UTC+8 date, rewrites the version number, generates the changelog, and performs a reproducible local build.
+The command automatically:
 
-Version format:
+1. Detects Fabric or NeoForge;
+2. Reads the Minecraft version;
+3. Creates or switches to `cloth/<version>` or `anvil/<version>`;
+4. Uses an orphan branch for a new version line;
+5. Extracts the `.mrpack` into `pack/` on the version branch;
+6. Writes `release/release.toml`;
+7. Generates the changelog and final `.mrpack` locally;
+8. Verifies reproducible output.
+
+## 6. Version number and Modrinth version name
+
+The base version number is generated automatically:
 
 ```text
-<Minecraft version>-<loader>-<YYMMDD>
+<Minecraft version>-<lowercase loader>-<YYMMDD>
 ```
 
-Example:
+Examples:
 
 ```text
-26.2-fabric-260731
+26.2-fabric-260801
+26.2-neoforge-260801
 ```
 
-The channel is always an explicit maintainer choice:
+The Modrinth version name uses the same components with spaces and the official loader name:
 
 ```text
-release
-beta
-alpha
+26.2 Fabric 260801
+26.2 NeoForge 260801
 ```
 
-Use `--date YYMMDD` only for migration or backfilling an older release.
+## 7. Multiple releases on the same date
 
-### Step 5: Inspect the output
+Use the optional `--release-id`:
+
+```bash
+arpack import export.mrpack \
+  --channel beta \
+  --release-id fix1
+```
+
+This produces:
+
+```text
+Version number: 26.2-fabric-260801-fix1
+Modrinth version name: 26.2 Fabric 260801 fix1
+Git tag: cloth-26.2-260801-fix1
+File: Arcomua-Cloth-26.2-Fabric-260801-fix1.mrpack
+```
+
+A release ID may contain 1–32 letters, numbers, dots, underscores, or hyphens. Without it, the original date-only format is retained.
+
+## 8. Channel
+
+Select one explicitly:
+
+```text
+--channel release
+--channel beta
+--channel alpha
+```
+
+The selected value is sent directly to Modrinth.
+
+## 9. Local validation
 
 ```bash
 arpack check
 ```
 
-Output:
+Output is written to:
 
 ```text
-dist/*.mrpack
-dist/*.mrpack.sha256
-dist/CHANGELOG.md
-dist/release-metadata.json
+dist/
+├── *.mrpack
+├── *.mrpack.sha256
+├── CHANGELOG.md
+└── release-metadata.json
 ```
 
-### Step 6: Clean-test in game launcher
+Import `dist/*.mrpack` into a clean test instance and verify downloads, startup, world loading, configurations, and resource packs.
 
-Import the generated `dist/*.mrpack` into a new instance and verify download, startup, world creation, configuration, and resource packs.
-
-### Step 7: Commit and push
+## 10. Commit and publish
 
 ```bash
-git add pack release
-git commit -m "Release Arcomua Cloth 26.2 Fabric 260731"
+git add -A
+git commit -m "Release Arcomua Cloth 26.2"
 git push -u origin cloth/26.2
 ```
 
-Or:
+Or commit and push during import:
 
 ```bash
-arpack import pack.mrpack \
+arpack import export.mrpack \
   --channel release \
-  --notes-file notes.md \
+  --release-id fix1 \
   --commit \
   --push
 ```
 
-GitHub Actions then validates, builds, publishes to Modrinth, and creates the GitHub Release.
+A push to a version branch publishes to Modrinth and creates a GitHub Release.
 
-## 4. Changelog generation
-
-The first release for a product/Minecraft branch contains only:
-
-```text
-Initial version
-```
-
-Later releases automatically list added, updated, and removed mods, followed by the text from `release/manual.md`.
-
-## 5. Yank a buggy version
-
-A yank is reversible:
-
-- Modrinth status becomes `archived`;
-- the GitHub Release becomes a draft;
-- the Git tag and audit history remain.
+## 11. Yank and restore
 
 From the target version branch:
 
@@ -184,38 +194,19 @@ From the target version branch:
 arpack yank --reason "Crash on startup"
 ```
 
-Or specify the target explicitly:
+For a release with an ID:
 
 ```bash
 arpack yank \
   --line cloth \
   --minecraft 26.2 \
-  --date 260731 \
+  --date 260801 \
+  --release-id fix1 \
   --reason "Crash on startup"
 ```
 
-Use `--dry-run` to inspect the target without dispatching anything.
-
-The same operation is available in the GitHub UI:
-
-```text
-Actions → Manage published version → Run workflow
-```
-
-## 6. Restore a yanked version
+Restore it with:
 
 ```bash
-arpack restore
+arpack restore --line cloth --minecraft 26.2 --date 260801 --release-id fix1
 ```
-
-Or:
-
-```bash
-arpack restore --line cloth --minecraft 26.2 --date 260731
-```
-
-This returns the Modrinth version to `listed` and republishes the GitHub Release.
-
-## 7. Versioning limitation
-
-Because the version number contains only the date, each product/loader/Minecraft line can publish only one distinct build per calendar day. Yank a broken same-day release and publish the corrected build under a new date.
