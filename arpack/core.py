@@ -135,15 +135,23 @@ def load_config(path: Path) -> RepositoryConfig:
     return parse_config_text(text)
 
 def run_git(repo: Path, *args: str, check: bool = True) -> subprocess.CompletedProcess[str]:
+    # Git for Windows writes repository paths as UTF-8, while Python may otherwise
+    # decode subprocess output with the active ANSI code page (for example GBK).
+    # Explicit UTF-8 decoding prevents non-ASCII tracked filenames from crashing
+    # the background stdout reader used by subprocess.run().
     result = subprocess.run(
         ["git", *args],
         cwd=repo,
         text=True,
+        encoding="utf-8",
+        errors="replace",
         capture_output=True,
     )
     if check and result.returncode != 0:
         command = "git " + " ".join(args)
-        detail = result.stderr.strip() or result.stdout.strip()
+        stderr = result.stderr or ""
+        stdout = result.stdout or ""
+        detail = stderr.strip() or stdout.strip()
         raise WorkflowError(f"{command} failed: {detail}")
     return result
 
@@ -153,6 +161,8 @@ def find_repo_root(start: Path) -> Path:
         ["git", "rev-parse", "--show-toplevel"],
         cwd=start,
         text=True,
+        encoding="utf-8",
+        errors="replace",
         capture_output=True,
     )
     if result.returncode != 0:

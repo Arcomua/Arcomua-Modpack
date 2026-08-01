@@ -142,7 +142,8 @@ def remove_empty_directories(repo: Path) -> None:
 
 def ensure_version_branch_layout(repo: Path, default_branch: str) -> list[str]:
     removed: list[str] = []
-    tracked = run_git(repo, "ls-files", "-z").stdout.split("\0")
+    tracked_output = run_git(repo, "ls-files", "-z").stdout or ""
+    tracked = tracked_output.split("\0")
     for relative in tracked:
         if not relative or is_allowed_version_file(relative):
             continue
