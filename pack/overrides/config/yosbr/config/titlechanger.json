@@ -1,0 +1,16 @@
+{
+  "enableTitleChanging": true,
+  "useTemplateTitles": false,
+  "templateUsePlayingName": false,
+  "templateUseDimensionSpecific": false,
+  "windowTitle": "Arcomua Cloth 260425 - Minecraft 26.1.2 with Fabric Loader ",
+  "openConfigKey": "",
+  "enableSetWindowTitleCommand": true,
+  "animationMode": "NONE",
+  "animationTitle": "",
+  "animationSpeed": 6,
+  "triggerOnSleep": false,
+  "triggerOnRespawn": false,
+  "triggerOnKill": false,
+  "triggerBindMode": "NONE"
+}

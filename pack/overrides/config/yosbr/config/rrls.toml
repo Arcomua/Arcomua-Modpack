@@ -1,0 +1,30 @@
+[global]
+	#Allowed Values: ALL, LOADING, RELOADING, NONE
+	hideOverlays = "ALL"
+	blockOverlay = false
+	miniRender = true
+	enableScissor = false
+
+[splash]
+	#Allowed Values: PROGRESS, TEXT, TEXT_WITH_BACKGROUND, NONE
+	type = "PROGRESS"
+	rgbProgress = false
+	reloadText = "Edit in config!"
+	animationSpeed = 1000.0
+
+[interpolation]
+	interpolateProgress = false
+	interpolateAtEnd = true
+	#Allowed Values: LINEAR, CONSTANT, INSINE, OUTSINE, INOUTSINE, INCUBIC, OUTCUBIC, INOUTCUBIC, INQUAD, OUTQUAD, INOUTQUAD, INQUART, OUTQUART, INOUTQUART, INQUINT, OUTQUINT, INOUTQUINT, INEXPO, OUTEXPO, INOUTEXPO, INCIRC, OUTCIRC, INOUTCIRC, INBACK, OUTBACK, INOUTBACK, INELASTIC, OUTELASTIC, INOUTELASTIC, INBOUNCE, OUTBOUNCE, INOUTBOUNCE, CATMULLROM, STEP
+	ease = "INOUTQUINT"
+	easingArg = nan
+
+[other]
+	resetResources = true
+	reInitScreen = true
+	earlyPackStatusSend = false
+	#Allowed Values: FORCE_LOAD, LOAD, NONE
+	doubleLoad = "FORCE_LOAD"
+
+[platform]
+	skipForgeOverlay = false
