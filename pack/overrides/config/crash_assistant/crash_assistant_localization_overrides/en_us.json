@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant has collected diagnostic information.</strong>\nFirst click “$LANG.gui.upload_all_comment$”. Then open a new Arcomua Modpack issue, paste the copied report, and describe what you were doing before the crash. Please also mention any mods, resource packs, shaders, or configuration files you changed.",
+  "gui.comment_under_title_cant_resolve.github": "Still need help? Search the Arcomua Modpack issue tracker first. If no existing issue matches, create a new one and include the generated report.",
+  "gui.comment_under_title_pls_report.github": "To report this problem or ask for help, open the Arcomua Modpack issue tracker and include the generated report.",
+  "gui.request_help_button.github": "Open Arcomua issue tracker",
+  "gui.upload_all_button": "Upload diagnostic logs and copy report",
+  "gui.upload_all_comment": "Upload logs and copy report",
+  "gui.upload_all_finished_button": "Copy report again",
+  "gui.comment_under_title_screenshot_notice": "Please send the generated report instead of only a screenshot. A screenshot of this window does not contain the logs needed to diagnose the crash.",
+  "gui.drag_drop_message": "1. Drag a single log entry, or “$LANG.gui.file_list_label$” to include all available logs.<br>2. Drop it into the GitHub issue."
+}

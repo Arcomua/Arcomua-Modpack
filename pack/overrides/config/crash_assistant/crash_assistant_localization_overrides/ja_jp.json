@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant が診断情報を収集しました。</strong>\nまず「$LANG.gui.upload_all_comment$」をクリックしてください。その後、Arcomua Modpack の新しい Issue を開き、コピーされたレポートを貼り付け、クラッシュ直前に行っていた操作を説明してください。Mod、リソースパック、シェーダー、設定ファイルを追加・削除・更新した場合も記載してください。",
+  "gui.comment_under_title_cant_resolve.github": "引き続きサポートが必要ですか？まず Arcomua Modpack の既存 Issue を検索してください。同じ問題がなければ、新しい Issue を作成して生成されたレポートを添付してください。",
+  "gui.comment_under_title_pls_report.github": "問題を報告したりサポートを求めたりする場合は、Arcomua Modpack の Issue ページを開き、生成されたレポートを添付してください。",
+  "gui.request_help_button.github": "Arcomua の Issue ページを開く",
+  "gui.upload_all_button": "診断ログをアップロードしてレポートをコピー",
+  "gui.upload_all_comment": "ログをアップロードしてレポートをコピー",
+  "gui.upload_all_finished_button": "レポートをもう一度コピー",
+  "gui.comment_under_title_screenshot_notice": "スクリーンショットだけではなく、生成されたレポートを送信してください。この画面のスクリーンショットには、クラッシュ調査に必要なログが含まれていません。",
+  "gui.drag_drop_message": "1. 個別のログ項目、または「$LANG.gui.file_list_label$」をドラッグして、利用可能なすべてのログを含めます。<br>2. GitHub Issue にドロップします。"
+}

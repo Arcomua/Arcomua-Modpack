@@ -51,18 +51,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/lhGA9TYQ/versions/R4NKJjgP/architectury-fabric-21.0.6.jar"
+        "https://cdn.modrinth.com/data/lhGA9TYQ/versions/1yQC4VvP/architectury-fabric-21.0.7.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 587042,
+      "fileSize": 587038,
       "hashes": {
-        "sha1": "762f25f7b3ea342dbbbfcf5c5963803e1ac10397",
-        "sha512": "035cc17e4df016cfa7f7832c24adbade7039ea529f147a29aaa84df6c8fd9b1d1c095479be468950857fe7cee7a6f595f3f2434fde148c7b0d965c92b26cfea5"
+        "sha1": "7c00161fc93303ba504f02f6bf3e3f42b99e1d84",
+        "sha512": "deffcad73b8f73d611d8e43ddad3b380e7896ba53e4b4f3660ab877b9c4ba20561e498888b17456b2b8819fb902e2070760613ce6fec9e1f1082990014e92dd4"
       },
-      "path": "mods/architectury-fabric-21.0.6.jar"
+      "path": "mods/architectury-fabric-21.0.7.jar"
     },
     {
       "downloads": [
@@ -171,18 +171,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/VSNURh3q/versions/W8Gj5vpQ/c2me-fabric-mc26.2-0.4.2-alpha.0.34.jar"
+        "https://cdn.modrinth.com/data/VSNURh3q/versions/HBLtzvqv/c2me-fabric-mc26.2-0.4.2-alpha.0.35.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 3789612,
+      "fileSize": 3790215,
       "hashes": {
-        "sha1": "cba32638de6213aaf993867ab3a68a82547dcb3e",
-        "sha512": "c1c087075a1e4c37d17972bebe6fa246f82d1ef481119bbda1a8442c4d7c866eac57e032d057b00a025a1bdc67cf5ad51d4b260fcde97c5d8a02cb5a821ad43f"
+        "sha1": "925adccbe5fe6c5496410fdb007e2c6ca2b20511",
+        "sha512": "078618f4e45367ae416000a5930e3a13dced5e71eb82102e614c0e8e03d1b84d8d8efcbebc7d5e88d5a4a71ad6d64b1fd5ef3a1171a56001566b33afbad9a504"
       },
-      "path": "mods/c2me-fabric-mc26.2-0.4.2-alpha.0.34.jar"
+      "path": "mods/c2me-fabric-mc26.2-0.4.2-alpha.0.35.jar"
     },
     {
       "downloads": [
@@ -201,33 +201,33 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/jE0SjGuf/versions/daCrSdc6/carpet-tis-addition-v1.82.3-mc26.2.jar"
+        "https://cdn.modrinth.com/data/jE0SjGuf/versions/lW1s6HL1/carpet-tis-addition-v1.82.4-mc26.2.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 1687629,
+      "fileSize": 1687671,
       "hashes": {
-        "sha1": "3a0d992ce9babfb05a488efd1c77f920e5945659",
-        "sha512": "49f63b989e157d3d0bf465d8923418c66789a75c10d8b2574c125656f70a75433600ce7eba913e5c643c1a76d3a6039e3d759fecc7af3da7340339e9cef0d3f5"
+        "sha1": "287f6e0d97ebc10277be873b072efd35519f284c",
+        "sha512": "ebe83e448b882c67afb9fca74899bd1146e23eca1fc25e412b5793e884f79ef4020290051951746ab6117f80d311072c2cbfca7a7c553915cfcc81488c8cd363"
       },
-      "path": "mods/carpet-tis-addition-v1.82.3-mc26.2.jar"
+      "path": "mods/carpet-tis-addition-v1.82.4-mc26.2.jar"
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/bASLtZKx/chat_heads-1.2.5-fabric-26.1.jar"
+        "https://cdn.modrinth.com/data/Wb5oqrBJ/versions/GMQUn1dH/chat_heads-1.2.6-fabric-26.1.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 92112,
+      "fileSize": 92428,
       "hashes": {
-        "sha1": "2e9caf68afa58e895034f4bbf1c3cee65c69e25e",
-        "sha512": "a39d4bf232705044af070854edb85d4be0a071ee9f4407b4833e862b2887e11346508e59d3057dfbaddcb81c24ccbea8f28047ad1bf086055cd631b29bcccc49"
+        "sha1": "0fcb8cffdaa0b53e0d074c4ab4281d65fd582b9f",
+        "sha512": "6de896c7684408bd764c2f7085fb0f86eaa10cd656e592518afeee97873691a2928f55ff0126a2e3f4689743337efd4efe37d5b621be1657f221b366d462f78d"
       },
-      "path": "mods/chat_heads-1.2.5-fabric-26.1.jar"
+      "path": "mods/chat_heads-1.2.6-fabric-26.1.jar"
     },
     {
       "downloads": [
@@ -681,18 +681,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/WMDesFsZ/versions/BMDhZRaV/IMBlocker-7.2.0-fabric-26.1%2B.jar"
+        "https://cdn.modrinth.com/data/WMDesFsZ/versions/BO7fgnmM/IMBlocker-7.2.1-fabric-26.1%2B.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 179442,
+      "fileSize": 183524,
       "hashes": {
-        "sha1": "f94c37d697e88ad5c194e0da98bdc0706b7e5a5e",
-        "sha512": "09c7731590cbb8680a85dfd94d12819b5a73d1f0bfdcfc525d032086c92f99447ce1aa305a69dce4e0a97ca86b23aeb7c1dce40351a5744798ff3324389f0cf8"
+        "sha1": "f56f4c3b43855bff03ee589e24099a37c734c3b3",
+        "sha512": "7f1a5b246eb3741c977ddf2dc11fd439cae0f4ecd83200eb96b6a5b7d26cb91be58e1a9c816bc41a871a96be122add6f36f698423225c20ae170f47501371f03"
       },
-      "path": "mods/IMBlocker-7.2.0-fabric-26.1+.jar"
+      "path": "mods/IMBlocker-7.2.1-fabric-26.1+.jar"
     },
     {
       "downloads": [
@@ -756,18 +756,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/p8RJPJIC/versions/6I2BEXfJ/Ixeris-4.6.1%2B26.2-fabric.jar"
+        "https://cdn.modrinth.com/data/p8RJPJIC/versions/B6Z4jE2K/Ixeris-4.6.2%2B26.2-fabric.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 752087,
+      "fileSize": 757485,
       "hashes": {
-        "sha1": "e3151b0b6376d8d66bb0d6c3374b7ef90546817e",
-        "sha512": "86f9141fce8c34659f93f0b4074e0e848bd6bba9785d9be4f030e542d0b56823252a3aede040415bbe12d543e05e49ea032a6f878ae668eba66f1bc41bdca2fd"
+        "sha1": "59bbe18b92f0f2e2aed69ca8ac6ba33cf2901b8d",
+        "sha512": "696ebb93e78b90e4599e5b6bbd1012ceb3fff69e66617fa042e290ea4917ea9fa598a9a07febd8bd1f4c7908794026a3653f5c523c3255b4ebef8a5def37a74c"
       },
-      "path": "mods/Ixeris-4.6.1+26.2-fabric.jar"
+      "path": "mods/Ixeris-4.6.2+26.2-fabric.jar"
     },
     {
       "downloads": [
@@ -846,18 +846,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/Nz0RSWrF/versions/wFfJYc4n/lazy-language-loader-0.5.1.jar"
+        "https://cdn.modrinth.com/data/uLbm7CG6/versions/L79IylWm/language-reload-1.7.7%2B26.2.jar"
       ],
       "env": {
         "client": "required",
-        "server": "required"
+        "server": "unsupported"
       },
-      "fileSize": 16173,
+      "fileSize": 77258,
       "hashes": {
-        "sha1": "33f9715034e034fcac2b866ecfe41c0de680a601",
-        "sha512": "7fdf45d775060319acbc247e08c89974c8f847ce25d69b5c6ef284a6adf391e84a3dab22d517b049519e759cbf618cbcdcd2e71c7eed90478d2ee2d862810208"
+        "sha1": "261027cef3c476d4fafdf59362179eb8da9019d2",
+        "sha512": "b8516564b2ec47f34569843dc72d93d4053122693377193e3063b38602e760c8e1177239cb1a8d7b04d4c1e1b8476f66a13bac4d956fa9ad4666411476a78fdc"
       },
-      "path": "mods/lazy-language-loader-0.5.1.jar"
+      "path": "mods/language-reload-1.7.7+26.2.jar"
     },
     {
       "downloads": [
@@ -996,18 +996,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/51shyZVL/versions/SYFaYeMK/moreculling-fabric-26.2-1.8.0.jar"
+        "https://cdn.modrinth.com/data/51shyZVL/versions/D5oVCouK/moreculling-fabric-26.2-1.8.1.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 364530,
+      "fileSize": 363646,
       "hashes": {
-        "sha1": "6a2ae8fa02102f078657f02fd70b2d34c66ae898",
-        "sha512": "d7e52db2c4214bd13a5e8ef9e7e6e84312d991847525fa9827cd0fac9385e32e7ab5bdc9062a3daa68c901629bd7ad390d3713139191734bb2e753fef12fbe1c"
+        "sha1": "189d90ef598883df8197ea18b510dba21e69bac4",
+        "sha512": "9c331ba5f2ce9c322c41aa577f1029f3420d5507d0d942aadbb43fb9bd82e7da6f72e3a0b26c4ad96394669a99a7feb512b5119b3095fde2e0a437bf68c08b40"
       },
-      "path": "mods/moreculling-fabric-26.2-1.8.0.jar"
+      "path": "mods/moreculling-fabric-26.2-1.8.1.jar"
     },
     {
       "downloads": [
@@ -1416,18 +1416,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/GBeCx05I/versions/r20ZhTy5/tweakermore-v3.32.0-beta.1-mc26.2.jar"
+        "https://cdn.modrinth.com/data/GBeCx05I/versions/YmXOB0LC/tweakermore-v3.32.0-mc26.2.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 977018,
+      "fileSize": 980831,
       "hashes": {
-        "sha1": "12e2ddae2fedf6e52bbdade18ae8554c43fc90ef",
-        "sha512": "f849f488d9d200c4f9bd1beb5ee5765ba569c01d5ee3ac57082ef904821bff2af191928425357c4a2a2a1285ee3a3afb3275c7e231495625d7b2dec757219914"
+        "sha1": "6b3c7c2f2888e92fd864d1641154710a9ecc25ea",
+        "sha512": "e5c5fece88335c379cba7df392380ca0e3e7c2ec244a2b5296100a2712066c48fe6387423534640d1c921f77f294a13a08570619195cd338c8c7a0c946cfd06b"
       },
-      "path": "mods/tweakermore-v3.32.0-beta.1-mc26.2.jar"
+      "path": "mods/tweakermore-v3.32.0-mc26.2.jar"
     },
     {
       "downloads": [
@@ -1506,18 +1506,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/EnPUzSTg/versions/nsyxSUHo/XaeroPlus-2.35.0%2Bfabric-26.2-WM1.44.2-MM26.4.2.jar"
+        "https://cdn.modrinth.com/data/EnPUzSTg/versions/IHT0Hyh7/XaeroPlus-2.35.1%2Bfabric-26.2-WM1.44.2-MM26.4.2.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 8126775,
+      "fileSize": 8127342,
       "hashes": {
-        "sha1": "d2114028353b582f2c2e6be2a0430b76d9ba4c2c",
-        "sha512": "e21021491147c3daaf7f75a0291d3a43d34ea6d71b570c8dc1e54802df304e099d9c4b0b2e9d8cb8d646fca0fef56f0bc04f7b836d162395df603fa2f124796e"
+        "sha1": "a809ee19583963cbff08df1c095ba24f24cb6d50",
+        "sha512": "3bc6a4a8be5634e2ee068ed5054e3ca5cb68f37f6818ad9326b2135fe680eff79f0a0cb5a1bc370471d2c39ae41e72294ae1261061b26b206e8d62c280b8082f"
       },
-      "path": "mods/XaeroPlus-2.35.0+fabric-26.2-WM1.44.2-MM26.4.2.jar"
+      "path": "mods/XaeroPlus-2.35.1+fabric-26.2-WM1.44.2-MM26.4.2.jar"
     },
     {
       "downloads": [
@@ -1566,18 +1566,18 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/OnlVIpq5/versions/QBcjDrhr/zfastnoise-1.1.0-beta.3%2B26.2.jar"
+        "https://cdn.modrinth.com/data/OnlVIpq5/versions/qxGN3Aeh/zfastnoise-1.1.0-beta.4%2B26.2.jar"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 528618,
+      "fileSize": 550997,
       "hashes": {
-        "sha1": "e9505796190b1f62c33d80ef03089d7b5fa8686b",
-        "sha512": "392f646d9171e2cef545e6aff8f1914efa216f587053802e2c608cf233f6717d6a139d396fd6ef54e295c807e5916c2f369c9e0648ffee33759d291597459c66"
+        "sha1": "99d6f9744299dd7c5c13e6ab800e73bb66c05099",
+        "sha512": "19255027d38b3ef1a1acde72a9be7bfc334c3e1a3281c62dd66cb40e96b56ad1428c069b1c75c57008bd40d998bd2faca7822ce63a3814f6eb7603a299b93933"
       },
-      "path": "mods/zfastnoise-1.1.0-beta.3+26.2.jar"
+      "path": "mods/zfastnoise-1.1.0-beta.4+26.2.jar"
     },
     {
       "downloads": [
@@ -1611,16 +1611,16 @@
     },
     {
       "downloads": [
-        "https://cdn.modrinth.com/data/yfDziwn1/versions/r7AZ0jmT/SodiumTranslations.zip"
+        "https://cdn.modrinth.com/data/yfDziwn1/versions/11MKV3hD/SodiumTranslations.zip"
       ],
       "env": {
         "client": "required",
         "server": "required"
       },
-      "fileSize": 271788,
+      "fileSize": 273128,
       "hashes": {
-        "sha1": "0e7f852ce0d1333a0dc1434d9055e5f9cd8b777d",
-        "sha512": "97905b43324f0189c4cc9f1dc47fab0d6f2c6da07ca2a780826a4a743aa1343219c4336d234bc439026fd265eed401f8319ba2c2fb82f352d309b4267149d775"
+        "sha1": "90326edade51f3a0591a28b23c95671125b09cbc",
+        "sha512": "d2c1236c54da50ae0040210dd65161bd9430de17cdfee2a81df9039590f91211b4d37c31259a3628fdea812db101f096e4c193ae00b1c44d2cb47ba52b182a9e"
       },
       "path": "resourcepacks/SodiumTranslations.zip"
     },
@@ -1644,5 +1644,5 @@
   "game": "minecraft",
   "name": "Arcomua Cloth",
   "summary": "Powered by Arcomua Team",
-  "versionId": "26.2-fabric-260801"
+  "versionId": "26.2-fabric-260806"
 }

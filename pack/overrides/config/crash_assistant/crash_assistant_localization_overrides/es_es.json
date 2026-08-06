@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant ha recopilado información de diagnóstico.</strong>\nPrimero pulsa «$LANG.gui.upload_all_comment$». Después abre una incidencia nueva de Arcomua Modpack, pega el informe copiado y explica qué estabas haciendo antes del cierre. Indica también si cambiaste mods, paquetes de recursos, shaders o archivos de configuración.",
+  "gui.comment_under_title_cant_resolve.github": "¿Sigues necesitando ayuda? Busca primero en las incidencias de Arcomua Modpack. Si ninguna coincide, crea una nueva e incluye el informe generado.",
+  "gui.comment_under_title_pls_report.github": "Para informar del problema o pedir ayuda, abre las incidencias de Arcomua Modpack e incluye el informe generado.",
+  "gui.request_help_button.github": "Abrir incidencias de Arcomua",
+  "gui.upload_all_button": "Subir registros de diagnóstico y copiar informe",
+  "gui.upload_all_comment": "Subir registros y copiar informe",
+  "gui.upload_all_finished_button": "Copiar el informe de nuevo",
+  "gui.comment_under_title_screenshot_notice": "Envía el informe generado, no solo una captura de pantalla. La captura de esta ventana no contiene los registros necesarios para diagnosticar el cierre.",
+  "gui.drag_drop_message": "1. Arrastra un registro individual o «$LANG.gui.file_list_label$» para incluir todos los registros disponibles.<br>2. Suéltalo en la incidencia de GitHub."
+}

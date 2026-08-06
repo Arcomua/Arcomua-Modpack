@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant telah mengumpulkan maklumat diagnostik.</strong>\nKlik “$LANG.gui.upload_all_comment$” dahulu. Kemudian buka isu baharu untuk Arcomua Modpack, tampal laporan yang telah disalin dan terangkan perkara yang anda lakukan sebelum permainan ranap. Nyatakan juga sebarang mod, pek sumber, shader atau fail konfigurasi yang anda ubah.",
+  "gui.comment_under_title_cant_resolve.github": "Masih memerlukan bantuan? Cari dahulu dalam penjejak isu Arcomua Modpack. Jika tiada isu yang sepadan, cipta isu baharu dan sertakan laporan yang dijana.",
+  "gui.comment_under_title_pls_report.github": "Untuk melaporkan masalah atau mendapatkan bantuan, buka penjejak isu Arcomua Modpack dan sertakan laporan yang dijana.",
+  "gui.request_help_button.github": "Buka penjejak isu Arcomua",
+  "gui.upload_all_button": "Muat naik log diagnostik dan salin laporan",
+  "gui.upload_all_comment": "Muat naik log dan salin laporan",
+  "gui.upload_all_finished_button": "Salin laporan sekali lagi",
+  "gui.comment_under_title_screenshot_notice": "Sila hantar laporan yang dijana, bukan tangkapan skrin sahaja. Tangkapan skrin tetingkap ini tidak mengandungi log yang diperlukan untuk mendiagnosis ranap.",
+  "gui.drag_drop_message": "1. Seret satu entri log, atau “$LANG.gui.file_list_label$” untuk menyertakan semua log yang tersedia.<br>2. Lepaskannya ke dalam isu GitHub."
+}

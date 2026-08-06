@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant hat Diagnoseinformationen gesammelt.</strong>\nKlicke zuerst auf „$LANG.gui.upload_all_comment$“. Öffne anschließend ein neues Issue für Arcomua Modpack, füge den kopierten Bericht ein und beschreibe, was du unmittelbar vor dem Absturz getan hast. Erwähne bitte auch alle Mods, Ressourcenpakete, Shader oder Konfigurationsdateien, die du geändert hast.",
+  "gui.comment_under_title_cant_resolve.github": "Brauchst du weiterhin Hilfe? Durchsuche zuerst den Issue-Tracker von Arcomua Modpack. Wenn kein vorhandenes Issue passt, erstelle ein neues und füge den erzeugten Bericht bei.",
+  "gui.comment_under_title_pls_report.github": "Um das Problem zu melden oder Hilfe zu erhalten, öffne den Issue-Tracker von Arcomua Modpack und füge den erzeugten Bericht bei.",
+  "gui.request_help_button.github": "Arcomua-Issue-Tracker öffnen",
+  "gui.upload_all_button": "Diagnoseprotokolle hochladen und Bericht kopieren",
+  "gui.upload_all_comment": "Protokolle hochladen und Bericht kopieren",
+  "gui.upload_all_finished_button": "Bericht erneut kopieren",
+  "gui.comment_under_title_screenshot_notice": "Bitte sende den erzeugten Bericht und nicht nur einen Screenshot. Ein Screenshot dieses Fensters enthält nicht die zur Diagnose benötigten Protokolle.",
+  "gui.drag_drop_message": "1. Ziehe einen einzelnen Protokolleintrag oder „$LANG.gui.file_list_label$“, um alle verfügbaren Protokolle einzuschließen.<br>2. Lege ihn im GitHub-Issue ab."
+}
