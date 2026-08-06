@@ -62,7 +62,7 @@ jobs:
 
           if gh release view "$TAG" >/dev/null 2>&1; then
             gh release upload "$TAG" \
-              "$ARTIFACT#Modrinth modpack" \
+              "$ARTIFACT" \
               "$SHA_FILE#SHA-256 checksum" \
               --clobber
             gh release edit "$TAG" \
@@ -72,7 +72,7 @@ jobs:
           else
             args=(
               "$TAG"
-              "$ARTIFACT#Modrinth modpack"
+              "$ARTIFACT"
               "$SHA_FILE#SHA-256 checksum"
               --target "$GITHUB_SHA"
               --title "$TITLE"

@@ -1,184 +1,99 @@
-# Arcomua Modpack 工作流维护说明（v5）
+# Arcomua Modpack 维护流程
 
-## 1. 分支结构
+## 1. 安装 `arpack`
 
-`Main` 是控制分支，只保存公共工具、GitHub Actions、产品配置和文档。它不保存实际整合包的 `pack/` 或活动发布信息。
+环境要求：Git、Python 3.11+，以及能够导出 Modrinth `.mrpack` 格式的启动器或管理工具。
 
-每个整合包版本分支只保存：
-
-```text
-.github/workflows/publish-version.yml
-.gitignore
-pack/
-release/
-```
-
-版本分支命名：
-
-```text
-cloth/<Minecraft版本>
-anvil/<Minecraft版本>
-```
-
-例如：
-
-```text
-cloth/26.2
-anvil/26.2
-```
-
-新版本分支使用孤立分支创建，不继承 `Main` 的全部历史和文件。旧的 v3 版本分支可使用 `arpack clean-branch` 清理当前目录结构。
-
-## 2. 环境要求
-
-- Git
-- Python 3.11 或更高版本
-- 任意能够把整合包导出为 Modrinth 格式 `.mrpack` 的启动器或管理工具
-- GitHub CLI `gh`，仅在本地执行 `yank` 或 `restore` 时需要
-
-## 3. 安装或升级 `arpack`
-
-在 `Main` 分支仓库根目录运行：
+在仓库根目录执行：
 
 ```bash
 python -m pip install --upgrade .
-```
-
-检查：
-
-```bash
 arpack --help
 ```
 
-## 4. 从 v3 升级
+Windows也可以使用：
 
-在 `Main`：
-
-```bash
-git switch Main
-git pull --ff-only origin Main
+```powershell
+py -3 -m pip install --upgrade .
+arpack --help
 ```
 
-复制 v5 文件后，删除不应保存在 `Main` 的活动发布源：
+使用本地一键下架或恢复功能时，还需要安装并登录 GitHub CLI：
 
 ```bash
-git rm -r pack release
+gh auth login
 ```
 
-提交：
+## 2. 制作并导出整合包
 
-```bash
-git add -A
-git commit -m "Upgrade Arcomua workflow to v5"
-git push origin Main
-python -m pip install --upgrade .
+在外部工具中完成 Mod增删、更新、配置调整和游戏内测试，然后导出 Modrinth格式的 `.mrpack`。
+
+可在仓库外创建手写更新说明，例如 `notes.md`：
+
+```markdown
+- Fixed the default graphics preset.
+- Improved resource-pack compatibility.
 ```
 
-清理当前已有的版本分支，例如 `cloth/26.2`：
+## 3. 导入并生成发布源
+
+普通发布：
 
 ```bash
-git switch cloth/26.2
-git pull --ff-only origin cloth/26.2
-arpack clean-branch --commit --push
-```
-
-确认时输入 `CLEAN`。该命令保留 `pack/` 和 `release/`，删除从 `Main` 重复继承的工具、文档和产品目录。
-
-## 5. 导入并发布整合包
-
-从任意兼容工具导出 `.mrpack`，然后在本地仓库运行：
-
-```bash
-arpack import "/path/to/export.mrpack" \
+arpack import "/path/to/exported.mrpack" \
   --channel release \
   --notes-file "/path/to/notes.md"
 ```
 
-工具会自动：
-
-1. 识别 Fabric 或 NeoForge；
-2. 读取 Minecraft 版本；
-3. 创建或切换到 `cloth/<版本>` 或 `anvil/<版本>`；
-4. 新建分支时使用孤立分支；
-5. 将 `.mrpack` 解压到版本分支的 `pack/`；
-6. 生成 `release/release.toml`；
-7. 本地生成 Changelog 和最终 `.mrpack`；
-8. 检查构建是否可复现。
-
-## 6. 版本号与版本副标题
-
-基础版本号自动生成：
-
-```text
-<Minecraft版本>-<加载器小写名称>-<YYMMDD>
-```
-
-例如：
-
-```text
-26.2-fabric-260801
-26.2-neoforge-260801
-```
-
-Modrinth 的版本副标题使用同样的组成部分，但用空格分隔，并采用加载器正式名称：
-
-```text
-26.2 Fabric 260801
-26.2 NeoForge 260801
-```
-
-## 7. 同一天发布多个版本
-
-使用可选的 `--release-id`：
+同一天发布多个版本时增加 `--release-id`：
 
 ```bash
-arpack import export.mrpack \
+arpack import "/path/to/exported.mrpack" \
   --channel beta \
-  --release-id fix1
+  --release-id fix1 \
+  --notes-file "/path/to/notes.md"
 ```
 
-生成：
+可选发布通道：
 
 ```text
-版本号：26.2-fabric-260801-fix1
-Modrinth副标题：26.2 Fabric 260801 fix1
-Git标签：cloth-26.2-260801-fix1
-文件：Arcomua-Cloth-26.2-Fabric-260801-fix1.mrpack
+release
+beta
+alpha
 ```
 
-`release-id` 支持 1–32 个字母、数字、点、下划线或连字符。不指定时保持原来的日期版本格式。
+`arpack` 会自动：
 
-## 8. Channel
+1. 识别 Fabric或NeoForge及Minecraft版本；
+2. 创建或切换到 `cloth/<版本>`、`anvil/<版本>`；
+3. 生成 `<mc>-<loader>-<YYMMDD>[-release-id]` 版本号；
+4. 将 `.mrpack` 解包到版本分支的 `pack/`；
+5. 识别远程 Mod和 `overrides/mods/` 内嵌 JAR的增删更新；
+6. 清理 `options.txt` 中的 `lastServer`，并将语言改为 `en_us`；
+7. 生成 Changelog并完成本地可复现构建检查。
 
-必须手动选择：
+## 4. 检查构建结果
 
-```text
---channel release
---channel beta
---channel alpha
-```
-
-该值会直接同步到 Modrinth。
-
-## 9. 本地检查
+可再次运行：
 
 ```bash
 arpack check
 ```
 
-结果位于：
+查看：
 
 ```text
-dist/
-├── *.mrpack
-├── *.mrpack.sha256
-├── CHANGELOG.md
-└── release-metadata.json
+dist/*.mrpack
+dist/*.mrpack.sha256
+dist/CHANGELOG.md
+dist/release-metadata.json
 ```
 
-使用一个全新实例导入 `dist/*.mrpack`，确认下载、启动、世界加载、配置和资源包均正常。
+将 `dist/*.mrpack` 导入一个全新实例，确认能够下载、启动和进入世界。
 
-## 10. 提交和发布
+## 5. 提交并发布
+
+确认无误后：
 
 ```bash
 git add -A
@@ -186,88 +101,34 @@ git commit -m "Release Arcomua Cloth 26.2"
 git push -u origin cloth/26.2
 ```
 
-也可以自动提交并推送：
+也可以让导入命令自动提交和推送：
 
 ```bash
-arpack import export.mrpack \
+arpack import pack.mrpack \
   --channel release \
-  --release-id fix1 \
+  --notes-file notes.md \
   --commit \
   --push
 ```
 
-版本分支推送后，GitHub Actions会自动上传 Modrinth并创建 GitHub Release。
+推送版本分支后，GitHub Actions会自动构建、上传Modrinth，并创建GitHub Release。
 
-## 11. 下架和恢复
+## 6. 下架或恢复版本
 
-在目标版本分支运行：
+下架当前版本分支记录的版本：
 
 ```bash
 arpack yank --reason "Crash on startup"
 ```
 
-指定带 `release-id` 的版本：
-
-```bash
-arpack yank \
-  --line cloth \
-  --minecraft 26.2 \
-  --date 260801 \
-  --release-id fix1 \
-  --reason "Crash on startup"
-```
-
 恢复：
 
 ```bash
-arpack restore --line cloth --minecraft 26.2 --date 260801 --release-id fix1
+arpack restore
 ```
 
-## 12. 内嵌 Mod 的自动 Changelog
-
-部分启动器会把无法通过 Modrinth 下载清单表达的 Mod 直接放进：
+也可以在 GitHub 网页中运行：
 
 ```text
-pack/overrides/mods/
+Actions → Manage published version → Run workflow
 ```
-
-v5 会在生成 Changelog 时读取这些 JAR 内的元数据，并把它们与 `modrinth.index.json` 中的远程 Mod 一起比较。
-
-当前识别：
-
-```text
-Fabric：fabric.mod.json
-NeoForge：META-INF/neoforge.mods.toml
-Forge：META-INF/mods.toml
-Quilt：quilt.mod.json
-旧 Forge：mcmod.info
-```
-
-对于 Forge/NeoForge 中的 `${file.jarVersion}`，工作流会尝试从 `META-INF/MANIFEST.MF` 读取 `Implementation-Version`。
-
-同一 Mod ID 的 JAR 从旧版本替换为新版本时，会生成：
-
-```markdown
-### Updated
-- Example Mod: `1.0.0` → `1.1.0`
-```
-
-无法识别元数据的 JAR 仍会按文件路径和哈希参与增删改比较，不会被忽略。
-
-## 13. options.txt 自动清理
-
-每次导入和构建时，工作流会检查：
-
-```text
-pack/overrides/options.txt
-pack/overrides/config/yosbr/options.txt
-```
-
-存在文件时自动执行：
-
-```text
-lastServer:example.com  → lastServer: 
-lang:zh_cn             → lang:en_us
-```
-
-如果目标文件不存在，或者文件中没有对应设置项，工作流直接跳过。其他 `options.txt` 设置保持不变。

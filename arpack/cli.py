@@ -320,39 +320,6 @@ def check_command(args: argparse.Namespace) -> int:
     return 0
 
 
-def clean_branch_command(args: argparse.Namespace) -> int:
-    repo = find_repo_root(Path.cwd())
-    require_clean_repo(repo)
-    config = config_from_repository(repo, args.config)
-    branch = run_git(repo, "branch", "--show-current").stdout.strip()
-    if not BRANCH_RE.fullmatch(branch):
-        raise WorkflowError("clean-branch must be run on cloth/<minecraft> or anvil/<minecraft>")
-
-    removed = ensure_version_branch_layout(repo, config.default_branch)
-    run_local_check(
-        repo,
-        config,
-        offline=args.offline,
-        verify_reproducible=True,
-    )
-    print(f"Version branch layout cleaned. Removed {len(removed)} duplicated tracked file(s).")
-
-    if args.commit or args.push:
-        run_git(repo, "add", "-A")
-        message = args.message or f"Clean version branch layout for {branch}"
-        run_git(repo, "commit", "-m", message)
-        print(f"Created commit: {message}")
-
-    if args.push:
-        if not args.yes:
-            answer = input(f"Push the cleaned {branch} branch? Type CLEAN: ").strip()
-            if answer != "CLEAN":
-                raise WorkflowError("Operation cancelled")
-        run_git(repo, "push", "origin", branch)
-        print("Cleaned version branch pushed.")
-    return 0
-
-
 def product_for_line(config: RepositoryConfig, line: str):
     matches = [product for product in config.products.values() if product.branch_line == line]
     if len(matches) != 1:
@@ -537,15 +504,6 @@ def main(argv: list[str] | None = None) -> int:
         help="Build only once instead of verifying identical output",
     )
 
-    clean = subparsers.add_parser(
-        "clean-branch",
-        help="Remove duplicated Main files from the current version branch",
-    )
-    clean.add_argument("--offline", action="store_true")
-    clean.add_argument("--commit", action="store_true")
-    clean.add_argument("--push", action="store_true")
-    clean.add_argument("--yes", action="store_true")
-    clean.add_argument("--message")
 
     yank = subparsers.add_parser(
         "yank",
@@ -565,8 +523,6 @@ def main(argv: list[str] | None = None) -> int:
             return import_command(args)
         if args.command == "check":
             return check_command(args)
-        if args.command == "clean-branch":
-            return clean_branch_command(args)
         if args.command == "yank":
             return manage_command(args, "yank")
         if args.command == "restore":
