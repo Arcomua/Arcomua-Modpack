@@ -1,0 +1,2 @@
+- Fix Litematica RCE vulnerability 
+- Hide older versions for security reasons
