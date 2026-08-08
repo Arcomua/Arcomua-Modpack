@@ -1,5 +1,8 @@
 # Arcomua Modpack 维护流程
 
+
+> Changelog 说明：如果当前 Minecraft/加载器版本线此前没有 workflow 发布标签，自动部分会显示 `Initial version`。如果本次导入使用了 `--notes-file` 或 `--note`，维护者说明仍会追加到 `Initial version` 后面。
+
 ## 1. 安装 `arpack`
 
 环境要求：Git、Python 3.11+，以及能够导出 Modrinth `.mrpack` 格式的启动器或管理工具。

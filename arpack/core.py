@@ -744,6 +744,9 @@ def generate_changelog(
     lookup_metadata: bool = True,
 ) -> str:
     if previous_tag is None:
+        manual_notes = manual_notes.strip()
+        if manual_notes:
+            return "Initial version\n\n## Maintainer notes\n\n" + manual_notes + "\n"
         return "Initial version\n"
 
     old = collect_mods_from_git(repo, previous_tag)

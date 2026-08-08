@@ -1,5 +1,8 @@
 # Arcomua Modpack Maintainer Workflow
 
+
+> Changelog behavior: if the current Minecraft/loader line has no previous workflow release tag, the automatic part is `Initial version`. When `--notes-file` or `--note` is supplied, the maintainer notes are still appended after `Initial version`.
+
 ## 1. Install `arpack`
 
 Requirements: Git, Python 3.11+, and a launcher or management tool that can export a Modrinth `.mrpack`.
