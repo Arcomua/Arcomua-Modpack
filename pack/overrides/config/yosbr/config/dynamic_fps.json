@@ -1,0 +1,17 @@
+{
+  "states": {
+    "hovered": {
+      "volume_multipliers": {
+        "master": 0.8
+      }
+    },
+    "unfocused": {
+      "frame_rate_target": 5
+    },
+    "abandoned": {
+      "volume_multipliers": {
+        "master": 0.2
+      }
+    }
+  }
+}

@@ -1,0 +1,221 @@
+{
+	"general": {
+		"disable_mod": false,
+		"hide_bossbar": true,
+		"shadow_text": true,
+		"auto_start": false,
+		"animationSpeed": 1.0,
+		"always_show_ping": false,
+		"hide_debug_crosshair": false,
+		"background_color": 1867534416,
+		"space_modules": false,
+		"always_show_profiler": false,
+		"animations": false,
+		"fontScale": 1.0,
+		"hide_sidebar": true,
+		"always_show_tps": false
+	},
+	"modules_right": [
+		{
+			"name": "system",
+			"name_color": 16766720,
+			"value_color": 16775930,
+			"lines": {
+				"opengl_version": true,
+				"allocation_rate": true,
+				"display": true,
+				"java_version": true,
+				"gpu_driver": true,
+				"memory_usage": true,
+				"allocated_memory": true,
+				"cpu": true,
+				"gpu_utilization": true,
+				"time": true,
+				"gpu": true
+			},
+			"enabled": true
+		}, 
+		{
+			"name": "miscright",
+			"name_color": 16645526,
+			"value_color": 16775930,
+			"lines": {
+				"misc_right": true
+			},
+			"enabled": false
+		}, 
+		{
+			"empty_lines": 1,
+			"name": "empty",
+			"lines": {
+				"nothing": true
+			},
+			"enabled": true
+		}, 
+		{
+			"name": "target",
+			"name_color": 16766720,
+			"value_color": 16775930,
+			"lines": {
+				"id_fluid": true,
+				"fluid_tags": true,
+				"block_states": true,
+				"targeted_block": true,
+				"block_tags": true,
+				"id_block": true,
+				"nothing": true,
+				"nothing2": true,
+				"targeted_fluid": true,
+				"targeted_entity": true,
+				"fluid_states": true
+			},
+			"enabled": true
+		}
+	],
+	"modules_left": [
+		{
+			"name": "minecraft",
+			"name_color": 16761035,
+			"value_color": 16758465,
+			"lines": {
+				"minecraft": true
+			},
+			"enabled": true
+		}, 
+		{
+			"color_high": 9498256,
+			"color_med": 16777184,
+			"name": "fps",
+			"lines": {
+				"fps": true
+			},
+			"enabled": true,
+			"color_low": 15761536
+		}, 
+		{
+			"name": "graphics",
+			"name_color": 16747520,
+			"value_color": 16316671,
+			"lines": {
+				"shader": true,
+				"render_distance": true,
+				"graphics": true,
+				"clouds": true,
+				"biome_blend_radius": true
+			},
+			"enabled": true
+		}, 
+		{
+			"name": "server",
+			"name_color": 16747520,
+			"value_color": 16316671,
+			"lines": {
+				"server_tick": true,
+				"packets_sent": true,
+				"packets_received": true,
+				"tick_manager_status": true
+			},
+			"enabled": true
+		}, 
+		{
+			"color_x": 15761536,
+			"color_y": 9498256,
+			"color_z": 11393254,
+			"name": "coords",
+			"name_color": 13955815,
+			"lines": {
+				"chunk_coords": true,
+				"player_coords": true,
+				"block_coords": true,
+				"velocity": true,
+				"chunk_relative_coords": true,
+				"abs_velocity": true
+			},
+			"enabled": true
+		}, 
+		{
+			"name": "chunks",
+			"chunks_disabled_color": 16733525,
+			"name_color": 16766720,
+			"value_color": 16775930,
+			"total_chunks_color": 16755200,
+			"lines": {
+				"chunk_file": true,
+				"available_buffers": true,
+				"loaded_chunks_server": true,
+				"forceloaded_chunks": true,
+				"chunk_culling": true,
+				"pending_uploads": true,
+				"pending_chunks": true,
+				"loaded_chunks": true,
+				"spawn_chunks": true,
+				"client_chunk_cache": true,
+				"chunk_sections": true
+			},
+			"chunks_enabled_color": 9498256,
+			"enabled": true
+		}, 
+		{
+			"name": "entity",
+			"name_color": 16645526,
+			"value_color": 16775930,
+			"total_entities_color": 16766720,
+			"lines": {
+				"entities": true,
+				"water_creature": true,
+				"underground_water_creature": true,
+				"ambient": true,
+				"particles": true,
+				"axolotls": true,
+				"creature": true,
+				"water_ambient": true,
+				"monster": true,
+				"misc": true
+			},
+			"enabled": true
+		}, 
+		{
+			"maximum_color": 43690,
+			"name": "sound",
+			"name_color": 16766720,
+			"value_color": 15132410,
+			"lines": {
+				"ambient_sounds": true,
+				"sounds": true,
+				"mood": true
+			},
+			"enabled": true
+		}, 
+		{
+			"enabled_color": 5635925,
+			"name": "help",
+			"name_color": 16645526,
+			"value_color": 15132410,
+			"disabled_color": 16733525,
+			"lines": {
+				"help": true,
+				"fps_tps_new": true,
+				"ping": true,
+				"pie_graph_new": true
+			},
+			"enabled": true
+		}, 
+		{
+			"empty_lines": 1,
+			"name": "empty",
+			"lines": {
+				"nothing": true
+			},
+			"enabled": true
+		}, 
+		{
+			"name": "miscleft",
+			"name_color": 16645526,
+			"value_color": 15132410,
+			"lines": {
+				"misc_left": true
+			},
+			"enabled": true
+		}
+	]
+}
