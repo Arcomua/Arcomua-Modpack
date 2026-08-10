@@ -1,0 +1,101 @@
+{
+  "perf": {
+    "maxParticleAmount": 1500,
+    "particleDensity": 100,
+    "particleStormDensity": 200,
+    "particleRadius": 25,
+    "fogParticleRadius": 90
+  },
+  "effect": {
+    "doRainParticles": true,
+    "doSplashParticles": true,
+    "doSmokeParticles": true,
+    "doRippleParticles": true,
+    "doStreakParticles": true,
+    "doSnowParticles": true,
+    "doDustParticles": true,
+    "doShrubParticles": true,
+    "doFogParticles": false,
+    "doGroundFogParticles": false,
+    "doPuddles": false
+  },
+  "sound": {
+    "doRainSounds": true,
+    "doSnowSounds": true,
+    "doSandSounds": true
+  },
+  "compat": {
+    "renderVanillaWeather": false,
+    "tickVanillaWeather": false,
+    "alwaysRaining": false,
+    "biomeTint": true,
+    "tintMix": 0.5,
+    "yLevelWindAdjustment": true,
+    "syncRegistry": true
+  },
+  "spawn": {
+    "doOverrideWeather": false,
+    "overrideWeather": "SNOW",
+    "useHeightmapTemp": true,
+    "canSpawnAboveClouds": true,
+    "cloudHeight": 191,
+    "dustyBlockTags": [
+      "minecraft:camel_sand_step_sound_blocks"
+    ]
+  },
+  "rain": {
+    "density": 1.0,
+    "gravity": 1.0,
+    "windStrength": 0.3,
+    "stormWindStrength": 0.7,
+    "opacity": 1.0,
+    "size": 2.0,
+    "impactEffectAmount": 5
+  },
+  "snow": {
+    "density": 0.4,
+    "gravity": 0.05,
+    "rotationAmount": 0.02,
+    "stormRotationAmount": 0.05,
+    "windStrength": 1.0,
+    "stormWindStrength": 3.0,
+    "size": 2.0
+  },
+  "dust": {
+    "density": 0.8,
+    "gravity": 0.2,
+    "windStrength": 0.2,
+    "stormWindStrength": 0.3,
+    "size": 2.0,
+    "spawnOnGround": true
+  },
+  "shrub": {
+    "density": 0.02,
+    "gravity": 0.2,
+    "rotationAmount": 0.2,
+    "windStrength": 0.2,
+    "stormWindStrength": 0.3,
+    "bounciness": 0.2
+  },
+  "ripple": {
+    "resolution": 16,
+    "useResourcepackResolution": true
+  },
+  "fog": {
+    "density": 0.2,
+    "gravity": 0.2,
+    "size": 0.5
+  },
+  "groundFog": {
+    "density": 20,
+    "maxSpawnHeight": 64,
+    "minSpawnHeight": 60,
+    "size": 8.0
+  },
+  "puddle": {
+    "updateDelay": 100,
+    "updateStep": 5,
+    "rainLevel": 90,
+    "stormLevel": 130
+  }
+}
