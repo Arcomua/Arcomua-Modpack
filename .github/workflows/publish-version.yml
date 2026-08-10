@@ -1,0 +1,17 @@
+name: Publish version branch
+
+on:
+  push:
+    branches:
+      - "cloth/**"
+      - "anvil/**"
+    paths:
+      - "pack/**"
+      - "release/release.toml"
+      - "release/manual.md"
+  workflow_dispatch:
+
+jobs:
+  publish:
+    uses: Arcomua/Arcomua-Modpack/.github/workflows/_reusable-publish.yml@Main
+    secrets: inherit

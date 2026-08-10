@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 9,
+  "currentVersion": "250329",
+  "modpackName": "Arcomua Cloth",
+  "modpackAuthor": "Arcomua Team",
+  "modpackReleaseType": "stable",
+  "updateCheckerId": "https://update.arcomua.com/arcomua_cloth/1.21.4/",
+  "advanced": {
+    "bccEnabled": false,
+    "expandButton": true,
+    "updateCheckerType": 2,
+    "retroWarning": false,
+    "addButton": false,
+    "mainMenuCreditsIntegration": true,
+    "modpackMods": []
+  }
+}
