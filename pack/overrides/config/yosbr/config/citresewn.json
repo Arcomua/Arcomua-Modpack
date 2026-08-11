@@ -1,0 +1,7 @@
+{
+    "enabled": true,
+    "mute_errors": true,
+    "mute_warns": true,
+    "cache_ms": 80,
+    "broken_paths": false
+}
