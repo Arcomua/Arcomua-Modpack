@@ -1,0 +1,1 @@
+- Fix Litematica RCE vulnerability

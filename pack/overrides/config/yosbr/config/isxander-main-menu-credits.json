@@ -1,0 +1,24 @@
+{
+  "main_menu": {
+    "top_left": [],
+    "top_right": [],
+    "bottom_left": [],
+    "bottom_right": [
+      {
+        "text": "Made with ❤ by Arcomua Team",
+        "clickEvent": {
+          "action": "open_url",
+          "value": "https://www.arcomua.com/"
+        }
+      }
+    ],
+    "mod_blacklist": []
+  },
+  "pause_menu": {
+    "top_left": [],
+    "top_right": [],
+    "bottom_left": [],
+    "bottom_right": [],
+    "mod_blacklist": []
+  }
+}

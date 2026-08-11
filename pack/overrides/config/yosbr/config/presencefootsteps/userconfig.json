@@ -1,0 +1,20 @@
+{
+  "volume": 51,
+  "clientPlayerVolume": 50,
+  "otherPlayerVolume": 50,
+  "hostileEntitiesVolume": 100,
+  "passiveEntitiesVolume": 100,
+  "runningVolumeIncrease": 6,
+  "wetSoundsVolume": 50,
+  "foliageSoundsVolume": 100,
+  "maxSteppingEntities": 50,
+  "disabled": false,
+  "firstRun": true,
+  "multiplayer": true,
+  "global": true,
+  "footwear": true,
+  "visualiser": false,
+  "exclusive": false,
+  "stance": "BIPED",
+  "targetEntities": "ALL"
+}
