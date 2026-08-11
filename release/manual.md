@@ -1,2 +1,0 @@
-- Remove outdated config files
-- Replace modpack icon
