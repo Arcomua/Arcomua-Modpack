@@ -6,9 +6,7 @@
   "zoomOutTransition": "ease_out_exp",
   "affectHandFov": true,
   "retainZoomSteps": false,
-  "linearLikeSteps": false,
   "scrollZoom": true,
-  "scrollZoomAmount": 3,
   "scrollZoomSmoothness": 25,
   "zoomKeyBehaviour": "hold",
   "_keybindScrolling": false,
@@ -22,5 +20,7 @@
   "secondaryZoomInTime": 10.0,
   "secondaryZoomOutTime": 1.0,
   "secondaryHideHUDOnZoom": true,
-  "_firstLaunch": true
+  "_firstLaunch": false,
+  "scrollStepCount": 10,
+  "zoomPerStep": 150
 }

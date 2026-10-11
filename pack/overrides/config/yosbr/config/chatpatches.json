@@ -16,7 +16,7 @@
   "boundary": true,
   "boundaryFormat": "\u00268[\u0026r$\u00268]",
   "boundaryColor": 5636095,
-  "chatlog": true,
+  "chatlog": false,
   "chatlogSaveInterval": 0,
   "chatHidePacket": true,
   "chatWidth": 0,

@@ -97,7 +97,6 @@
     "xmapNoSessionFinalizationWait": false,
     "xmapWaypointFreecamCompact": false,
     "lmCustomSchematicBaseDirectoryEnabledPorting": false,
-    "lmCustomSchematicBaseDirectoryPorting": "C:\\Users\\Miro\\AppData\\Roaming\\PrismLauncher\\instances\\Arcomua Cloth\\.minecraft\\schematics",
     "lmPickBlockShulkersPorting": false,
     "mcSpectatorEnterSinkingFixPorting": false,
     "configOriginalNameScale": 0.65,

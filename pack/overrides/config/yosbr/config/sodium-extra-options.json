@@ -25,12 +25,6 @@
     "sky_colors": true
   },
   "render_settings": {
-    "fog_distance": 0,
-    "fog_start": 100,
-    "multi_dimension_fog_control": false,
-    "dimensionFogDistance": {
-      "minecraft:overworld": 0
-    },
     "light_updates": true,
     "item_frame": true,
     "armor_stand": true,
@@ -51,7 +45,6 @@
     "reduce_resolution_on_mac": true,
     "use_adaptive_sync": false,
     "cloud_height": 192,
-    "cloud_distance": 100,
     "toasts": true,
     "advancement_toast": true,
     "recipe_toast": true,

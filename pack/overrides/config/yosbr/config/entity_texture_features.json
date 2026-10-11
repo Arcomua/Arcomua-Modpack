@@ -1,6 +1,7 @@
 {
   "optifine_limitRandomVariantGapsBy10": true,
   "optifine_allowWeirdSkipsInTrueRandom": true,
+  "optifine_preventBaseTextureInOptifineDirectory": true,
   "illegalPathSupportMode": "All",
   "enableCustomTextures": true,
   "enableCustomBlockEntities": true,
@@ -25,6 +26,7 @@
   "debugLoggingMode": "None",
   "logTextureDataInitialization": false,
   "hideConfigButton": false,
+  "stackDebugPrinting": false,
   "configButtonLoc": "OFF",
   "disableVanillaDirectoryVariantTextures": false,
   "use3DSkinLayerPatch": true,

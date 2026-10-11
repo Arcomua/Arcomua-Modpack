@@ -156,36 +156,13 @@
 			// Declares whether arrows in containers should be clickable.
 			"clickableRecipeArrows": true,
 			"registerRecipesInAnotherThread": true,
-			"newFastEntryRendering": true,
 			"cachingFastEntryRendering": false,
 			"cachingDisplayLookup": true,
+			// Controls whether REI synthesizes recipe displays from the client's own data packs, for servers that do not sync recipe data. NEVER: off; AUTO: load locally as a fallback until the server syncs displays; ALWAYS: load locally even when the server provides displays.
+			"forceLocalRecipes": "AUTO",
 			"categorySettings": {
 				"filteringQuickCraftCategories": { },
-				"categoryOrdering": [
-					"minecraft:plugins/crafting",
-					"minecraft:plugins/smelting",
-					"minecraft:plugins/smoking",
-					"minecraft:plugins/blasting",
-					"minecraft:plugins/campfire",
-					"minecraft:plugins/stone_cutting",
-					"minecraft:plugins/fuel",
-					"minecraft:plugins/brewing",
-					"minecraft:plugins/composting",
-					"minecraft:plugins/stripping",
-					"minecraft:plugins/smithing",
-					"minecraft:plugins/anvil",
-					"minecraft:plugins/beacon_base",
-					"minecraft:plugins/beacon_payment",
-					"minecraft:plugins/tilling",
-					"minecraft:plugins/pathing",
-					"minecraft:plugins/waxing",
-					"minecraft:plugins/wax_scraping",
-					"minecraft:plugins/oxidizing",
-					"minecraft:plugins/oxidation_scraping",
-					"justenoughbreeding:breeding",
-					"roughlyenoughitems:plugins/information",
-					"minecraft:plugins/tag"
-				],
+				"categoryOrdering": [],
 				"hiddenCategories": []
 			}
 		},
@@ -194,8 +171,7 @@
 			"shouldFilterDisplays": true,
 			"filteringRules": [
 				"{id:\"roughlyenoughitems:manual\",rule:{}}",
-				"{id:\"roughlyenoughitems:basic\",rule:{}}",
-				"{id:\"roughlyenoughitems:hidden_from_recipe_viewers\",rule:{}}"
+				"{id:\"roughlyenoughitems:basic\",rule:{}}"
 			]
 		}
 	}

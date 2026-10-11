@@ -1,0 +1,6 @@
+{
+  "useUPnP": false,
+  "getPublicIP": false,
+  "onlineMode": true,
+  "applyforallworld": true
+}
