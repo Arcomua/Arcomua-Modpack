@@ -1,0 +1,11 @@
+# Local build output
+dist/
+*.mrpack
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+.venv/
+venv/

@@ -1,0 +1,28 @@
+{
+  "basicSettings": {
+    "screenWhitelist": [],
+    "enableScreenRecovering": false,
+    "recoveredScreens": [],
+    "englishStateImpl": "CONVERSION_STATUS",
+    "primaryEnglishState": "CJK",
+    "useStrictCursorRect": false
+  },
+  "advanceSettings": {
+    "charSimulationScreens": [],
+    "commandPrefixRegex": "^/"
+  },
+  "windowsCompatibilitySettings": {
+    "enableConversionStatusApi": true,
+    "isClassicCompositionStyle": false,
+    "enableIngameIME": false
+  },
+  "linuxCompatibilitySettings": {
+    "enableKeyboardPatch": true,
+    "isHeadlessPreeditMode": false,
+    "ibusOnArgName": "libpinyin",
+    "ibusOffArgName": "xkb:us::eng",
+    "fcitx5OnArgName": "-o",
+    "fcitx5OffArgName": "-c",
+    "fcitx5OnStateName": "2"
+  }
+}

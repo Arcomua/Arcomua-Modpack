@@ -1,0 +1,39 @@
+{
+  "Notes": [
+    "Smoothness values are in %. Scrolling speed values are in pixels.",
+    "0 % means animation off (no smoothness) and bigger values mean slower animation speed (high smoothness).",
+    "Press F3+T in a world to update the config.",
+    "To access config ingame, use the mod modmenu."
+  ],
+  "Hotbar": {
+    "Smoothness": 20.0,
+    "Rollover": true,
+    "Static Selector": false
+  },
+  "Chat": {
+    "Smoothness": 20.0,
+    "Opening Smoothness": 20.0,
+    "Scrolling Speed": 0.0,
+    "Suggestion Smoothness": 50.0,
+    "Suggestion Speed": 30.0
+  },
+  "Creative Screen": {
+    "Smoothness": 50.0,
+    "Speed": 30.0,
+    "RP Compatibility Mode": false
+  },
+  "Entry List": {
+    "Smoothness": 50.0,
+    "Speed": 30.0
+  },
+  "Text Input Field": {
+    "Smoothness": 50.0,
+    "Speed": 100.0,
+    "Cursor Margin": 10.0,
+    "Custom Cursor Update": true
+  },
+  "Misc": {
+    "Enable mask debug": false
+  },
+  "Format": 2.7
+}

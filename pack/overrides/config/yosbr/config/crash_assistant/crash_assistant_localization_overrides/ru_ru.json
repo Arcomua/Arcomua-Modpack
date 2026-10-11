@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant собрал диагностические данные.</strong>\nСначала нажмите «$LANG.gui.upload_all_comment$». Затем создайте новую задачу для Arcomua Modpack, вставьте скопированный отчёт и опишите, что вы делали перед сбоем. Также укажите, меняли ли вы моды, наборы ресурсов, шейдеры или файлы конфигурации.",
+  "gui.comment_under_title_cant_resolve.github": "Всё ещё нужна помощь? Сначала поищите похожую задачу в трекере Arcomua Modpack. Если такой задачи нет, создайте новую и приложите сформированный отчёт.",
+  "gui.comment_under_title_pls_report.github": "Чтобы сообщить о проблеме или получить помощь, откройте трекер Arcomua Modpack и приложите сформированный отчёт.",
+  "gui.request_help_button.github": "Открыть трекер Arcomua",
+  "gui.upload_all_button": "Загрузить диагностические журналы и скопировать отчёт",
+  "gui.upload_all_comment": "Загрузить журналы и скопировать отчёт",
+  "gui.upload_all_finished_button": "Скопировать отчёт ещё раз",
+  "gui.comment_under_title_screenshot_notice": "Отправьте сформированный отчёт, а не только снимок экрана. На снимке этого окна нет журналов, необходимых для диагностики сбоя.",
+  "gui.drag_drop_message": "1. Перетащите отдельный журнал или «$LANG.gui.file_list_label$», чтобы добавить все доступные журналы.<br>2. Перетащите их в задачу GitHub."
+}

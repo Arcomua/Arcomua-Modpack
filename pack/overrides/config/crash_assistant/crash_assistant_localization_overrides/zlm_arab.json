@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant تله مڠومڤول معلومت دياݢنوستيک.</strong>\nکليک “$LANG.gui.upload_all_comment$” دهولو. کمودين بوک Issue بهارو اونتوق Arcomua Modpack، تمڤل لاڤورن يڠ تله ديسالين، دان ترڠکن اڤ يڠ اندا لاکوکن سبلوم Minecraft ترهنتي. نياتکن جوݢ سبارڠ مود، ڤيک سومبر، shader، اتاو فايل کونفيݢوراسي يڠ اندا اوبه.",
+  "gui.comment_under_title_cant_resolve.github": "مسيه ممرلوکن بنتوان؟ چاري دهولو دالم ڤنجيجق Issue Arcomua Modpack. جک تياد Issue يڠ سڤادن، چيڤتا Issue بهارو دان سرطاکن لاڤورن يڠ ديهاسيلکن.",
+  "gui.comment_under_title_pls_report.github": "اونتوق ملاڤورکن مسئله اتاو مندافتکن بنتوان، بوک ڤنجيجق Issue Arcomua Modpack دان سرطاکن لاڤورن يڠ ديهاسيلکن.",
+  "gui.request_help_button.github": "بوک ڤنجيجق Issue Arcomua",
+  "gui.upload_all_button": "موات نايق لوݢ دياݢنوستيک دان سالين لاڤورن",
+  "gui.upload_all_comment": "موات نايق لوݢ دان سالين لاڤورن",
+  "gui.upload_all_finished_button": "سالين لاڤورن سکالي لاݢي",
+  "gui.comment_under_title_screenshot_notice": "سيلا هنتر لاڤورن يڠ ديهاسيلکن، بوکن هاڽ تاڠکڤن سکرين. تاڠکڤن سکرين تتيڠکڤ اين تيدق مڠاندوڠي لوݢ يڠ دڤرلوکن اونتوق دياݢنوسيس.",
+  "gui.drag_drop_message": "1. سريت ساتو اينتري لوݢ، اتاو “$LANG.gui.file_list_label$” اونتوق مڽرتاکن سموا لوݢ يڠ اد.<br>2. لتقکن ک دالم Issue GitHub."
+}

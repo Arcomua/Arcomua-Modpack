@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant 已收集本次崩溃的诊断信息。</strong>\n请先点击“$LANG.gui.upload_all_comment$”，随后打开一个新的 Arcomua Modpack Issue，粘贴已复制的报告，并说明崩溃前正在进行的操作。若曾增删或更新模组、资源包、光影或配置文件，也请一并说明。",
+  "gui.comment_under_title_cant_resolve.github": "仍然需要帮助？请先搜索 Arcomua Modpack 的 Issue 列表；若没有相同问题，再新建 Issue 并附上生成的报告。",
+  "gui.comment_under_title_pls_report.github": "如需反馈问题或寻求帮助，请打开 Arcomua Modpack Issue 页面，并附上生成的报告。",
+  "gui.request_help_button.github": "打开 Arcomua 问题反馈页面",
+  "gui.upload_all_button": "上传诊断日志并复制报告",
+  "gui.upload_all_comment": "上传日志并复制报告",
+  "gui.upload_all_finished_button": "再次复制报告",
+  "gui.comment_under_title_screenshot_notice": "请提交生成的报告，不要只发送此窗口的截图。截图不包含排查崩溃所需的日志信息。",
+  "gui.drag_drop_message": "1. 拖动单个日志条目，或拖动“$LANG.gui.file_list_label$”以包含全部可用日志。<br>2. 将其拖放到 GitHub Issue 中。"
+}

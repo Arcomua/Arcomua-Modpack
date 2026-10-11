@@ -1,0 +1,11 @@
+{
+  "gui.comment_under_title.github": "<strong>Crash Assistant ha raccolto le informazioni diagnostiche.</strong>\nFai prima clic su “$LANG.gui.upload_all_comment$”. Poi apri una nuova segnalazione per Arcomua Modpack, incolla il rapporto copiato e descrivi cosa stavi facendo prima dell'arresto. Indica anche eventuali mod, pacchetti di risorse, shader o file di configurazione modificati.",
+  "gui.comment_under_title_cant_resolve.github": "Hai ancora bisogno di aiuto? Cerca prima nelle segnalazioni di Arcomua Modpack. Se non ne esiste una corrispondente, creane una nuova e allega il rapporto generato.",
+  "gui.comment_under_title_pls_report.github": "Per segnalare il problema o chiedere aiuto, apri la pagina delle segnalazioni di Arcomua Modpack e includi il rapporto generato.",
+  "gui.request_help_button.github": "Apri le segnalazioni di Arcomua",
+  "gui.upload_all_button": "Carica i log diagnostici e copia il rapporto",
+  "gui.upload_all_comment": "Carica i log e copia il rapporto",
+  "gui.upload_all_finished_button": "Copia di nuovo il rapporto",
+  "gui.comment_under_title_screenshot_notice": "Invia il rapporto generato, non soltanto uno screenshot. Lo screenshot di questa finestra non contiene i log necessari per diagnosticare l'arresto.",
+  "gui.drag_drop_message": "1. Trascina un singolo log oppure “$LANG.gui.file_list_label$” per includere tutti i log disponibili.<br>2. Rilascialo nella segnalazione GitHub."
+}

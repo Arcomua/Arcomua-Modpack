@@ -1,0 +1,37 @@
+{
+  "volume": {
+    "volume": 51,
+    "foliageSoundsVolume": 100,
+    "clientPlayerVolume": 50,
+    "passiveEntitiesVolume": 100,
+    "runningVolumeIncrease": 6,
+    "wetSoundsVolume": 50,
+    "hostileEntitiesVolume": 100,
+    "otherPlayerVolume": 50
+  },
+  "debug": {
+    "visualiser": false
+  },
+  "performance": {
+    "maxSteppingEntities": 50
+  },
+  "sound": {
+    "preventHorseGallopingSounds": false,
+    "footwear": true,
+    "exclusive": false,
+    "global": true,
+    "multiplayer": true
+  },
+  "client": {
+    "targetEntities": "ALL",
+    "disabled": false,
+    "stance": "BIPED"
+  },
+  "compatibility": {
+    "ignoredEntityTypes": [
+      "minecraft:happy_ghast",
+      "minecraft:ghast",
+      "minecraft:phantom"
+    ]
+  }
+}

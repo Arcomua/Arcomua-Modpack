@@ -1,0 +1,15 @@
+{
+  "Generic": {
+    "debugMessages": false,
+    "categoryColorPrefix": "§d",
+    "nameColorPrefix": "§b"
+  },
+  "Hotkeys": {
+    "openConfigGui": {
+      "keys": "RIGHT_BRACKET,C"
+    },
+    "resetAllVanillaKeybinds": {
+      "keys": ""
+    }
+  }
+}

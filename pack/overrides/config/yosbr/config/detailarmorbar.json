@@ -1,0 +1,17 @@
+{
+  "effectType": "OUTLINE",
+  "effectSpeed": "NORMAL",
+  "effectThorn": "STATIC",
+  "toggleEnchants": true,
+  "toggleNetherites": true,
+  "toggleArmorTypes": true,
+  "toggleThorns": true,
+  "toggleDurability": true,
+  "toggleMending": true,
+  "toggleEmptyBar": true,
+  "toggleItemBar": true,
+  "toggleVanillaTexture": true,
+  "toggleCompatibleHeartMod": true,
+  "toggleInverseSlot": false,
+  "toggleSortSpecialItem": true
+}
